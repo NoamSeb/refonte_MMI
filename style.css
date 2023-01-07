@@ -174,6 +174,12 @@
         text-align: center;
     }
     
+    #tictac {
+        display: flex;
+        justify-content: center;
+        color: red;
+    }
+    
     .temoignages {
         margin-top: 20vw;
     }
@@ -206,4 +212,70 @@
     .bottomFooter {
         display: flex;
         justify-content: space-around;
+    }
+    
+    .pageTitle {
+        color: white;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-left: 10vw;
+        text-align: center;
+        z-index: 10;
+        font-size: 1.5rem;
+    }
+    
+    .content {
+        margin-top: 20vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .yellow {
+        color: #F7D043;
+    }
+    
+    .pagesSecondTitle {
+        text-align: center;
+    }
+    
+    .pagesSecondTitle div {
+        text-align: center;
+        font-size: 1rem;
+        width: 40vw;
+    }
+    
+    .seeMore {
+        text-align: center;
+    }
+    
+    .blue {
+        color: #3DCCFA;
+    }
+    
+    .pageContent {
+        margin-top: 20vw;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .pageContentImg {
+        width: 20vw;
+        background-color: #3DCCFA;
+        color: white;
+        padding: 1vw;
+        border-radius: 10px;
+        border: none;
+    }
+    
+    .pageContentTxt {
+        width: 30vw;
     }
