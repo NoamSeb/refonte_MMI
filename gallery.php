@@ -4,8 +4,6 @@ $stmt = $db->query($requete);
 $result = $stmt->fetchall(PDO::FETCH_ASSOC);
 ?>
 
-<!-- jddeek -->
-
 <!DOCTYPE html>
 <html lang="fr">
 
