@@ -1,0 +1,1 @@
+CREATE TABLE evenements (id_event PRIMARY KEY, name_event VARCHAR(250), description_event TEXT, date_event VARCHAR(25), img_event VARCHAR(250));
