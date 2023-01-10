@@ -1,4 +1,8 @@
-<?php include('connexion.php');?>
+<?php include('connexion.php');
+$requete = "SELECT * FROM projet, modules WHERE ext_module=id_module ";
+$stmt = $db->query($requete);
+$result = $stmt->fetchall(PDO::FETCH_ASSOC);
+?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -39,6 +43,16 @@
                 </div>
             </div>
             <div class="pageSlider">
+                <?php
+                foreach($result as $r) { ?>
+                <div class="projet">
+                    <img src="<?=$r['image']?>" alt="<?=$r['titre']?>">
+                    <p class="moduleProjet"><?=$r['ext_module']?></p>
+                    <p class="titleProjet"><?=$r['titre']?></p>
+                    <p class="auteurProjet"> Par <?=$r['auteur']?></p>
+                    <p class="descriProjet"><?=$r['description']?></p>
+                </div>
+                <?php } ?>
                 <!-- 
                     
                     SLIDER 
