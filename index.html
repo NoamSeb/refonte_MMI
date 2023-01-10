@@ -5,30 +5,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" type="text/css">
+
     <title>MMI-Champs</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <img src="medias/imgBackground.jpg" alt="" class="imgBackground">
-    <nav>
-        <div class="imgNav">
-            <img src="medias/logo_MMI.svg" alt="Retour à l'accueil">
-        </div>
+    <nav class="navbar">
+        <a href="" class="imgNav">
+            <img src="medias/logo_MMI.svg" alt="Logo">
+        </a>
         <div class="navTxt">
             <ul>
-                <li>Formation</li>
-                <li>Projets</li>
-                <li>Évènements</li>
-                <li>International</li>
+                <a href="index.html"><li>Formation</li></a>
+                <a href="gallery.php"><li>Projets</li></a>
+                <a href="event.html"><li>Évènements</li></a>
+                <a href="international.html"><li>International</li></a>
             </ul>
         </div>
     </nav>
-    <div class="mainTitle">
+    <header class="mainTitle">
         <h1>BUT MMI</h1>
-        <h2>Métier du Multimédia & de l'Internet</h2>
+        <h2>Métiers du Multimédia & de l'Internet</h2>
         <h3>Champs sur Marne</h3>
-    </div>
+    </header>
+
     <main>
         <div class="stats">
             <div class="diplome">
@@ -39,7 +43,7 @@
             <div class="candidate">
                 <img src="medias/candidat.svg" alt="">
                 <p class="number2">2500</p>
-                <p>CANDIDATS CHAQUE ANNÉES</p>
+                <p>CANDIDATS CHAQUE ANNÉE</p>
             </div>
             <div class="places">
                 <img src="medias/places.svg" alt="">
@@ -60,7 +64,9 @@
                     SLIDER 
                 
                 -->
-                <p>Le BUT MMI vous forme aux métiers du web, du développement back-end, à l’UX Design, en passant par le Webmarketing ou la réalisation de produits audiovisuels. Cette formation vous permet d’acquérir un bagage suffisant pour entrer dans
+                <p>Le BUT MMI vous forme aux métiers du web, du développement back-end, à l’UX Design, en passant par le
+                    Webmarketing ou la réalisation de produits audiovisuels. Cette formation vous permet d’acquérir un
+                    bagage suffisant pour entrer dans
                     le monde professionnel ou poursuivre vos études en master.</p>
                 <button>En savoir plus</button>
             </div>
@@ -70,11 +76,13 @@
             <div class="skills">
                 <div class="comprendre">
                     <p class="skillName">COMPRENDRE</p>
-                    <p class=skillTxt>Comprendre les écosystèmes, les besoins des utilisateurs et les dispositifs de communication numérique</p>
+                    <p class=skillTxt>Comprendre les écosystèmes, les besoins des utilisateurs et les dispositifs de
+                        communication numérique</p>
                 </div>
                 <div class="concevoir">
                     <p class="skillName">CONCEVOIR</p>
-                    <p class=skillTxt>Concevoir ou co-concevoir une réponse stratégique pertinente à une problématique complexe
+                    <p class=skillTxt>Concevoir ou co-concevoir une réponse stratégique pertinente à une problématique
+                        complexe
                     </p>
                 </div>
                 <div class="exprimer">
@@ -96,11 +104,14 @@
             <div class="course">
                 <div class="craNum">
                     <p class=parcourName>Création numérique</p>
-                    <p class=parcourTxt>Métiers : directeur artistique, designer interactif, web/UI designer, motion designer, réalisateur, infographiste, game designer...</p>
+                    <p class=parcourTxt>Métiers : directeur artistique, designer interactif, web/UI designer, motion
+                        designer, réalisateur, infographiste, game designer...</p>
                 </div>
                 <div class="dev">
                     <p class=parcourName>Développement web & dispositifs interactifs</p>
-                    <p class=parcourTxt>Métiers : Intégrateur, développeur front, développeur back, développeur full-stack, métiers de la scénographie numérique, intégrateur de dispositif de réalité virtuelle...
+                    <p class=parcourTxt>Métiers : Intégrateur, développeur front, développeur back, développeur
+                        full-stack, métiers de la scénographie numérique, intégrateur de dispositif de réalité
+                        virtuelle...
                     </p>
                 </div>
             </div>
@@ -126,7 +137,7 @@
             <button class="actuButton">Voir plus</button>
         </div>
         <div class="temoignages">
-            <h2 class="testimonyTitle">NOS ANCIENS TÉMPOIGNENT</h2>
+            <h2 class="testimonyTitle">NOS ANCIENS TÉMOIGNENT</h2>
             <!-- 
                 
                 SLIDER 
@@ -137,12 +148,15 @@
     <footer>
         <div class="footer">
             <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.1005349879015!2d2.58308131562675!3d48.837221010151026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e60e33dd9a3fdd%3A0x7e5ced48ab7fc8df!2sIUT%20de%20Marne-la-Vall%C3%A9e%20-%20Universit%C3%A9%20Gustave%20Eiffel!5e0!3m2!1sfr!2sfr!4v1672012216586!5m2!1sfr!2sfr"
-                    width="400" height="200" style="border:0; border-radius: 30px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.1005349879015!2d2.58308131562675!3d48.837221010151026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e60e33dd9a3fdd%3A0x7e5ced48ab7fc8df!2sIUT%20de%20Marne-la-Vall%C3%A9e%20-%20Universit%C3%A9%20Gustave%20Eiffel!5e0!3m2!1sfr!2sfr!4v1672012216586!5m2!1sfr!2sfr"
+                    width="400" height="200" style="border:0; border-radius: 30px;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="campus">
                 <p class="footerTitle">Campus</p>
-                <p class="footerTxt">2 rue Albert Einstein<br> 77420 Champs-sur-Marne<br> RER A - Noisy-Champs<br> Bus 212, 213 & 312 - Nobel
+                <p class="footerTxt">2 rue Albert Einstein<br> 77420 Champs-sur-Marne<br> RER A - Noisy-Champs<br> Bus
+                    212, 213 & 312 - Nobel
                 </p>
             </div>
             <div class="contact">
