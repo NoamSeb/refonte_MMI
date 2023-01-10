@@ -1,26 +1,54 @@
 /* summary */
 
+
 /* 1. fonts & body */
+
+
 /* 2. text */
+
+
 /* 3. dark/light mode */
+
+
 /* 4. mouse cursor */
+
+
 /* 5. background */
+
+
 /* 6. loading page */
+
+
 /* 7. nav bar */
+
+
 /* 8. header */
+
+
 /* 9. fade in animation */
+
+
 /* 10. about section */
+
+
 /* 11. projects, navigation */
+
+
 /* 12. project page */
+
+
 /* 13. footer */
+
+
 /* 14. responsive (1280, 1024, 768) */
 
 
 /* fonts */
+
+
 /* DM Sans, sans-serif */
+
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
-
-
 *,
 *::before,
 *::after {
@@ -39,6 +67,7 @@ body {
     padding: 0;
     font-family: "DM Sans", sans-serif;
 }
+
 
 /* text */
 
@@ -333,6 +362,10 @@ footer {
     color: #3DCCFA;
 }
 
+.blueBackground {
+    background-color: #3DCCFA;
+}
+
 .pageContent {
     margin-top: 20vw;
     display: flex;
@@ -342,7 +375,6 @@ footer {
 
 .pageContentImg {
     width: 20vw;
-    background-color: #3DCCFA;
     color: white;
     padding: 1vw;
     border-radius: 10px;
@@ -351,4 +383,12 @@ footer {
 
 .pageContentTxt {
     width: 30vw;
+}
+
+.pink {
+    color: #EC3F7D;
+}
+
+.pinkBackground {
+    background-color: #EC3F7D;
 }
