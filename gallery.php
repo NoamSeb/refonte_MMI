@@ -45,6 +45,11 @@ $result = $stmt->fetchall(PDO::FETCH_ASSOC);
                 </div>
             </div>
             <div class="pageSlider">
+                <!-- 
+                    
+                SLIDER 
+            
+            -->
                 <?php
                 foreach($result as $r) { ?>
                 <div class="projet">
