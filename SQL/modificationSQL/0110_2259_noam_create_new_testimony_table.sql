@@ -1,0 +1,1 @@
+CREATE TABLE temoignages (id_temoignage INT PRIMARY KEY NOT NULL, nom_étudiant VARCHAR(250), contenu_temoignage TEXT, promo_etudiant VARCHAR(250));
