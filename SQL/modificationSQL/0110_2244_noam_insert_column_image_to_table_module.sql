@@ -1,0 +1,1 @@
+ALTER TABLE modules ADD img_module VARCHAR(250);
