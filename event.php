@@ -52,10 +52,10 @@ $result = $stmt->fetchall(PDO::FETCH_ASSOC);
                 foreach($result as $r) { ?>
                 <div class="event">
                     <img src="<?=$r['img_event']?>" alt="<?=$r['name_event']?>">
-                    <p class="titleEvent"><?=$r['name_event']?></p>
+                    <p class="titleEvent"><?=$r['nom_event']?></p>
                     <p class="dateEvent"><?=$r['date_event']?></p>
                     <p class="descripEvent"><?=$r['description_event']?></p>
-                    
+                    <a href="affiche-event.php?id=<?=$r['id_event']?>">voir plus</a>
                 </div>
                 <?php } ?>
                 <!-- 
