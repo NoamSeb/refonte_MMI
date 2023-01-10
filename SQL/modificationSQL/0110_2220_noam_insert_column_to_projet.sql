@@ -1,0 +1,1 @@
+ALTER TABLE projet ADD ext_module VARCHAR(250);
