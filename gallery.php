@@ -85,7 +85,7 @@ $result = $stmt->fetchall(PDO::FETCH_ASSOC);
             </div>
         </div>
         <div class="bottomFooter">
-            <p>2023 - BUT métiers DU Multimédia ET DE l’Internet, Champs-sur-marne © Tous droits réservés</p>
+            <p>2023 - BUT Métiers du Multimédia & de l’Internet, Champs-sur-marne © Tous droits réservés</p>
             <p class="linkMentions">MENTIONS LÉGALES</p>
         </div>
 
