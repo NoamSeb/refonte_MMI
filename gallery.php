@@ -1,4 +1,8 @@
-<?php include('connexion.php');?>
+<?php include('connexion.php');
+$requete = "SELECT * FROM projet ";
+$stmt = $db->query($requete);
+$result = $stmt->fetchall(PDO::FETCH_ASSOC);
+?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -39,6 +43,12 @@
                 </div>
             </div>
             <div class="pageSlider">
+                <?php
+                foreach($result as $r) { ?>
+                <div class="projet">
+                    <img src="<?=$r['image']?>" alt="<?=$r['titre']?>">
+                </div>
+                <?php } ?>
                 <!-- 
                     
                     SLIDER 
