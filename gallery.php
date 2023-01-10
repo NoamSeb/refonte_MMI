@@ -31,7 +31,7 @@ $result = $stmt->fetchall(PDO::FETCH_ASSOC);
         </div>
     </nav>
     <div class="pageTitle">
-        <h1>GALLERIE</h1>
+        <h1>GALERIE</h1>
         <p>découvrez les projets de nos étudiants</p>
     </div>
     <main>
