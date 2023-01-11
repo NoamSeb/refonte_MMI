@@ -13,33 +13,64 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.theme.default.min.css">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
 
     <link rel="stylesheet" href="style.css" type="text/css">
-
+    <script src="./js/script.js"></script>
     <title>MMI-Champs</title>
 </head>
 
 <body>
-    <nav class="navbar">
-        <a href="" class="imgNav">
-            <img src="medias/logo_MMI.svg" alt="Logo">
-        </a>
-        <div class="navTxt">
-            <ul>
-                <a href="index.html">
+    <div class="menu-overlay">
+        <div class="overlay-menu">
+            <ul class="one">
+                <a href="index.php">
                     <li>Formation</li>
                 </a>
                 <a href="gallery.php">
                     <li>Projets</li>
                 </a>
-                <a href="event.html">
+                <a href="event.php">
+                    <li>Évènements</li>
+                </a>
+                <a href="international.html">
+                    <li>International</li>
+                </a>
+
+            </ul>
+        </div>
+    </div>
+
+    <nav class="navbar" data-scroll>
+        <a href="" class="imgNav">
+            <img src="medias/logo_MMI.svg" alt="Logo">
+        </a>
+
+        <div class="navLinks">
+            <ul>
+                <a href="index.php">
+                    <li>Formation</li>
+                </a>
+                <a href="gallery.php">
+                    <li>Projets</li>
+                </a>
+                <a href="event.php">
                     <li>Évènements</li>
                 </a>
                 <a href="international.html">
                     <li>International</li>
                 </a>
             </ul>
+            <div id="toggle-menu" class="menu">
+                <div class="menu-link">
+                    <span class="hamburger-icon">
+                        <span class="hamburger-bar hamburger-bar-1"></span>
+                        <span class="hamburger-bar hamburger-bar-2"></span>
+                        <span class="hamburger-bar hamburger-bar-3"></span>
+                    </span>
+                </div>
+            </div>
         </div>
     </nav>
     <header class="mainTitle">
@@ -173,27 +204,33 @@
     <footer>
         <div class="footer">
             <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.1005349879015!2d2.58308131562675!3d48.837221010151026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e60e33dd9a3fdd%3A0x7e5ced48ab7fc8df!2sIUT%20de%20Marne-la-Vall%C3%A9e%20-%20Universit%C3%A9%20Gustave%20Eiffel!5e0!3m2!1sfr!2sfr!4v1672012216586!5m2!1sfr!2sfr"
-                    width="400" height="200" style="border:0; border-radius: 30px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.1005349879015!2d2.58308131562675!3d48.837221010151026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e60e33dd9a3fdd%3A0x7e5ced48ab7fc8df!2sIUT%20de%20Marne-la-Vall%C3%A9e%20-%20Universit%C3%A9%20Gustave%20Eiffel!5e0!3m2!1sfr!2sfr!4v1672012216586!5m2!1sfr!2sfr" style="border:0; border-radius: 30px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="campus">
-                <p class="footerTitle">Campus</p>
-                <p class="footerTxt">2 rue Albert Einstein<br> 77420 Champs-sur-Marne<br> RER A - Noisy-Champs<br> Bus 212, 213 & 312 - Nobel
-                </p>
+                <h3>Campus</h3>
+                <ul>
+                    <li>2 rue Albert Einstein</li>
+                    <li>77420 Champs Sur Marne</li>
+                    <li>RER A - Noisy-Champs</li>
+                    <li>Bus 212, 213 & 312 - Nobel</li>
+                </ul>
             </div>
             <div class="contact">
-                <p class="footerTitle">Contact</p>
-                <p class="footerTxt">01 60 95 85 90<br> mmi-dir.iut@univ-eiffel.fr
-                </p>
-                <div class="icons">
-                    <img src="medias/insta_icon.svg" alt="Page Instagram">
-                    <img src="medias/twitter_icon.svg" alt="Page Twitter">
+                <h3>Contact</h3>
+                <ul>
+                    <li>01 60 95 85 90</li>
+                    <li> mmi-dir.iut@univ-eiffel.fr</li>
+                </ul>
+                <div class="socials">
+                    <a href="https://www.instagram.com/mmi_champs/" target="_blank"><img src="medias/insta_icon.svg" alt="Page Instagram"></a>
+                    <a href="https://twitter.com/mmi_champs" target="_blank"><img src="medias/twitter_icon.svg" alt="Page Twitter"></a>
+                    
                 </div>
             </div>
         </div>
-        <div class="bottomFooter">
-            <p>2023 - BUT métiers DU Multimédia ET DE l’Internet, Champs-sur-marne © Tous droits réservés</p>
-            <p class="linkMentions">MENTIONS LÉGALES</p>
+        <div class="credits">
+            <p>2023&#160;&#160;&#160;-&#160;&#160;&#160;BUT Métiers du Multimédia & de l’Internet, Champs-sur-Marne © Tous droits réservés</p>
+            <h3>mentions légales</h3>
         </div>
 
     </footer>
@@ -205,6 +242,12 @@
 <script src="slider-actus.js"></script>
 </script>
 
+<script>
+    ScrollOut({
+        cssProps: true,
+        threshold: 0.2,
+    });
+</script>
 
 
 </html>
