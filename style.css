@@ -78,7 +78,8 @@ h2 {
 }
 
 h3 {
-    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-size: 1.3rem;
     font-weight: 500;
 }
 
@@ -113,13 +114,27 @@ a:focus {
 
 ul {
     list-style-type: none;
+    padding: 0;
 }
 
 header {
-    background-image: url('medias/imgBackground.jpg');
     position: relative;
     height: 100vh;
     color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 0 4rem;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mainTitle {
+    background-image: url('medias/imgBackground.jpg');
 }
 
 .navbar {
@@ -131,8 +146,32 @@ header {
     top: 0;
     width: 100%;
     mix-blend-mode: difference;
-    color: white;
+    color: white !important;
     padding: 1rem 2rem;
+}
+
+/* quand la nav n'est pas en viewport : la cacher */
+
+[data-scroll] {
+    transition: opacity 0.5s;
+}
+
+
+[data-scroll="out"] {
+    opacity: 0;
+}
+
+/* [data-scroll="in"] {
+    opacity: 1;
+} */
+
+
+/* au scroll top montrer la nav */
+[data-scroll-dir-y="-1"] .navbar {
+    opacity: 1;
+    /* visibility: visible; */
+    /* transition: visibility 2s; */
+    /* transition: opacity 0.9s; */
 }
 
 .navLinks ul {
@@ -152,7 +191,7 @@ header {
     height: 14px;
     width: 20px;
     display: none;
-    filter: contrast(0);
+    /* filter: contrast(0); */
     cursor: pointer;
 }
 
@@ -401,45 +440,45 @@ button {
 
 footer {
     width: 100%;
+    padding: 5rem 15%;
     color: white;
-    background-color: black;
+    background-color: rgb(35, 35, 35);
 }
 
 .footer {
-    max-width: 80vw;
-    margin: auto;
     display: flex;
-    justify-content: space-around;
-    padding: 5vh;
+    justify-content: space-between;
+    gap: 4rem;
+    margin-bottom: 2rem;
 }
 
-.footerTitle {
-    font-size: 1.2rem;
+.footer ul {
+    line-height: 1.7rem;
 }
 
-.footerTxt {
-    max-width: 20vw;
+.map {
+    height: 100%;
+    width: 40%;
 }
 
-.bottomFooter {
+.map iframe {
+    height: 100%;
+    width: 100%;
+}
+
+.footer .socials {
+    mix-blend-mode: screen;
+}
+
+.credits {
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
 }
 
-.pageTitle {
-    color: white;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    margin-left: 10vw;
-    text-align: center;
-    z-index: 10;
-    font-size: 1.5rem;
+.international {
+    background-image: url('medias/international.png');
 }
 
 .content {
@@ -516,6 +555,12 @@ footer {
 
 /* responsive */
 
+@media screen and (max-width:1280px) {
+    footer {
+        padding: 5rem 8%;
+    }
+}
+
 @media screen and (max-width:1024px) {
     .navLinks ul {
         display: none;
@@ -531,3 +576,5 @@ footer {
     }
 
 }
+
+/* fin responsive */
