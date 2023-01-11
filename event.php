@@ -88,7 +88,7 @@ $result = $stmt->fetchall(PDO::FETCH_ASSOC);
                 <?php
                 foreach($result as $r) { ?>
                 <div class="event">
-                    <img src="<?=$r['img_event']?>" alt="<?=$r['name_event']?>">
+                    <!-- <img src="<?=$r['img_event']?>" alt="<?=$r['name_event']?>"> -->
                     <p class="titleEvent"><?=$r['nom_event']?></p>
                     <p class="dateEvent"><?=$r['date_event']?></p>
                     <p class="descripEvent"><?=$r['description_event']?></p>
