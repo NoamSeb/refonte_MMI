@@ -1,5 +1,5 @@
 <?php include('connexion.php');
-$requete = "SELECT * FROM evenement";
+$requete = "SELECT * FROM evenements";
 $stmt = $db->query($requete);
 $result = $stmt->fetchall(PDO::FETCH_ASSOC);
 ?>
