@@ -1,3 +1,5 @@
+<?php include('connexion.php');?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -169,30 +171,22 @@
             
             -->
 
+            <?php
+            $requete = 'SELECT * FROM evenements ORDER BY date_event DESC';
+            $stmt = $db->query($requete);
+            $result = $stmt->fetchall(PDO::FETCH_ASSOC); 
+            ?>
+
             <div class="row">
                 <div class="large-12 columns">
                     <div class="owl-carousel owl-theme">
-                        <div class="item">
-                            <h2>Slide 1</h2>
-                        </div>
-                        <div class="item">
-                            <h2>Slide 2</h2>
-                        </div>
-                        <div class="item">
-                            <h2>Slide 3</h2>
-                        </div>
-                        <div class="item">
-                            <h2>Slide 4</h2>
-                        </div>
-                        <div class="item">
-                            <h2>Slide 5</h2>
-                        </div>
-                        <div class="item">
-                            <h2>Slide 6</h2>
-                        </div>
-                        <div class="item">
-                            <h2>Slide 7</h2>
-                        </div>
+                        <?php foreach($result as $row) {
+                            echo '<div class="item">';
+                            echo '<img src="'.$row['img_event'].'" alt="">';
+                            echo '<h2>'.$row['nom_event'].'</h2>';
+                            echo '<p>'.$row['date_event'].'</p>';
+                            echo '</div>';};
+                        ?>
                     </div>
                 </div>
             </div>
