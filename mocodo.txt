@@ -1,0 +1,8 @@
+modules:id_module, nom_module, desc_module, matiere, img_module
+
+projet: id_projet, ext_module,titre, description, auteur, image, 
+LIÉ À, NN modules, NN projet
+
+evenements: id_event, nom_event, description_event, date_event, img_event
+temoignage: id_temoignage, nom_etudiant, contenu_temoignage, promo_etudiant
+utilisateur: id_user, login, password
