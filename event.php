@@ -16,18 +16,55 @@ $result = $stmt->fetchall(PDO::FETCH_ASSOC);
 </head>
 
 <body>
-    <img src="medias/event.png" alt="" class="imgBackground">
-    <nav>
-        <div class="imgNav">
-            <img src="medias/logo_MMI.svg" alt="Retour à l'accueil">
-        </div>
-        <div class="navTxt">
-            <ul>
-                <a href="index.html"><li>Formation</li></a>
-                <a href="gallery.php"><li>Projets</li></a>
-                <a href="event.html"><li>Évènements</li></a>
-                <a href="international.html"><li>International</li></a>
+<div class="menu-overlay">
+        <div class="overlay-menu">
+            <ul class="one">
+                <a href="index.php">
+                    <li>Formation</li>
+                </a>
+                <a href="gallery.php">
+                    <li>Projets</li>
+                </a>
+                <a href="event.php">
+                    <li>Évènements</li>
+                </a>
+                <a href="international.html">
+                    <li>International</li>
+                </a>
+
             </ul>
+        </div>
+    </div>
+
+    <nav class="navbar" data-scroll>
+        <a href="" class="imgNav">
+            <img src="medias/logo_MMI.svg" alt="Logo">
+        </a>
+
+        <div class="navLinks">
+            <ul>
+                <a href="index.php">
+                    <li>Formation</li>
+                </a>
+                <a href="gallery.php">
+                    <li>Projets</li>
+                </a>
+                <a href="event.php">
+                    <li>Évènements</li>
+                </a>
+                <a href="international.html">
+                    <li>International</li>
+                </a>
+            </ul>
+            <div id="toggle-menu" class="menu">
+                <div class="menu-link">
+                    <span class="hamburger-icon">
+                        <span class="hamburger-bar hamburger-bar-1"></span>
+                        <span class="hamburger-bar hamburger-bar-2"></span>
+                        <span class="hamburger-bar hamburger-bar-3"></span>
+                    </span>
+                </div>
+            </div>
         </div>
     </nav>
     <div class="pageTitle">
