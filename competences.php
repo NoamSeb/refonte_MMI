@@ -1,4 +1,8 @@
-<?php include 'connexion.php'; ?>
+<?php include 'connexion.php'; 
+$requete = "SELECT * FROM competences";
+$resultat = $db->query($requete);
+$competence = $resultat->fetchAll(PDO::FETCH_ASSOC);
+?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -13,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.theme.default.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/vendors/jquery.min.js"></script>
     <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
     <link rel="stylesheet" href="style.css" type="text/css">
     <script src="./js/script.js"></script>
@@ -74,28 +78,29 @@
     </nav>
     
     <div class="header-competences">
-    <p class="competence5"> 5 compétences </p>
-    <div class="slider-header-competences">
-        <?php
-        $requete = "SELECT * FROM competences";
-        $resultat = $db->query($requete);
-        $competence = $resultat->fetchAll(PDO::FETCH_ASSOC);
-        foreach ($competence as $competence) {
-            echo'<div class="competence-slide">';
-                echo "<div class=\"item\" >";
-                echo "<p class=\"id-competence\"> #". $competence['id_competence']." </p>";
-                echo '<svg width="40" height="3" viewBox="0 0 40 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <line y1="1.5" x2="40" y2="1.5" stroke="white" stroke-width="3"/>
-                </svg>';
-                echo "<h1 class=\"nom-competence\">" . $competence['nom_competence'] . "</h1>";
-                echo "<p class=\"description-competence\">" . $competence['description_competence'] . "</p>";
-                echo "<p class=\"modules-lies\"> <span class=\"uppercase\">Modules liés :</span> </br>" . $competence['modules_lie'] . "</p>";
-                echo "</div>";
-            echo '</div>';
-        }
-        ?>
+        <div class="slider-header-competences row">
+            <div class="large-12 columns slider-background">
+                <div class="carousel-competences owl-carousel owl-theme">
+                    <?php
+                    foreach ($competence as $text) {
+                        echo "<div class=\"item\" >";
+                        echo '<p class="competence5"> 5 compétences </p>';
+                            echo "<p class=\"id-competence\"> #". $text['id_competence']." </p>";
+                            echo '<svg width="40" height="3" viewBox="0 0 40 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line y1="1.5" x2="40" y2="1.5" stroke="white" stroke-width="3"/>
+                            </svg>';
+                            echo "<h1 class=\"nom-competence\">" . $text['nom_competence'] . "</h1>";
+                            echo "<p class=\"description-competence\">" . $text['description_competence'] . "</p>";
+                            echo "<p class=\"modules-lies\"> <span class=\"uppercase\">Modules liés :</span> </br>" . $text['modules_lie'] . "</p>";
+                            echo "<img class=\"img-background-competences\" src=\"medias/" . $text['img_competence'] . "\" alt=\"\">";
+                            echo "</div>";
+                    }
+                    ?>
+                </div>
+            </div>
+        </div>
     </div>
-    </div>
+
 
 
     <section class="pluridisciplinaire">
@@ -160,6 +165,12 @@
 
     </footer>
 
-
+    
+    
 </body>
+
+<script src="https://owlcarousel2.github.io/OwlCarousel2/assets/vendors/jquery.min.js"></script>
+<script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script>
+<script src="slider-actus.js" defer></script>
+<script src="sliders.js" defer></script>
 </html>
