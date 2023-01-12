@@ -1,18 +1,45 @@
 /* summary */
 
+
 /* 1. fonts & body */
+
+
 /* 2. text */
+
+
 /* 3. dark/light mode */
+
+
 /* 4. mouse cursor */
+
+
 /* 5. background */
+
+
 /* 6. loading page */
+
+
 /* 7. nav bar */
+
+
 /* 8. header */
+
+
 /* 9. fade in animation */
+
+
 /* 10. about section */
+
+
 /* 11. projects, navigation */
+
+
 /* 12. project page */
+
+
 /* 13. footer */
+
+
 /* 14. responsive (1280, 1024, 768) */
 
 
@@ -22,11 +49,11 @@
 /* DM Sans, sans-serif */
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
-
 :root {
     --color-black: #0a0a0a;
     --color-white: #f5f5f5;
 }
+
 
 /* dark/light mode */
 
@@ -150,16 +177,17 @@ header {
     padding: 1rem 2rem;
 }
 
+
 /* quand la nav n'est pas en viewport : la cacher */
 
 [data-scroll] {
     transition: opacity 0.5s;
 }
 
-
 [data-scroll="out"] {
     opacity: 0;
 }
+
 
 /* [data-scroll="in"] {
     opacity: 1;
@@ -167,6 +195,7 @@ header {
 
 
 /* au scroll top montrer la nav */
+
 [data-scroll-dir-y="-1"] .navbar {
     opacity: 1;
     /* visibility: visible; */
@@ -184,7 +213,6 @@ header {
 .navLinks ul li {
     color: white;
 }
-
 
 .menu {
     position: relative;
@@ -290,7 +318,6 @@ header {
 .categorie {
     padding: 1rem;
 }
-
 
 .imgBackground {
     width: 100vw;
@@ -549,8 +576,136 @@ footer {
 /* ------------------------------------------------------------------------------------------------------------------------------------ */
 
 
+/* PAGE COMPETENCES */
 
+.competence5 {
+    font-family: "dm sans", sans-serif;
+    font-weight: bold;
+    margin-bottom: 7vh;
+    padding-left: 10vw;
+    font-size: 1.25rem;
+}
 
+.header-competences {
+    padding-top: 20vh;
+    height: 100vh;
+    background-color: #F7D043;
+}
+
+.slider-header-competences {
+    display: flex;
+}
+
+.slider-header-competences .item {
+    padding-left: 10vw;
+    width: 40vw;
+}
+
+.slider-header-competences .item .id-competence {
+    font-family: "inter", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 1.4vh;
+}
+
+.slider-header-competences .item .nom-competence {
+    font-family: "inter", sans-serif;
+    font-size: 4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-top: 3vh;
+}
+
+.slider-header-competences .item .description-competence {
+    font-family: "dm sans", sans-serif;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 2%;
+}
+
+.modules-lies {
+    font-size: 1rem;
+    font-family: "dm sans", sans-serif;
+    margin-top: 6vh;
+}
+
+.uppercase {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.pluridisciplinaire h2 {
+    font-size: 2.5rem;
+    font-family: "inter", sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.pluridisciplinaire span {
+    color: #10DCB7;
+}
+
+.pluridisciplinaire {
+    text-align: center;
+    width: 65%;
+    margin: 20vh auto;
+}
+
+.pluridisciplinaire p {
+    font-size: 1.25rem;
+    line-height: 161.2%;
+}
+
+.pedagogie-projet {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20vh;
+}
+
+.paragraphe-right {
+    width: 40%;
+    margin-right: 1vw;
+}
+
+.paragraphe-right h2 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-family: "inter", sans-serif;
+    font-weight: 900;
+}
+
+.paragraphe-right p {
+    display: block;
+    position: relative;
+    font-family: "dm sans", sans-serif;
+    font-size: 1.25rem;
+    line-height: 161.2%;
+}
+
+.paragraphe-left {
+    background-color: #10DCB7;
+    width: 25%;
+    border-radius: 27px;
+    color: #FFF;
+    padding: 20px 30px;
+    margin-left: 1vw;
+}
+
+.paragraphe-left h2 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-family: "inter", sans-serif;
+    font-weight: 900;
+}
+
+.paragraphe-left ul {
+    font-family: "dm sans", sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    list-style: circle;
+    line-height: 161.2%;
+    padding-left: 15px;
+}
 
 
 /* responsive */
@@ -565,16 +720,14 @@ footer {
     .navLinks ul {
         display: none;
     }
-
     .menu {
         display: block;
     }
-
     .navLinks ul {
         display: none;
         transition: all 0.2s ease;
     }
-
 }
+
 
 /* fin responsive */

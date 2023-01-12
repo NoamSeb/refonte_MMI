@@ -240,7 +240,6 @@
 
 <script src="countDown.js"></script>
 <script src="slider-actus.js"></script>
-</script>
 
 <script>
     ScrollOut({
