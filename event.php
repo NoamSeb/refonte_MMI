@@ -37,7 +37,7 @@ $result = $stmt->fetchall(PDO::FETCH_ASSOC);
     </div>
 
     <nav class="navbar" data-scroll>
-        <a href="" class="imgNav">
+        <a href="index.php" class="imgNav">
             <img src="medias/logo_MMI.svg" alt="Logo">
         </a>
 
@@ -67,10 +67,10 @@ $result = $stmt->fetchall(PDO::FETCH_ASSOC);
             </div>
         </div>
     </nav>
-    <div class="pageTitle">
+    <header class="header international">
         <h1>évènements</h1>
-        <p>Découvrez les évènements du but mmi</p>
-    </div>
+        <h3>Découvrez les évènements du but mmi</h3>
+    </header>
     <main>
         <div class="content">
             <div class="pagesSecondTitle">
