@@ -25,7 +25,7 @@
     <div class="menu-overlay">
         <div class="overlay-menu">
             <ul class="one">
-                <a href="index.php">
+                <a href="formation.php">
                     <li>Formation</li>
                 </a>
                 <a href="gallery.php">
@@ -43,13 +43,13 @@
     </div>
 
     <nav class="navbar" data-scroll>
-        <a href="" class="imgNav">
+        <a href="index.php" class="imgNav">
             <img src="medias/logo_MMI.svg" alt="Logo">
         </a>
 
         <div class="navLinks">
             <ul>
-                <a href="index.php">
+                <a href="formation.php">
                     <li>Formation</li>
                 </a>
                 <a href="gallery.php">

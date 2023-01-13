@@ -692,12 +692,47 @@ footer {
 .pluridisciplinaire p {
     font-size: 1.25rem;
     line-height: 161.2%;
+    margin-top: 30px;
+}
+
+.voir-projets {
+    width: 65vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.module1,
+.module3,
+.module5 {
+    align-self: flex-start;
+}
+
+.module2,
+.module4,
+.module6 {
+    text-align: end;
+    align-self: flex-end;
+}
+
+.module-competence {
+    margin-bottom: 15vh;
+    width: 45vw;
+}
+
+.nom-module {
+    font-family: "inter", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 1.4vh;
+    text-transform: uppercase;
 }
 
 .pedagogie-projet {
     display: flex;
     justify-content: center;
     margin-bottom: 20vh;
+    margin-top: 10vh;
 }
 
 .paragraphe-right {
@@ -718,6 +753,7 @@ footer {
     font-family: "dm sans", sans-serif;
     font-size: 1.25rem;
     line-height: 161.2%;
+    margin-top: 30px;
 }
 
 .paragraphe-left {
