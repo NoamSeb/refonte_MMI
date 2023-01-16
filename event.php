@@ -1,7 +1,5 @@
-<?php include('connexion.php');
-$requete = "SELECT * FROM evenements";
-$stmt = $db->query($requete);
-$result = $stmt->fetchall(PDO::FETCH_ASSOC);
+<?php 
+include('model.php');
 ?>
 
 <!DOCTYPE html>
@@ -67,7 +65,7 @@ $result = $stmt->fetchall(PDO::FETCH_ASSOC);
             </div>
         </div>
     </nav>
-    <header class="header international">
+    <header class="header header-event">
         <h1>évènements</h1>
         <h3>Découvrez les évènements du but mmi</h3>
     </header>
@@ -76,7 +74,8 @@ $result = $stmt->fetchall(PDO::FETCH_ASSOC);
             <div class="pagesSecondTitle">
                 <h2>Des évènements <span class="purple">tout au long de l'année</span></h2>
                 <div class="pagesSecondTitleTxt">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt felis augue, vehicula volutpat felis cursus a. Ut vulputate, orci elementum pulvinar interdum, libero sem auctor elit, id vestibulum purus erat ac velit.</p>
+                    <p>Le BUT MMI ce n’est pas que des cours ! Participez à différents évènements tout au long de l’année ! Ces évènements (hors la JPO) sont des moyens de mettre en avant vos projets et ce que vous avez appris lors de votre séjours en MMI alors n’hésitez pas à y participer, vous pourrez avoir de bonnes surprises…
+                    </p>
                 </div>
             </div>
             <div class="pageContent">
@@ -86,15 +85,18 @@ $result = $stmt->fetchall(PDO::FETCH_ASSOC);
                 
                 -->
                 <?php
-                foreach($result as $r) { ?>
-                <div class="event">
-                    <!-- <img src="<?=$r['img_event']?>" alt="<?=$r['name_event']?>"> -->
-                    <p class="titleEvent"><?=$r['nom_event']?></p>
-                    <p class="dateEvent"><?=$r['date_event']?></p>
-                    <p class="descripEvent"><?=$r['description_event']?></p>
-                    <a href="affiche-event.php?id=<?=$r['id_event']?>">voir plus</a>
-                </div>
-                <?php } ?>
+                $result = getEvent();
+                foreach($result as $result) { 
+                    echo 
+                    '<div class="event event'.$result['id_event'].'" style="background:url(\'medias/'.$result['img_event'].'\') no-repeat center center/cover;">'.
+                    '<div class="event-darken">' .
+                        '<h3 class="titleEvent">'.$result['nom_event'].'</h3>' .
+                        '<p class="dateEvent">'.$result['date_event'].'</p>' .
+                        '<p class="descripEvent">'.$result['description_event'].'</p>' .
+                        '<a href="affiche-event.php?id=<'.$result['id_event'].'">Voir plus</a>' .
+                    '</div>'.
+                    '</div>';
+                } ?>
                 <!-- 
                     
                     SLIDER 

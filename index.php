@@ -1,4 +1,4 @@
-<?php include('connexion.php');?>
+<?php include('model.php');?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -105,30 +105,28 @@
         <div class="mmiGeneral">
             <h2>UNE FORMATION EN <span class="purple">3 ANS</span></h2>
 
-            <?php
-            $requete = 'SELECT * FROM modules';
-            $stmt = $db->query($requete);
-            $module = $stmt->fetchall(PDO::FETCH_ASSOC); 
-            ?>
 
             <div class="row">
                 <div class="large-12 columns">
-                    <div class="carousel-events owl-carousel owl-theme">
-                        <?php foreach($module as $module) {
-                            echo '<div class="item">';
-                            // echo '<img src="'.$row['img_event'].'" alt="">';
-                            echo '<h2>'.$row['nom_event'].'</h2>';
-                            echo '<p>'.$row['date_event'].'</p>';
-                            echo '</div>';};
+                    <div class="carousel-modules owl-carousel owl-theme">
+                        <?php 
+                        $modules = getModules();
+                        foreach($modules as $module) {
+                            echo 
+                            '<div class="item item-modules">'.
+                                '<div class="img-and-title">'.
+                                    '<img src="medias/'.$module['img_module'].'" alt="">'.
+                                    '<h3>'. $module['nom_module'] .'</h3>'.
+                                '</div>'.
+                                '<div class="desc-and-button">'.
+                                    '<p>'. $module['desc_module'] .'</p>'.
+                                    '<a class="button" href="formation.php">En savoir plus</a>'.
+                                '</div>'.
+                            '</div>';};
                         ?>
                     </div>
                 </div>
             </div>
-
-            <p>Le BUT MMI vous forme aux métiers du web, du développement back-end, à l’UX Design, en passant par le Webmarketing ou la réalisation de produits audiovisuels. Cette formation vous permet d’acquérir un bagage suffisant pour entrer dans le monde
-                professionnel ou poursuivre vos études en master.</p>
-            <button>En savoir plus</button>
-        </div>
         </div>
         <div class="competences">
             <h2 class="skillsTitle">5 COMPÉTENCES</h2>
@@ -172,16 +170,9 @@
         </div>
         <div class="actu">
             <h2 class="actuTitle">ACTUALITÉS</h2>
-            <div>
+            <div class="count-down">
+                <h3>Prochaine JPO</h3>
                 <p id="header--countDown">
-                    <!-- <div id="tictac">
-                        <div class="bloc_time"> <span id="countdown_month">--</span> <small>MOIS</small></div>
-                        <div class="bloc_time"> <span id="countdown_day">--</span> <small>JOURS</small></div>
-                        <div class="bloc_time"> <span id="countdown_hour">--</span> <small>HEURES</small></div>
-                        <div class="bloc_time"> <span id="countdown_min">--</span> <small>MIN</small></div>
-                        <div class="bloc_time"> <span id="countdown_sec">--</span> <small>SEC</small></div>
-                    </div> -->
-
                 </p>
             </div>
             <!-- 
@@ -191,25 +182,27 @@
             -->
 
             <?php
-            $requete = 'SELECT * FROM evenements ORDER BY date_event DESC';
-            $stmt = $db->query($requete);
-            $result = $stmt->fetchall(PDO::FETCH_ASSOC); 
+            $events=getEvent();
             ?>
 
             <div class="row">
                 <div class="large-12 columns">
                     <div class="carousel-events owl-carousel owl-theme">
-                        <?php foreach($result as $row) {
-                            echo '<div class="item">';
-                            // echo '<img src="'.$row['img_event'].'" alt="">';
-                            echo '<h2>'.$row['nom_event'].'</h2>';
-                            echo '<p>'.$row['date_event'].'</p>';
-                            echo '</div>';};
+                        <?php 
+                        foreach($events as $event) {
+                            echo 
+                            '<div class="item">'.
+                                '<div class="img-event-background" style="background:url(\'medias/'.$event['img_event'].'\')no-repeat center center/cover;">'.
+                                '</div>'.
+                                '<h3>'.$event['nom_event'].'</h3>'.
+                                '<p>'.$event['date_event'].'</p>'.
+                             '</div>';};
                         ?>
                     </div>
                 </div>
+                <div style></div>
+                <a href="event.php" class="button">Voir plus</a>
             </div>
-            <button class="actuButton">Voir plus</button>
         </div>
         <div class="temoignages">
             <h2 class="testimonyTitle">NOS ANCIENS TÉMOIGNENT</h2>
@@ -257,7 +250,7 @@
 <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/vendors/jquery.min.js"></script>
 <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script>
 
-<script src="countDown.js"></script>
+<script src="countDown.js" defer></script>
 <script src="slider-actus.js" defer></script>
 
 <script>
