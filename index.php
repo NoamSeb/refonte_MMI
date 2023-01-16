@@ -105,7 +105,26 @@
         <div class="mmiGeneral">
             <h2>UNE FORMATION EN <span class="purple">3 ANS</span></h2>
 
-            -->
+            <?php
+            $requete = 'SELECT * FROM modules';
+            $stmt = $db->query($requete);
+            $module = $stmt->fetchall(PDO::FETCH_ASSOC); 
+            ?>
+
+            <div class="row">
+                <div class="large-12 columns">
+                    <div class="carousel-events owl-carousel owl-theme">
+                        <?php foreach($module as $module) {
+                            echo '<div class="item">';
+                            // echo '<img src="'.$row['img_event'].'" alt="">';
+                            echo '<h2>'.$row['nom_event'].'</h2>';
+                            echo '<p>'.$row['date_event'].'</p>';
+                            echo '</div>';};
+                        ?>
+                    </div>
+                </div>
+            </div>
+
             <p>Le BUT MMI vous forme aux métiers du web, du développement back-end, à l’UX Design, en passant par le Webmarketing ou la réalisation de produits audiovisuels. Cette formation vous permet d’acquérir un bagage suffisant pour entrer dans le monde
                 professionnel ou poursuivre vos études en master.</p>
             <button>En savoir plus</button>
@@ -179,10 +198,10 @@
 
             <div class="row">
                 <div class="large-12 columns">
-                    <div class="owl-carousel owl-theme">
+                    <div class="carousel-events owl-carousel owl-theme">
                         <?php foreach($result as $row) {
                             echo '<div class="item">';
-                            echo '<img src="'.$row['img_event'].'" alt="">';
+                            // echo '<img src="'.$row['img_event'].'" alt="">';
                             echo '<h2>'.$row['nom_event'].'</h2>';
                             echo '<p>'.$row['date_event'].'</p>';
                             echo '</div>';};
