@@ -1,5 +1,6 @@
 <?php
 session_start();
+include('../model.php');
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -59,8 +60,6 @@ session_start();
 </style>
 
 <body>
-
-
     <header>
         <img src="../medias/user.png">
     </header>
@@ -75,7 +74,7 @@ session_start();
             </ul>
         </nav>
         <?php
-        echo ("Bonjour " . $_SESSION['login'] . ". Quel plaisir de vous revoir !");
+        echo "Bonjour " . $_SESSION['login'] . ". Quel plaisir de vous revoir !";
         ?>
         <div class="dashboard">
 
