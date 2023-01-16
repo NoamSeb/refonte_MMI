@@ -59,3 +59,11 @@ function getEvents(){
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     return $result;
 }
+
+function detailEvent($event){
+    $db = dbConnect();
+    $requete = "SELECT * FROM evenements WHERE " . $event . "=id_event";
+    $stmt = $db->query($requete);
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $result;
+}

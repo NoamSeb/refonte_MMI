@@ -28,21 +28,14 @@ if (!isset($_SESSION["login"])) {
         <nav>
             <ul>
                 <li><a href="dashboard.php">Dashboard</a></li>
-                <li><a href="projet.php">Projet</a></li>
-                <li><a href="evenement.php">Evenements</a></li>
+                <li><a href="projet.php">Projets</a></li>
+                <li><a href="evenement.php">Évènements</a></li>
                 <li><a href="../controllers/logout.php">Déconnexion</a></li>
             </ul>
         </nav>
         <div class="dashboard">
 
-
-            <?php
-            echo ("Bonjour " . $_SESSION['login'] . ". Quel plaisir de vous revoir !");
-            ?>
-            <br> <br>
-            <br>
-
-            <h3>Evenements</h3>
+            <h3>Évènements</h3>
             <table>
                 <thead>
                     <tr>
@@ -65,7 +58,7 @@ if (!isset($_SESSION["login"])) {
                             <td><?= $value['date_event'] ?></td>
                             <td><?= $value['img_event'] ?></td>
                             <td><?=
-                                '<div style="display:flex; gap:1rem"><a type="button" class="btn btn-xs btn-info" href="read.php?billet=' . $value['id_event'] . '" >&#128065;</a><a type="button" class="btn btn-xs btn-warning" href="edit.php?action=edit & id=' . $value['id_event'] . '">&#9998;</a><a type="button" class="btn btn-xs btn-danger" onclick="return confirm(`Êtes-vous sûr de vouloir supprimer l\'article ?`)" href="delete.php?type=billet&delete & id=' . $value['id_event'] . '">&#128465;</a></div>'; ?></td>
+                                '<div style="display:flex; gap:1rem"><a type="button" class="btn btn-xs btn-info" href="readevent.php?id_event=' . $value['id_event'] . '" >&#128065;</a><a type="button" class="btn btn-xs btn-warning" href="editevent.php?action=edit & id_event=' . $value['id_event'] . '">&#9998;</a><a type="button" class="btn btn-xs btn-danger" onclick="return confirm(`Êtes-vous sûr de vouloir supprimer l\'article ?`)" href="deleteevent.php?type=id_event&delete & id_event=' . $value['id_event'] . '">&#128465;</a></div>'; ?></td>
                         </tr>
                     <?php } ?>
                 </tbody>
@@ -73,7 +66,7 @@ if (!isset($_SESSION["login"])) {
         </div>
     </div>
 </body>
-<script src=" https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-                                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+<!-- <script src=" https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
 
 </html>

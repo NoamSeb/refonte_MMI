@@ -1,6 +1,7 @@
 <?php
+require_once('../model.php');
+$resultevent = detailEvent($_GET["id_event"]);
 session_start();
-include('../model.php');
 if (!isset($_SESSION["login"])) {
     header('location: ../index.php');
 }
@@ -15,10 +16,11 @@ if (!isset($_SESSION["login"])) {
     <title>Document</title>
     <link rel="stylesheet" href="../style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </head>
 
 <body>
+
+
     <!-- <header>
         <img src="../medias/user.png">
     </header> -->
@@ -32,19 +34,20 @@ if (!isset($_SESSION["login"])) {
             </ul>
         </nav>
         <div class="dashboard">
-
+            <h3>Évènements</h3>
             <?php
-            echo "<b>Bonjour " . $_SESSION['login'] . ". Quel plaisir de vous revoir !</b><br>";
+            foreach ($resultevent as $value) {
+                echo
+                '<article><h2>' . $value["nom_event"] . '</h2>' .
+                    '<h6>Publié le ' . $value["date_event"] . " par " . $value["auteur"] . '</h6>' .
+                    '<p>' . $value["contenu"] . '</p></article>';
+            }
             ?>
-            <p>Bienvenue sur le back-office du site du BUT MMI de Champs Sur Marne, où vous pouvez gérer projets, actualités et évènements.</p>
-            <div class="row">
-                <a href="projet.php">Voir les projets</a>
-                <a href="evenement.php">Voir les évènements</a>
-            </div>
+
         </div>
     </div>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<!-- <script src=" https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
 
 </html>

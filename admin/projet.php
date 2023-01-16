@@ -28,20 +28,13 @@ if (!isset($_SESSION["login"])) {
         <nav>
             <ul>
                 <li><a href="dashboard.php">Dashboard</a></li>
-                <li><a href="projet.php">Projet</a></li>
-                <li><a href="evenement.php">Evenements</a></li>
+                <li><a href="projet.php">Projets</a></li>
+                <li><a href="evenement.php">Évènements</a></li>
                 <li><a href="../controllers/logout.php">Déconnexion</a></li>
             </ul>
         </nav>
 
         <div class="dashboard">
-
-            <?php
-            echo ("Bonjour " . $_SESSION['login'] . ". Quel plaisir de vous revoir !");
-            ?>
-            <br>
-            <br>
-            <br>
             <h3>Projets</h3>
             <table>
                 <thead>
@@ -75,7 +68,7 @@ if (!isset($_SESSION["login"])) {
 
     </div>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
 
 </html>
