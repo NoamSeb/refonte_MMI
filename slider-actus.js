@@ -1,6 +1,7 @@
 let owl_events = $('.carousel-events');
 owl_events.owlCarousel({
     margin: 10,
+    nav:true,
     loop: true,
     autoplay: true,
     autoplayTimeout: 3000,
