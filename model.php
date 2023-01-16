@@ -25,4 +25,11 @@ function connectUser()
     }
     return false;
 }
+function getUser($id) {
+    $db = dbConnect();
+
+    $requete = "SELECT * FROM utilisateur WHERE id_user=$id";
+    $stmt = $db->query($requete);
+    $stmt->fetch(PDO::FETCH_ASSOC);
+}
 ?>
