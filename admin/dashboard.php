@@ -1,7 +1,7 @@
 <?php
 session_start();
 include('../model.php');
-if(!isset($_SESSION["login"])) {
+if (!isset($_SESSION["login"])) {
     header('location: ../index.php');
 }
 ?>
@@ -32,26 +32,15 @@ if(!isset($_SESSION["login"])) {
                 <li><a href="../controllers/logout.php">Déconnexion</a></li>
             </ul>
         </nav>
-        <?php
-        echo "Bonjour " . $_SESSION['login'] . ". Quel plaisir de vous revoir !";
-        ?>
-        <p>Dashboard</p>
         <div class="dashboard">
-            <div class="container align-items-center mt-2">
-                <div class="row">
-                    <div class="projet col-md-5 col-sm-5 rounded p-5 bg-secondary">
-                        <p class="text-white">Projet</p>
-                        <p class="text-white"><a href="projet.php">Voir les projets</a></p>
-                    </div>
-                    <div class="event col-md-5 col-sm-5 offset-md-2 rounded p-5 bg-secondary">
-                        <p class="text-white">Evenements</p>
-                        <p class="text-primary"><a href="evenement.php">Voir les évènements</a></p>
-                    </div>
-                    <div class="actu col-md-12 col-sm-12 rounded p-5 bg-secondary m1">
-                        <p class="text-white">Actualités</p>
-                        <p class="text-primary"><a href="actualite.php">Voir les Actualités</a></p>
-                    </div>
-                </div>
+
+            <?php
+            echo "<b>Bonjour " . $_SESSION['login'] . ". Quel plaisir de vous revoir !</b><br>";
+            ?>
+            <p>Bienvenue sur le back-office du site du BUT MMI de Champs Sur Marne, où vous pouvez gérer projets, actualités et évènements.</p>
+            <div class="row">
+                <a href="projet.php">Voir les projets</a>
+                <a href="evenement.php">Voir les évènements</a>
             </div>
         </div>
     </div>
