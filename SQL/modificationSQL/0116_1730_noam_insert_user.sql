@@ -1,0 +1,1 @@
+INSERT INTO utilisateur (login, password) VALUES (admin, $2y$10$B1GBS9gW7w3CfJI9hZHl9.TyI4cfZNFky4up9nNjzX8CBOlVAzn6G);
