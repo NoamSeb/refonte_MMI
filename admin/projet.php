@@ -57,16 +57,16 @@ if (!isset($_SESSION["login"])) {
                 </thead>
                 <tbody>
                     <?php
-                    foreach ($projets as $projets) { ?>
+                    foreach ($projets as $value) { ?>
                         <tr>
-                            <td><?= $projets['id_projet'] ?></td>
-                            <td><?= $projets['titre'] ?></td>
-                            <td><?= $projets['description'] ?></td>
-                            <td><?= $projets['auteur'] ?></td>
-                            <td><?= $projets['image'] ?></td>
-                            <td><?= $projets['ext_module'] ?></td>
+                            <td><?= $value['id_projet'] ?></td>
+                            <td><?= $value['titre'] ?></td>
+                            <td><?= $value['description'] ?></td>
+                            <td><?= $value['auteur'] ?></td>
+                            <td><?= $value['image'] ?></td>
+                            <td><?= $value['ext_module'] ?></td>
                             <td><?=
-                                '<div style="display:flex; gap:1rem"><a type="button" class="btn btn-xs btn-info" href="read.php?billet=' . $value['id_event'] . '" >&#128065;</a><a type="button" class="btn btn-xs btn-warning" href="edit.php?action=edit & id=' . $value['id_event'] . '">&#9998;</a><a type="button" class="btn btn-xs btn-danger" onclick="return confirm(`Êtes-vous sûr de vouloir supprimer l\'article ?`)" href="delete.php?type=billet&delete & id=' . $value['id_event'] . '">&#128465;</a></div>'; ?></td>
+                                '<div style="display:flex; gap:1rem"><a type="button" class="btn btn-xs btn-info" href="read.php?billet=' . $value['id_projet'] . '" >&#128065;</a><a type="button" class="btn btn-xs btn-warning" href="edit.php?action=edit & id=' . $value['id_projet'] . '">&#9998;</a><a type="button" class="btn btn-xs btn-danger" onclick="return confirm(`Êtes-vous sûr de vouloir supprimer l\'article ?`)" href="delete.php?type=billet&delete & id=' . $value['id_projet'] . '">&#128465;</a></div>'; ?></td>
                         </tr>
                     <?php } ?>
                 </tbody>

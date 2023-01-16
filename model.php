@@ -47,7 +47,7 @@ function getModules() {
 }
 function getProject(){
     $db = dbConnect();
-    $requete = "SELECT * FROM projet, modules WHERE ext_module=id_module";
+    $requete = "SELECT * FROM projet";
     $stmt = $db->query($requete);
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     return $result;
