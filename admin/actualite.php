@@ -1,4 +1,6 @@
 <?php
+require_once('../model.php');
+$actus = getActus();
 session_start();
 if(!isset($_SESSION["login"])) {
     header('location: ../index.php');
@@ -81,6 +83,33 @@ if(!isset($_SESSION["login"])) {
         echo ("Bonjour " . $_SESSION['login'] . ". Quel plaisir de vous revoir !");
         ?>
         <p>Page Actualités</p>
+        <br>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2">Évènements</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Id</th>
+                    <th>Nom</th>
+                    <th>Description</th>
+                    <th>Date</th>
+                    <th>Image</th>
+                </tr>
+                <?php
+                foreach ($events as $event) { ?>
+                    <tr>
+                        <td><?= $event['id_event'] ?></td>
+                        <td><?= $event['nom_event'] ?></td>
+                        <td><?= $event['description_event'] ?></td>
+                        <td><?= $event['date_event'] ?></td>
+                        <td><?= $event['img_event'] ?></td>
+                    </tr>
+                <?php } ?>
+            </tbody>
+        </table>
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
