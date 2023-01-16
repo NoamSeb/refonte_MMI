@@ -141,7 +141,7 @@ a:focus {
 
 ul {
     list-style-type: none;
-    padding: 0;
+    padding-left: 0 !important;
 }
 
 header {

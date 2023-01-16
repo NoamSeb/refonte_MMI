@@ -27,36 +27,26 @@ include('../model.php');
         height: 5vw;
     }
 
-    nav {
-        background-color: black;
-        height: 100vh;
-        width: 20vw;
-        float: left;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    nav ul {
-        height: 90%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-
-    ul{
-        text-decoration: none;
-        text-align: center;
-    }
-
     .backoffice {
         width: 100%;
     }
-    .backoffice a {
+
+    .backoffice nav {
+        padding: 2rem;
+        background-color: black;
+        height: 100vh;
+        width: 17rem;
+        float: left;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .backoffice ul a {
         color: white;
+        line-height: 2rem;
         text-decoration: none;
     }
+
 </style>
 
 <body>
@@ -65,6 +55,7 @@ include('../model.php');
     </header>
     <div class="backoffice">
         <nav>
+            <h3>Tableau de bord</h3>
             <ul>
                 <li><a href="dashboard.php">Dashboard</a></li>
                 <li><a href="projet.php">Projet</a></li>
