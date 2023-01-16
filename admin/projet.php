@@ -2,7 +2,7 @@
 require_once('../model.php');
 $projets = getProject();
 session_start();
-if(!isset($_SESSION["login"])) {
+if (!isset($_SESSION["login"])) {
     header('location: ../index.php');
 }
 ?>
@@ -38,8 +38,7 @@ if(!isset($_SESSION["login"])) {
         ?>
         <p>Page Projet</p>
         <br>
-        <?php
-        foreach($projets as $p){?>
+
         <table>
             <thead>
                 <tr>
@@ -55,17 +54,21 @@ if(!isset($_SESSION["login"])) {
                     <th>Image</th>
                     <th>Module</th>
                 </tr>
-                <tr>
-                    <td><?php $p['id_projet']?></td>
-                    <td><?php $p['titre']?></td>
-                    <td><?php $p['description']?></td>
-                    <td><?php $p['auteur']?></td>
-                    <td><?php $p['image']?></td>
-                    <td><?php $p['ext_module']?></td>
-                </tr>
+                <?php
+                foreach ($projets as $projets) { ?>
+                    <tr>
+                        <td><?= $projets['id_projet'] ?></td>
+                        <td><?= $projets['titre'] ?></td>
+                        <td><?= $projets['description'] ?></td>
+                        <td><?= $projets['auteur'] ?></td>
+                        <td><?= $projets['image'] ?></td>
+                        <td><?= $projets['ext_module'] ?></td>
+                    </tr>
+                <?php } ?>
             </tbody>
         </table>
-        <?php }?>
+
+
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
