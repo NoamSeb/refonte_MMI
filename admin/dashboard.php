@@ -1,5 +1,6 @@
 <?php
 session_start();
+include('../model.php');
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -27,47 +28,35 @@ session_start();
         height: 5vw;
     }
 
-    nav {
-        background-color: black;
-        height: 100vh;
-        width: 20vw;
-        float: left;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    nav ul {
-        height: 90%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-
-    ul {
-        text-decoration: none;
-        text-align: center;
-    }
-
     .backoffice {
         width: 100%;
     }
 
-    .backoffice a {
+    .backoffice nav {
+        padding: 2rem;
+        background-color: black;
+        height: 100vh;
+        width: 17rem;
+        float: left;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .backoffice ul a {
         color: white;
+        line-height: 2rem;
         text-decoration: none;
     }
+
 </style>
 
 <body>
-
-
     <header>
         <img src="../medias/user.png">
     </header>
     <div class="backoffice">
         <nav>
+            <h3>Tableau de bord</h3>
             <ul>
                 <li><a href="dashboard.php">Dashboard</a></li>
                 <li><a href="projet.php">Projet</a></li>
@@ -77,7 +66,7 @@ session_start();
             </ul>
         </nav>
         <?php
-        echo ("Bonjour " . $_SESSION['login'] . ". Quel plaisir de vous revoir !");
+        echo "Bonjour " . $_SESSION['login'] . ". Quel plaisir de vous revoir !";
         ?>
         <p>Dashboard</p>
         <div class="dashboard">
