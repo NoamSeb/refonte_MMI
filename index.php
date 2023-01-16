@@ -239,7 +239,7 @@
 <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script>
 
 <script src="countDown.js"></script>
-<script src="slider-actus.js"></script>
+<script src="slider-actus.js" defer></script>
 
 <script>
     ScrollOut({
