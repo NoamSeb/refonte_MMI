@@ -812,6 +812,37 @@ footer {
     text-decoration: none;
 }
 
+.backoffice table {
+    margin-top: 2rem;
+    border-spacing: 0;
+    border-radius: 20px;
+    background-color: transparent;
+    border-collapse: separate;
+    border: 1px solid rgba(0, 0, 0, 0.146);
+    width: 100%;
+}
+
+.backoffice td,
+.backoffice th {
+    padding: 0.5rem 1rem;
+    text-align: left;
+    border-top: 1px solid rgba(0, 0, 0, 0.146);
+    border-left: 1px solid rgba(0, 0, 0, 0.146);
+}
+
+
+.backoffice th {
+    border-top: none;
+}
+
+.backoffice td:first-child,
+.backoffice th:first-child {
+    text-align: center;
+    border-left: none;
+    color: #555555;
+}
+
+
 /* responsive */
 
 @media screen and (max-width:1280px) {

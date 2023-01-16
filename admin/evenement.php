@@ -15,7 +15,7 @@ if (!isset($_SESSION["login"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
 </head>
 
 <body>
@@ -39,30 +39,32 @@ if (!isset($_SESSION["login"])) {
             <?php
             echo ("Bonjour " . $_SESSION['login'] . ". Quel plaisir de vous revoir !");
             ?>
-            <p>Page Évènements</p>
+            <br> <br>
             <br>
+
+            <h3>Evenements</h3>
             <table>
                 <thead>
-                    <tr>
-                        <th colspan="2">Évènements</th>
-                    </tr>
-                </thead>
-                <tbody>
                     <tr>
                         <th>Id</th>
                         <th>Nom</th>
                         <th>Description</th>
                         <th>Date</th>
                         <th>Image</th>
+                        <th>Options</th>
                     </tr>
+
+                </thead>
+                <tbody>
                     <?php
                     foreach ($events as $event) { ?>
                         <tr>
                             <td><?= $event['id_event'] ?></td>
                             <td><?= $event['nom_event'] ?></td>
-                            <td><?= $event['description_event'] ?></td>
+                            <td><?= mb_strimwidth($event['description_event'], 0, 200, "...") ?></td>
                             <td><?= $event['date_event'] ?></td>
                             <td><?= $event['img_event'] ?></td>
+                            <td></td>
                         </tr>
                     <?php } ?>
                 </tbody>

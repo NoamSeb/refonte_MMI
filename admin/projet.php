@@ -39,24 +39,23 @@ if (!isset($_SESSION["login"])) {
             <?php
             echo ("Bonjour " . $_SESSION['login'] . ". Quel plaisir de vous revoir !");
             ?>
-            <p>Page Projet</p>
             <br>
-
+            <br>
+            <br>
+            <h3>Projets</h3>
             <table>
                 <thead>
-                    <tr>
-                        <th colspan="2">Projets</th>
-                    </tr>
-                </thead>
-                <tbody>
                     <tr>
                         <th>Id</th>
                         <th>Titre</th>
                         <th>Description</th>
                         <th>Auteur</th>
                         <th>Image</th>
-                        <th>Module</th>
+                        <th>Modules liés</th>
+                        <th>Options</th>
                     </tr>
+                </thead>
+                <tbody>
                     <?php
                     foreach ($projets as $projets) { ?>
                         <tr>
@@ -66,6 +65,7 @@ if (!isset($_SESSION["login"])) {
                             <td><?= $projets['auteur'] ?></td>
                             <td><?= $projets['image'] ?></td>
                             <td><?= $projets['ext_module'] ?></td>
+                            <td></td>
                         </tr>
                     <?php } ?>
                 </tbody>
