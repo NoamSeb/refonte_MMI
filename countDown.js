@@ -92,8 +92,8 @@ var x = setInterval(function() {
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     // Display the result in the element with id="demo"
-    document.getElementById("header--countDown").innerHTML = days + " JOURS " + hours + " HEURES " +
-        minutes + " MINUTES " + seconds + " SECONDES ";
+    document.getElementById("header--countDown").innerHTML = days + '<span class="black-light"> Jours </span>' + hours + '<span class="black-light"> : </span>' +
+        minutes + '<span class="black-light"> min </span>' + seconds + '<span class="black-light"> sec </span>';
 
     // If the count down is finished, write some text
     if (distance < 0) {

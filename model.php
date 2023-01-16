@@ -43,8 +43,21 @@ function getUser($id) {
 }
 
 function getModules() {
-    
+    $db = dbConnect();
+    $requete = "SELECT * FROM modules";
+    $stmt = $db->query($requete);
+    $stmt = $stmt->fetchall(PDO::FETCH_ASSOC);   
+    return $stmt;  
 }
+
+function getEvent(){
+    $db = dbConnect();
+    $requete = 'SELECT * FROM evenements ORDER BY date_event DESC';
+    $stmt = $db->query($requete);
+    $stmt = $stmt->fetchall(PDO::FETCH_ASSOC); 
+    return $stmt;
+}
+
 function getProject(){
     $db = dbConnect();
     $requete = "SELECT * FROM projet";
