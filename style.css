@@ -605,8 +605,8 @@ footer {
     height: 100vh;
 }
 
-.owl-prev,
-.owl-next {
+.carousel-competences .owl-prev,
+.carousel-competences .owl-next {
     position: absolute;
     top: 75%;
     transform: translateY(-50%);
@@ -616,16 +616,16 @@ footer {
     border-radius: 50%;
 }
 
-.owl-next span,
-.owl-prev span {
+.carousel-competences .owl-next span,
+.carousel-competences .owl-prev span {
     font-size: 3rem;
 }
 
-.owl-prev {
+.carousel-competences .owl-prev {
     right: 20vw;
 }
 
-.owl-next {
+.carousel-competences .owl-next {
     right: 10vw;
 }
 
