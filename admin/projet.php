@@ -65,7 +65,8 @@ if (!isset($_SESSION["login"])) {
                             <td><?= $projets['auteur'] ?></td>
                             <td><?= $projets['image'] ?></td>
                             <td><?= $projets['ext_module'] ?></td>
-                            <td></td>
+                            <td><?=
+                                '<div style="display:flex; gap:1rem"><a type="button" class="btn btn-xs btn-info" href="read.php?billet=' . $value['id_event'] . '" >&#128065;</a><a type="button" class="btn btn-xs btn-warning" href="edit.php?action=edit & id=' . $value['id_event'] . '">&#9998;</a><a type="button" class="btn btn-xs btn-danger" onclick="return confirm(`Êtes-vous sûr de vouloir supprimer l\'article ?`)" href="delete.php?type=billet&delete & id=' . $value['id_event'] . '">&#128465;</a></div>'; ?></td>
                         </tr>
                     <?php } ?>
                 </tbody>
