@@ -1,6 +1,5 @@
 <?php
 require_once('../model.php');
-$resultevent = detailEvent($_GET["id_event"]);
 session_start();
 if (!isset($_SESSION["login"])) {
     header('location: ../index.php');
@@ -30,14 +29,15 @@ if (!isset($_SESSION["login"])) {
             </ul>
         </nav>
         <div class="dashboard">
-            <h3>Évènements</h3>
             <?php
-            foreach ($resultevent as $value) {
-                echo
-                '<article><h2>' . $value["titre"] . '</h2>' .
-                    '<h6>Publié le ' . date('M d, Y', strtotime($value["date_creation"])) . " par " . $value["auteur"] . '</h6>' .
-                    '<p>' . $value["contenu"] . '</p></article>';
-            } ?>
+            $db = dbConnect();
+            $requete = 'DELETE FROM evenements WHERE id_event = ' . $_GET['id_event'];
+            $db->query($requete);
+            ?>
+            <script type="text/javascript">
+                alert("Article supprimé avec succès.");
+                window.location = "evenement.php";
+            </script>
 
         </div>
     </div>

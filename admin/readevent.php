@@ -34,13 +34,20 @@ if (!isset($_SESSION["login"])) {
             </ul>
         </nav>
         <div class="dashboard">
-            <h3>Évènements</h3>
+        <div class="spacebetween">
+            <a class="ariane" href="javascript:history.go(-1)">Retour à la page précédente</a>
+            <?php
+                    foreach ($resultevent as $value) {
+                        echo '<div><a type="button" class="btn btn-warning" href="editevent.php?action=edit & id_event=' . $value['id_event'] . '">&#9998; MODIFIER</a>&nbsp;&nbsp;<a type="button" class="btn btn-danger" onclick="openPopup()">&#128465; SUPPRIMER</a></div>';
+                    };
+            ?>
+        </div>
             <?php
             foreach ($resultevent as $value) {
                 echo
                 '<article><h2>' . $value["nom_event"] . '</h2>' .
-                    '<h6>Publié le ' . $value["date_event"] . " par " . $value["auteur"] . '</h6>' .
-                    '<p>' . $value["contenu"] . '</p></article>';
+                    '<h6>Publié le ' . $value["date_event"] . '</h6>' .
+                    '<p>' . $value["description_event"] . '</p></article>';
             }
             ?>
 
