@@ -59,10 +59,3 @@ function getEvents(){
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     return $result;
 }
-function getActus(){
-    $db = dbConnect();
-    $requete = "SELECT * FROM actus";
-    $stmt = $db->query($requete);
-    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    return $result;
-}

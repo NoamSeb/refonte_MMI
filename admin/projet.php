@@ -15,8 +15,9 @@ if (!isset($_SESSION["login"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
 </head>
+
 <body>
 
 
@@ -29,45 +30,47 @@ if (!isset($_SESSION["login"])) {
                 <li><a href="dashboard.php">Dashboard</a></li>
                 <li><a href="projet.php">Projet</a></li>
                 <li><a href="evenement.php">Evenements</a></li>
-                <li><a href="actualite.php">Actualités</a></li>
                 <li><a href="../controllers/logout.php">Déconnexion</a></li>
             </ul>
         </nav>
-        <?php
-        echo ("Bonjour " . $_SESSION['login'] . ". Quel plaisir de vous revoir !");
-        ?>
-        <p>Page Projet</p>
-        <br>
 
-        <table>
-            <thead>
-                <tr>
-                    <th colspan="2">Projets</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th>Id</th>
-                    <th>Titre</th>
-                    <th>Description</th>
-                    <th>Auteur</th>
-                    <th>Image</th>
-                    <th>Module</th>
-                </tr>
-                <?php
-                foreach ($projets as $projets) { ?>
+        <div class="dashboard">
+
+            <?php
+            echo ("Bonjour " . $_SESSION['login'] . ". Quel plaisir de vous revoir !");
+            ?>
+            <p>Page Projet</p>
+            <br>
+
+            <table>
+                <thead>
                     <tr>
-                        <td><?= $projets['id_projet'] ?></td>
-                        <td><?= $projets['titre'] ?></td>
-                        <td><?= $projets['description'] ?></td>
-                        <td><?= $projets['auteur'] ?></td>
-                        <td><?= $projets['image'] ?></td>
-                        <td><?= $projets['ext_module'] ?></td>
+                        <th colspan="2">Projets</th>
                     </tr>
-                <?php } ?>
-            </tbody>
-        </table>
-
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Id</th>
+                        <th>Titre</th>
+                        <th>Description</th>
+                        <th>Auteur</th>
+                        <th>Image</th>
+                        <th>Module</th>
+                    </tr>
+                    <?php
+                    foreach ($projets as $projets) { ?>
+                        <tr>
+                            <td><?= $projets['id_projet'] ?></td>
+                            <td><?= $projets['titre'] ?></td>
+                            <td><?= $projets['description'] ?></td>
+                            <td><?= $projets['auteur'] ?></td>
+                            <td><?= $projets['image'] ?></td>
+                            <td><?= $projets['ext_module'] ?></td>
+                        </tr>
+                    <?php } ?>
+                </tbody>
+            </table>
+        </div>
 
     </div>
 </body>

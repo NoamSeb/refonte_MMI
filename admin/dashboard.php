@@ -28,7 +28,6 @@ if (!isset($_SESSION["login"])) {
                 <li><a href="dashboard.php">Dashboard</a></li>
                 <li><a href="projet.php">Projet</a></li>
                 <li><a href="evenement.php">Evenements</a></li>
-                <li><a href="actualite.php">Actualités</a></li>
                 <li><a href="../controllers/logout.php">Déconnexion</a></li>
             </ul>
         </nav>
