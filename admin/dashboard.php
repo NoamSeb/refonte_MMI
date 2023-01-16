@@ -1,6 +1,9 @@
 <?php
 session_start();
 include('../model.php');
+if(!isset($_SESSION["login"])) {
+    header('location: ../index.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">

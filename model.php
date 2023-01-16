@@ -8,24 +8,32 @@ function dbConnect()
     return $db;
 }
 
-function connectUser()
+function logIn()
 {
     $db = dbConnect();
-    $requete = "SELECT * FROM utilisateur where login=:login";
+    $db->query('SET NAMES utf8');
+
+    // requete préparée :
+    $requete = "SELECT * FROM utilisateur WHERE login=:login";
     $stmt = $db->prepare($requete);
     $stmt->bindParam(':login', $_POST["login"], PDO::PARAM_STR);
     $stmt->execute();
 
-
-    if ($stmt->rowCount() == 1) {
-        $user = $stmt->fetch(PDO::FETCH_ASSOC);
-        if (password_verify($_POST['password'], $user['password'])) {
-            return $user;
+    if ($stmt->rowcount() == 1) {
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        if (password_verify($_POST["password"], $result["password"])) {
+            $_SESSION["login"] = $_POST["login"];
+            $_SESSION["id_user"] = $result["id_user"];
+            return 1;
+        } else {
+            return 2;
         }
-        return false;
+    } else {
+        return 3;
     }
-    return false;
+
 }
+
 function getUser($id) {
     $db = dbConnect();
 
@@ -37,4 +45,5 @@ function getUser($id) {
 function getModules() {
     
 }
-?>
+
+

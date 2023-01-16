@@ -1,25 +1,23 @@
-<!DOCTYPE html>
-<html lang="fr">
+<?php session_start();
+include('./model.php');
+include("./connexion.php");
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-<form  action="./controllers/login.php" method="POST">
-        <label for="name">Entrez votre Login :</label>
-        <input type="text" id="login" name="login">
-        <label for="name">Entrez votre mot de passe :</label>
-        <input type="password" id="PWD" name="password">
-        <input type="submit">
-    </form>
-    <?php if(isset($result) && ($result==false)){
-            echo("Utilisateur ou mot de passe incorrect.");
-        }
-    ?>
-</body>
-
-</html>
+if(isset($_GET["action"]) && $_GET["action"] == 'login') {
+	if (isset($_POST["allez"])) {
+	$login = logIn();
+	switch ($login) {
+		case 1:
+			header('Location:./admin/dashboard.php');
+			break;
+		case 2:
+			$err = "password";
+			// header('Location:login.php?action=login&err=password');
+			break;
+		case 3:
+			$err = "login";
+			// header('Location:login.php?action=login&err=username');
+			break;
+	}}
+};
+include('./vuelogin.php');
+?>
