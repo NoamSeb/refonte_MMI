@@ -3,6 +3,7 @@
 function dbConnect()
 {
     $db = new PDO('mysql:host=localhost;dbname=refonte_mmi;port:3306', 'root', 'root');
+    $db->query('SET NAMES utf8mb4');
     return $db;
 }
 
