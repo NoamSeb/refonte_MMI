@@ -70,10 +70,10 @@ if(!isset($_SESSION["login"])) {
     <div class="backoffice">
         <nav>
             <ul>
-                <li><a href="">Dashboard</a></li>
-                <li><a href="">Projet</a></li>
-                <li><a href="">Évènements</a></li>
-                <li><a href="">Actualités</a></li>
+            <li><a href="dashboard.php">Dashboard</a></li>
+                <li><a href="projet.php">Projet</a></li>
+                <li><a href="evenement.php">Evenements</a></li>
+                <li><a href="actualite.php">Actualités</a></li>
                 <li><a href="../controllers/logout.php">Déconnexion</a></li>
             </ul>
         </nav>
