@@ -2,7 +2,8 @@
 
 function dbConnect()
 {
-    $db = new PDO('mysql:host=localhost;dbname=refonte_mmi;port:3306', 'root', 'root');
+    // $db = new PDO('mysql:host=localhost;dbname=refonte_mmi;port:3306', 'root', 'root');
+    require('connexion.php');
     $db->query('SET NAMES utf8mb4');
     return $db;
 }
@@ -31,5 +32,9 @@ function getUser($id) {
     $requete = "SELECT * FROM utilisateur WHERE id_user=$id";
     $stmt = $db->query($requete);
     $stmt->fetch(PDO::FETCH_ASSOC);
+}
+
+function getModules() {
+    
 }
 ?>
