@@ -17,58 +17,13 @@ if (!isset($_SESSION["login"])) {
     <link rel="stylesheet" href="../style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
-<style>
-    header {
-        height: fit-content;
-    }
-
-    header img {
-        float: right;
-    }
-
-    img {
-        width: 5vw;
-        height: 5vw;
-    }
-
-    nav {
-        background-color: black;
-        height: 100vh;
-        width: 20vw;
-        float: left;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    nav ul {
-        height: 90%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-
-    ul{
-        text-decoration: none;
-        text-align: center;
-    }
-
-    .backoffice {
-        width: 100%;
-    }
-    .backoffice a {
-        color: white;
-        text-decoration: none;
-    }
-</style>
 
 <body>
 
 
-    <header>
+    <!-- <header>
         <img src="../medias/user.png">
-    </header>
+    </header> -->
     <div class="backoffice">
         <nav>
             <ul>

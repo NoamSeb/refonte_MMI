@@ -17,49 +17,13 @@ if(!isset($_SESSION["login"])) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </head>
-<style>
-    header {
-        height: fit-content;
-    }
-
-    header img {
-        float: right;
-    }
-
-    img {
-        width: 5vw;
-        height: 5vw;
-    }
-
-    .backoffice {
-        width: 100%;
-    }
-
-    .backoffice nav {
-        padding: 2rem;
-        background-color: black;
-        height: 100vh;
-        width: 17rem;
-        float: left;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .backoffice ul a {
-        color: white;
-        line-height: 2rem;
-        text-decoration: none;
-    }
-
-</style>
 
 <body>
-    <header>
+    <!-- <header>
         <img src="../medias/user.png">
-    </header>
+    </header> -->
     <div class="backoffice">
         <nav>
-            <h3>Tableau de bord</h3>
             <ul>
                 <li><a href="dashboard.php">Dashboard</a></li>
                 <li><a href="projet.php">Projet</a></li>

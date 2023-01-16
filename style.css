@@ -782,6 +782,30 @@ footer {
 }
 
 
+
+
+/* admin */
+
+.backoffice {
+    width: 100%;
+}
+
+.backoffice nav {
+    padding: 2rem;
+    background-color: black;
+    height: 100vh;
+    width: 17rem;
+    float: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.backoffice ul a {
+    color: white;
+    line-height: 2rem;
+    text-decoration: none;
+}
+
 /* responsive */
 
 @media screen and (max-width:1280px) {
