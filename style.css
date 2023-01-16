@@ -48,7 +48,7 @@
 
 /* DM Sans, sans-serif */
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Inter:wght@500;600;700;800&display=swap');
 :root {
     --color-black: #0a0a0a;
     --color-white: #f5f5f5;
@@ -143,7 +143,7 @@ a:focus {
 
 ul {
     list-style-type: none;
-    padding: 0;
+    padding-left: 0 !important;
 }
 
 header {
@@ -1045,6 +1045,63 @@ footer {
 .seeMore {
     margin-top: 4rem;
     margin-bottom: 8rem;
+}
+
+
+/* admin */
+
+.backoffice {
+    width: 100%;
+    display: flex;
+}
+
+.backoffice .dashboard {
+    padding: 2rem;
+    width: 100%;
+}
+
+.backoffice nav {
+    padding: 2rem;
+    background-color: black;
+    height: 100vh;
+    width: 17rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.backoffice ul a {
+    color: white;
+    line-height: 2rem;
+    text-decoration: none;
+}
+
+.backoffice table {
+    margin-top: 2rem;
+    border-spacing: 0;
+    border-radius: 20px;
+    background-color: transparent;
+    border-collapse: separate;
+    border: 1px solid rgba(0, 0, 0, 0.146);
+    width: 100%;
+}
+
+.backoffice td,
+.backoffice th {
+    padding: 0.5rem 1rem;
+    text-align: left;
+    border-top: 1px solid rgba(0, 0, 0, 0.146);
+    border-left: 1px solid rgba(0, 0, 0, 0.146);
+}
+
+.backoffice th {
+    border-top: none;
+}
+
+.backoffice td:first-child,
+.backoffice th:first-child {
+    text-align: center;
+    border-left: none;
+    color: #555555;
 }
 
 
