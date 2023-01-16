@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet"
+        href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.theme.default.min.css">
+</head>
+<style>
+    /* section {
+        width: 100%;
+        overflow-x: hidden;
+        margin: 0 auto;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    span {
+        font-size: 2em;
+        cursor: pointer;
+        display: none;
+    }
+
+    main {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1rem;
+    } */
+
+    /* main div {
+        width: 10%;
+        height: 350px;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+    .slide {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .slide li {
+        padding: 10px;
+        border: 2px solid #1c1c1c;
+        border-radius: 50%;
+        margin-right: 0.8em;
+    }
+
+    .fived {
+        margin-right: 0;
+    } */
+
+    /* .accordion-focused {
+        width: 50%;
+    }
+
+    .accordion-slide {
+        background-color: #1c1c1c;
+        width: 20vw;
+    } */
+
+
+    /* .owl-projets .item {
+        background: #42bdc2;
+        padding: 30px 0px;
+        margin: 10px;
+        color: #FFF;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        text-align: center;
+    }
+
+    .owl-projets .owl-item {
+        width: 10vw !important;
+        display: block;
+        height: auto;
+    }
+
+    .owl-projets .owl-item.active {
+        width: 60vw !important;
+    } */
+
+
+
+    .owl-item>div {
+        cursor: pointer;
+        margin: 6% 8%;
+        transition: margin 0.4s ease;
+    }
+
+    .owl-item.center>div {
+        cursor: auto;
+        margin: 0;
+    }
+
+    .owl-item:not(.center)>div:hover {
+        opacity: .75;
+    }
+</style>
+
+<body>
+    <!-- <section>
+        <span class="prev fas fa-chevron-left">left</span>
+        <main class="accordion">
+            <div class="accordion-slide accordion-focused" alt=""></div>
+            <div class="accordion-slide" alt=""></div>
+            <div class="accordion-slide" alt=""></div>
+            <div class="accordion-slide" alt=""></div>
+            <div class="accordion-slide" alt=""></div>
+            <div class="accordion-slide" alt=""></div>
+            <div class="accordion-slide" alt=""></div>
+            <div class="accordion-slide" alt=""></div>
+            <div class="accordion-slide" alt=""></div>
+            <div class="accordion-slide" alt=""></div>
+            <div class="accordion-slide" alt=""></div>
+
+            <div class="accordion-slide" alt=""></div>
+            <div class="accordion-slide" alt=""></div>
+            <div class="accordion-slide" alt=""></div>
+            <div class="accordion-slide" alt=""></div>
+            <div class="accordion-slide" alt=""></div>
+        </main>
+        <span class="next fas fa-chevron-right">right</span>
+    </section> 
+    <ul class="slide">
+        <li class="oned b"></li>
+        <li class="twod"></li>
+        <li class="thred"></li>
+        <li class="fourd"></li>
+        <li class="fived"></li>
+    </ul>
+    
+    <div class="owl-projets owl-carousel owl-theme">
+
+        <div class="item">
+            <h1>1</h1>
+        </div>
+        <div class="item">
+            <h1>2</h1>
+        </div>
+        <div class="item">
+            <h1>3</h1>
+        </div>
+        <div class="item">
+            <h1>4</h1>
+        </div>
+        <div class="item">
+            <h1>5</h1>
+        </div>
+        <div class="item">
+            <h1>6</h1>
+        </div>
+        <div class="item">
+            <h1>7</h1>
+        </div>
+        <div class="item">
+            <h1>8</h1>
+        </div>
+        <div class="item">
+            <h1>9</h1>
+        </div>
+        <div class="item">
+            <h1>10</h1>
+        </div>
+        <div class="item">
+            <h1>11</h1>
+        </div>
+        <div class="item">
+            <h1>12</h1>
+        </div>
+    </div> -->
+
+
+    <div class="container">
+        <div class="owl-projets">
+            <div><img src="https://via.placeholder.com/400x300/f06/fff/?text=1" alt=""></div>
+            <div><img src="https://via.placeholder.com/400x300/f63/fff/?text=2" alt=""></div>
+            <div><img src="https://via.placeholder.com/400x300/fc3/fff/?text=3" alt=""></div>
+            <div><img src="https://via.placeholder.com/400x300/693/fff/?text=4" alt=""></div>
+            <div><img src="https://via.placeholder.com/400x300/3cc/fff/?text=5" alt=""></div>
+            <div><img src="https://via.placeholder.com/400x300/369/fff/?text=6" alt=""></div>
+            <div><img src="https://via.placeholder.com/400x300/936/fff/?text=7" alt=""></div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+
+    $(document).ready(function () {
+        let $owl = $('.owl-projets');
+
+        $owl.children().each(function (index) {
+            $(this).attr('data-position', index); // NB: .attr() instead of .data()
+        });
+
+        $owl.owlCarousel({
+            center: true,
+            loop: true,
+            items: 5,
+        });
+
+        $(document).on('click', '.owl-item>div', function () {
+            // see https://owlcarousel2.github.io/OwlCarousel2/docs/api-events.html#to-owl-carousel
+            var $speed = 300;  // in ms
+            $owl.trigger('to.owl.projets', [$(this).data('position'), $speed]);
+        });
+
+    });
+
+    // $(document).ready(function () {
+
+    //     let owl_projets = $('.owl-projets');
+    //     owl_projets.owlCarousel({
+    //         margin: 10,
+    //         loop: true,
+    //         nav: true,
+    //         autoplay: false,
+            // autoplayTimeout: 3000,
+            // dots: true,
+            // responsive: {
+            //     0: {
+            //         items: 1
+            //     },
+            //     600: {
+            //         items: 1
+            //     },
+            //     1000: {
+            //         items: 1
+            //     }
+            // }
+
+    //     });
+
+    // });
+
+    // let owl_projets = $('.owl-projets');
+    // owl_projets.owlCarousel({
+    //     navigation: true, // Show next and prev buttons
+
+    //     slideSpeed: 300,
+    //     paginationSpeed: 400,
+
+    //     items: 1,
+    //     itemsDesktop: false,
+    //     itemsDesktopSmall: false,
+    //     itemsTablet: false,
+    //     itemsMobile: false,
+
+    //     margin: 10,
+    //     nav: true,
+    //     autoplay: true,
+    //     autoplayTimeout: 3000,
+    //     autoplayHoverPause: true,
+    //     animateOut: 'fadeOut',
+    //     dots: false,
+    //     responsive: {
+    //         0: {
+    //             items: 1
+    //         },
+    //         600: {
+    //             items: 1
+    //         },
+    //         1000: {
+    //             items: 1
+    //         }
+    //     }
+
+
+    //     // margin: 10,
+    //     // nav: true,
+    //     // items: 1,
+    //     // loop: true,
+    //     // autoplay: true,
+    //     // autoplayTimeout: 3000,
+    //     // autoplayHoverPause: true,
+    //     // itemsDesktop: false,
+    //     // itemsDesktopSmall: false,
+    //     // itemsTablet: false,
+    //     // itemsMobile: false,
+    //     // responsive: {
+    //     //     0: {
+    //     //         items: 1
+    //     //     },
+    //     //     600: {
+    //     //         items: 3
+    //     //     },
+    //     //     1000: {
+    //     //         items: 6
+    //     //     }
+    //     // }
+    // })
+</script>
+
+
+
+
+<!-- <script>
+
+    let data = $(".accordion .accordion-slide");
+
+    $(function () {
+        let i = 0;
+        function change() {
+            ++i;
+            $($("main div")[i - 1]).animate({ width: "20vw" }, 0.01).removeClass("accordion-focused");
+            // $($('.slide li')[i - 1]).removeClass("b");
+            if (i == data.length) {
+                i = 0;
+            }
+            $($("main div")[i]).animate({ width: "50vw" }).addClass("accordion-focused");
+            // $($('.slide li')[i]).addClass("b");
+        }
+        var a = setInterval(change, 2000);
+
+        let j = 0;
+        $('main div').click(function () {
+            clearInterval(a);
+            j = $(this).index();
+            if (j != 0 || j != 4) {
+                $('span').removeClass('c');
+            }
+            if ($(this).hasClass("accordion-focused")) { }
+            else {
+                $('main div').animate({ width: "20vw" }, 0.5).removeClass('accordion-focused');
+                // $('.slide li').removeClass('b');
+                $(this).animate({ width: "50vw" }, 200).addClass('accordion-focused');
+                // $($('.slide li')[$(this).index()]).addClass('b');
+            }
+        });
+
+        $('span').click(function () {
+            clearInterval(a);
+            j = $('.accordion-focused').index();
+            if (j == 0 && $(this).hasClass('prev')) {
+                $($('main div')[0]).animate({ width: "20vw" }, 0.01).removeClass("accordion-focused")
+                // $($('.slide li')[0]).removeClass("b");
+                $($('main div')[4]).animate({ width: "50vw" }, 200).addClass("accordion-focused")
+                // $($('.slide li')[4]).addClass("b");
+            }
+            else if (j == 4 && $(this).hasClass('next')) {
+                $($('main div')[4]).animate({ width: "20vw" }, 0.01).removeClass("accordion-focused")
+                // $($('.slide li')[4]).removeClass("b");
+                $($('main div')[0]).animate({ width: "50vw" }, 200).addClass("accordion-focused")
+                // $($('.slide li')[0]).addClass("b");
+            }
+            else {
+                if ($(this).hasClass("prev")) {
+                    $($('main div')[j]).animate({ width: "20vw" }, 0.01).removeClass("accordion-focused")
+                    // $($('.slide li')[j]).removeClass("b");
+                    $($('main div')[j - 1]).animate({ width: "50vw" }, 200).addClass("accordion-focused")
+                    // $($('.slide li')[j - 1]).addClass("b");
+                }
+                else {
+                    $($('main div')[j]).animate({ width: "20vw" }, 0.01).removeClass("accordion-focused")
+                    // $($('.slide li')[j]).removeClass("b");
+                    $($('main div')[j + 1]).animate({ width: "50vw" }, 200).addClass("accordion-focused")
+                    // $($('.slide li')[j + 1]).addClass("b");
+                }
+            }
+
+        });
+
+    });
+</script> -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+</html>
