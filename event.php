@@ -140,4 +140,10 @@ $result = $stmt->fetchall(PDO::FETCH_ASSOC);
     </footer>
 </body>
 
+<script>
+    ScrollOut({
+        cssProps: true,
+        threshold: 0.2,
+    });
+</script>
 </html>

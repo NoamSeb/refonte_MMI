@@ -189,4 +189,5 @@ $module = $res->fetchAll(PDO::FETCH_ASSOC);
 <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script>
 <script src="slider-actus.js" defer></script>
 <script src="sliders.js" defer></script>
+
 </html>

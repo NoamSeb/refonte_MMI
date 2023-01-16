@@ -112,4 +112,5 @@ foreach ($result as $r) { ?>
 
     </footer>
 </body>
+
 </html>
