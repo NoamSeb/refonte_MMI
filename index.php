@@ -179,10 +179,10 @@
 
             <div class="row">
                 <div class="large-12 columns">
-                    <div class="owl-carousel owl-theme">
+                    <div class="carousel-events owl-carousel owl-theme">
                         <?php foreach($result as $row) {
                             echo '<div class="item">';
-                            echo '<img src="'.$row['img_event'].'" alt="">';
+                            // echo '<img src="'.$row['img_event'].'" alt="">';
                             echo '<h2>'.$row['nom_event'].'</h2>';
                             echo '<p>'.$row['date_event'].'</p>';
                             echo '</div>';};
