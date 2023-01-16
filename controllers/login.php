@@ -8,6 +8,6 @@ if ($result == false){
     session_start();
     $_SESSION['login']=$result['login'];
     $_SESSION['id']=$result['id_user'];
-    header('location: ../backoffice/main.php');
+    header('location: ../backoffice/dashboard.php');
 }
 ?>

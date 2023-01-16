@@ -13,10 +13,6 @@ session_start();
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
 <style>
-    body {
-        margin: 0;
-    }
-
     header {
         height: fit-content;
     }
@@ -50,8 +46,12 @@ session_start();
 
     ul{
         text-decoration: none;
+        text-align: center;
     }
 
+    .backoffice {
+        width: 100%;
+    }
     .backoffice a {
         color: white;
         text-decoration: none;
@@ -60,16 +60,17 @@ session_start();
 
 <body>
 
+
     <header>
         <img src="../medias/user.png">
     </header>
-    <main class="backoffice">
+    <div class="backoffice">
         <nav>
             <ul>
-                <li><a href="">Dashboard</a></li>
-                <li><a href="">Projet</a></li>
-                <li><a href="">Evenements</a></li>
-                <li><a href="">Actualités</a></li>
+                <li><a href="dashboard.php">Dashboard</a></li>
+                <li><a href="projet.php">Projet</a></li>
+                <li><a href="evenements.php">Evenements</a></li>
+                <li><a href="actualite.php">Actualités</a></li>
                 <li><a href="../controllers/logout.php">Déconnexion</a></li>
             </ul>
         </nav>
@@ -77,9 +78,9 @@ session_start();
         echo ("Bonjour " . $_SESSION['login'] . ". Quel plaisir de vous revoir !");
         ?>
         <div class="dashboard">
-            
+
         </div>
-    </main>
+    </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
