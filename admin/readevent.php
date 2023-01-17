@@ -1,6 +1,6 @@
 <?php
 require_once('../model.php');
-$resultevent = detailProjet($_GET["id_projet"]);
+$resultevent = detailEvent($_GET["id_event"]);
 session_start();
 if (!isset($_SESSION["login"])) {
     header('location: ../index.php');

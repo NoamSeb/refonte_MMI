@@ -84,6 +84,14 @@ function getEvents()
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     return $result;
 }
+function getCompetences()
+{
+    $db = dbConnect();
+    $requete = "SELECT * FROM competences";
+    $stmt = $db->query($requete);
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $result;
+}
 
 function getOneEvent()
 {

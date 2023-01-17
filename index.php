@@ -1,4 +1,7 @@
-<?php include('model.php');?>
+<?php include('model.php');
+$modules = getModules();
+$events = getEvent();
+?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -83,53 +86,53 @@
         <div class="stats">
             <div class="diplome">
                 <img src="medias/diplome.svg" alt="">
-                <p class="number1">1600</p>
-                <p>DIPLOMÉS</p>
+                <h3>1600</h3>
+                <h4><b>DIPLOMÉS</b></h4>
             </div>
             <div class="candidate">
                 <img src="medias/candidat.svg" alt="">
-                <p class="number2">2500</p>
-                <p>CANDIDATS CHAQUE ANNÉE</p>
+                <h3>2500</h3>
+                <h4><b>CANDIDATS CHAQUE ANNÉE</b></h4>
             </div>
             <div class="places">
                 <img src="medias/places.svg" alt="">
-                <p class="number3">56</p>
-                <p>PLACES</p>
+                <h3>56</h3>
+                <h4><b>PLACES</b></h4>
             </div>
             <div class="anciennete">
                 <img src="medias/anciennete.svg" alt="">
-                <p class="number4">28</p>
-                <p>ANS D'EXISTENCE</p>
+                <h3>28</h3>
+                <h4><b>ANS D'EXISTENCE</b></h4>
             </div>
         </div>
         <div class="mmiGeneral">
-            <h2>UNE FORMATION EN <span class="purple">3 ANS</span></h2>
+            <h3>une formation en <span class="purple">3 ans</span></h3>
 
 
             <div class="row">
                 <div class="large-12 columns">
                     <div class="carousel-modules owl-carousel owl-theme">
-                        <?php 
-                        $modules = getModules();
-                        foreach($modules as $module) {
-                            echo 
-                            '<div class="item item-modules">'.
-                                '<div class="img-and-title">'.
-                                    '<img src="medias/'.$module['img_module'].'" alt="">'.
-                                    '<h3>'. $module['nom_module'] .'</h3>'.
-                                '</div>'.
-                                '<div class="desc-and-button">'.
-                                    '<p>'. $module['desc_module'] .'</p>'.
-                                    '<a class="button" href="formation.php">En savoir plus</a>'.
-                                '</div>'.
-                            '</div>';};
+                        <?php
+                        foreach ($modules as $module) {
+                            echo
+                            '<div class="item item-modules">' .
+                                '<div class="img-and-title">' .
+                                '<img src="medias/' . $module['img_module'] . '" alt="">' .
+                                '<h4>' . $module['nom_module'] . '</h4>' .
+                                '</div>' .
+                                '<div class="desc-and-button">' .
+                                '<p>' . $module['desc_module'] . '</p>' .
+                                '<a class="button" href="formation.php">En savoir plus</a>' .
+                                '</div>' .
+                                '</div>';
+                        };
                         ?>
                     </div>
                 </div>
             </div>
         </div>
         <div class="competences">
-            <h2 class="skillsTitle">5 COMPÉTENCES</h2>
+            <h3 class="skillsTitle">5 compétences</h3>
             <div class="skills">
                 <div class="comprendre">
                     <p class="skillName">COMPRENDRE</p>
@@ -180,23 +183,19 @@
                 SLIDER 
             
             -->
-
-            <?php
-            $events=getEvent();
-            ?>
-
             <div class="row">
                 <div class="large-12 columns">
                     <div class="carousel-events owl-carousel owl-theme">
-                        <?php 
-                        foreach($events as $event) {
-                            echo 
-                            '<div class="item">'.
-                                '<div class="img-event-background" style="background:url(\'medias/'.$event['img_event'].'\')no-repeat center center/cover;">'.
-                                '</div>'.
-                                '<h3>'.$event['nom_event'].'</h3>'.
-                                '<p>'.$event['date_event'].'</p>'.
-                             '</div>';};
+                        <?php
+                        foreach ($events as $event) {
+                            echo
+                            '<div class="item">' .
+                                '<div class="img-event-background" style="background:url(\'medias/' . $event['img_event'] . '\')no-repeat center center/cover;">' .
+                                '</div>' .
+                                '<h3>' . $event['nom_event'] . '</h3>' .
+                                '<p>' . $event['date_event'] . '</p>' .
+                                '</div>';
+                        };
                         ?>
                     </div>
                 </div>
@@ -236,14 +235,16 @@
                 <div class="socials">
                     <a href="https://www.instagram.com/mmi_champs/" target="_blank"><img src="medias/insta_icon.svg" alt="Page Instagram"></a>
                     <a href="https://twitter.com/mmi_champs" target="_blank"><img src="medias/twitter_icon.svg" alt="Page Twitter"></a>
-                    
+
                 </div>
             </div>
         </div>
         <div class="credits">
             <p>2023&#160;&#160;&#160;-&#160;&#160;&#160;BUT Métiers du Multimédia & de l’Internet, Champs-sur-Marne © Tous droits réservés</p>
             <h4>mentions légales</h4>
-            <a href="./login.php"><h4>Back-office</h4></a>
+            <a href="./login.php">
+                <h4>Back-office</h4>
+            </a>
         </div>
 
     </footer>
