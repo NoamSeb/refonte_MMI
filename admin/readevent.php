@@ -38,7 +38,7 @@ if (!isset($_SESSION["login"])) {
             <a class="ariane" href="javascript:history.go(-1)">Retour à la page précédente</a>
             <?php
                     foreach ($resultevent as $value) {
-                        echo '<div><a type="button" class="btn btn-warning" href="editevent.php?action=edit & id_event=' . $value['id_event'] . '">&#9998; MODIFIER</a>&nbsp;&nbsp;<a type="button" class="btn btn-danger" onclick="return confirm(`Êtes-vous sûr de vouloir supprimer l\'article ?`)" href="deleteevent.php?type=id_event&delete & id_event=' . $value['id_event'] . '">&#128465; SUPPRIMER</a></div>';
+                        echo '<div><a type="button" class="btn btn-warning" href="editevent.php?action=edit & id_event=' . $value['id_event'] . '">&#9999; MODIFIER</a>&nbsp;&nbsp;<a type="button" class="btn btn-danger" onclick="return confirm(`Êtes-vous sûr de vouloir supprimer l\'article ?`)" href="deleteevent.php?type=id_event&delete & id_event=' . $value['id_event'] . '">&#128465; SUPPRIMER</a></div>';
                     };
             ?>
         </div>

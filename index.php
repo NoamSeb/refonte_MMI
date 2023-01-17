@@ -243,6 +243,7 @@
         <div class="credits">
             <p>2023&#160;&#160;&#160;-&#160;&#160;&#160;BUT Métiers du Multimédia & de l’Internet, Champs-sur-Marne © Tous droits réservés</p>
             <h4>mentions légales</h4>
+            <a href="./login.php"><h4>Back-office</h4></a>
         </div>
 
     </footer>
@@ -250,8 +251,8 @@
 <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/vendors/jquery.min.js"></script>
 <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script>
 
-<script src="countDown.js" defer></script>
-<script src="slider-actus.js" defer></script>
+<script src="./js/countDown.js" defer></script>
+<script src="./js/slider-actus.js" defer></script>
 
 <script>
     ScrollOut({
