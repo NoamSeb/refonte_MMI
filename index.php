@@ -85,22 +85,22 @@ $events = getEvent();
     <main>
         <div class="stats">
             <div class="diplome">
-                <img src="medias/diplome.svg" alt="">
+                <img src="medias/icons/diplome.svg" alt="">
                 <h3>1600</h3>
                 <h4><b>DIPLOMÉS</b></h4>
             </div>
             <div class="candidate">
-                <img src="medias/candidat.svg" alt="">
+                <img src="medias/icons/candidat.svg" alt="">
                 <h3>2500</h3>
                 <h4><b>CANDIDATS CHAQUE ANNÉE</b></h4>
             </div>
             <div class="places">
-                <img src="medias/places.svg" alt="">
+                <img src="medias/icons/places.svg" alt="">
                 <h3>56</h3>
                 <h4><b>PLACES</b></h4>
             </div>
             <div class="anciennete">
-                <img src="medias/anciennete.svg" alt="">
+                <img src="medias/icons/anciennete.svg" alt="">
                 <h3>28</h3>
                 <h4><b>ANS D'EXISTENCE</b></h4>
             </div>
