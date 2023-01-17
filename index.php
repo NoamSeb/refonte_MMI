@@ -99,7 +99,7 @@
             <div class="anciennete">
                 <img src="medias/anciennete.svg" alt="">
                 <p class="number4">28</p>
-                <p>ANS D'EXISTANCE</p>
+                <p>ANS D'EXISTENCE</p>
             </div>
         </div>
         <div class="mmiGeneral">

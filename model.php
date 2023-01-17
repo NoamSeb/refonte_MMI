@@ -31,10 +31,10 @@ function logIn()
     } else {
         return 3;
     }
-
 }
 
-function getUser($id) {
+function getUser($id)
+{
     $db = dbConnect();
 
     $requete = "SELECT * FROM utilisateur WHERE id_user=$id";
@@ -42,30 +42,34 @@ function getUser($id) {
     $stmt->fetch(PDO::FETCH_ASSOC);
 }
 
-function getModules() {
+function getModules()
+{
     $db = dbConnect();
     $requete = "SELECT * FROM modules";
     $stmt = $db->query($requete);
-    $stmt = $stmt->fetchall(PDO::FETCH_ASSOC);   
-    return $stmt;  
-}
-
-function getEvent(){
-    $db = dbConnect();
-    $requete = 'SELECT * FROM evenements ORDER BY date_event DESC';
-    $stmt = $db->query($requete);
-    $stmt = $stmt->fetchall(PDO::FETCH_ASSOC); 
+    $stmt = $stmt->fetchall(PDO::FETCH_ASSOC);
     return $stmt;
 }
 
-function getProject(){
+function getEvent()
+{
+    $db = dbConnect();
+    $requete = 'SELECT * FROM evenements ORDER BY date_event DESC';
+    $stmt = $db->query($requete);
+    $stmt = $stmt->fetchall(PDO::FETCH_ASSOC);
+    return $stmt;
+}
+
+function getProject()
+{
     $db = dbConnect();
     $requete = "SELECT * FROM projet";
     $stmt = $db->query($requete);
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     return $result;
 }
-function getEvents(){
+function getEvents()
+{
     $db = dbConnect();
     $requete = "SELECT * FROM evenements";
     $stmt = $db->query($requete);
@@ -73,7 +77,17 @@ function getEvents(){
     return $result;
 }
 
-function detailEvent($event){
+function getOneEvent()
+{
+    $db = dbConnect();
+    $requete = "SELECT * FROM evenements WHERE id_event={$_GET["id"]}";
+    $stmt = $db->query($requete);
+    $result = $stmt->fetchall(PDO::FETCH_ASSOC);
+    return $result;
+}
+
+function detailEvent($event)
+{
     $db = dbConnect();
     $requete = "SELECT * FROM evenements WHERE " . $event . "=id_event";
     $stmt = $db->query($requete);
@@ -82,7 +96,7 @@ function detailEvent($event){
 }
 
 // insérer un nouvel evenement
-function insertEvent($titre, $contenu,$date)
+function insertEvent($titre, $contenu, $date)
 {
     $db = dbConnect();
     // $auteur = $_SESSION['login'];
@@ -103,4 +117,3 @@ function editEvent($id, $title, $content, $date)
     $query = 'UPDATE evenements SET nom_event ="' . $title . '", description_event ="' . $content . '", date_event ="' . $date . '" WHERE id_event ="' . $id . '"';
     $db->query($query);
 }
-
