@@ -1,6 +1,9 @@
 <?php
 require_once('../model.php');
-$resultDetailEvent = detailProjet($_GET["id_projet"]);
+$resultDetailProjet = detailProjet($_GET["id"]);
+$resultModule = getModules();
+$resultOneModule = getOneModule();
+
 session_start();
 if (!isset($_SESSION["login"])) {
     header('location: ../index.php');
@@ -8,15 +11,16 @@ if (!isset($_SESSION["login"])) {
 
 if (isset($_POST["update"])) {
     $id = $_POST['id'];
-    $title = $_POST['titre'];
-    $content = $_POST['contenu'];
-    $date = $_POST['date'];
+    $titre = $_POST['titre'];
+    $description = $_POST['description'];
+    $auteur = $_POST['auteur'];
+    $module = $_POST['module'];
 
-    editEvent($id, $title, $content, $date);
-    echo'<script type="text/javascript">
-    alert("Article modifié avec succès!");
-    window.location = "dashboard.php";
-</script>';
+    editProjet($id, $titre, $description, $auteur, $module);
+//     echo '<script type="text/javascript">
+//     alert("Article modifié avec succès!");
+//     window.location = "dashboard.php";
+// </script>';
 }
 ?>
 <!DOCTYPE html>
@@ -34,11 +38,6 @@ if (isset($_POST["update"])) {
 </head>
 
 <body>
-
-
-    <!-- <header>
-        <img src="../medias/user.png">
-    </header> -->
     <div class="backoffice">
         <aside class="navigation">
             <a href="dashboard.php" class="dashboardbutton"><i class="fa fa-tachometer" aria-hidden="true"></i>&#160;&#160;Dashboard</a>
@@ -49,28 +48,40 @@ if (isset($_POST["update"])) {
             <a href="../index.php" class="homebutton justify-self-end">&larr;&#160;&#160;Retour au site</a>
         </aside>
         <div class="dashboard">
-            <?php foreach ($resultDetailEvent as $result) {
-                $editId = $result['id_event'];
-                $editTitle = $result['nom_event'];
-                $editContent = $result['description_event'];
-                $editDate = $result['date_event'];
-
+            <?php foreach ($resultDetailProjet as $result) {
+                $editId = $result['id_projet'];
+                $editTitle = $result['titre'];
+                $editDescription = $result['description'];
+                $editAuteur = $result['auteur'];
+                $editImage = $result['image'];
+                $editModule = $result['ext_module'];
             }
 
             ?>
-            <h2>Modifier l'article</h2>
+            <h2>Modifier le Projet</h2>
 
             <form class="edit" role="form" method="post" action="">
                 <input type="hidden" name="id" value="<?php echo $editId; ?>">
                 <label for="titre">Titre</label>
                 <input placeholder="Titre" name="titre" value="<?php echo $editTitle; ?>">
-                <label for="contenu">Contenu</label>
-                <textarea placeholder="Contenu" name="contenu"><?php echo $editContent; ?></textarea>
-                <label for="date">Date de l'évènement</label>
-                <input type="date" placeholder="Date de l'évènement" name="date" value="<?php echo $editDate; ?>">
+                <label for="description">Description</label>
+                <textarea placeholder="Description" name="description"><?php echo $editDescription; ?></textarea>
+                <label for="auteur">Auteur</label>
+                <input placeholder="Auteur" name="auteur" value="<?php echo $editAuteur; ?>">
+                <label for="image">Image</label>
+                <input type="file" placeholder="Image" name="image" value="<?php echo $editImage; ?>">
+                <label for="module">Module</label><br>
+                <select name="module" id="module" value="<?php echo $editModule; ?>">
+                    <?php
+                    foreach ($resultOneModule as $rom) {
+                        echo '<option value="">' . $rom['nom_module'] . '</option>';
+                    } 
+                    foreach ($resultModules as $rm) {
+                        echo '<option value="' . $rm["id_module"] . '">' . $rm["nom_module"] . '</option>';
+                    } ?>
+                </select>
 
-                <input type="submit" name="update" value="Mettre à jour l'article">
-
+                <input type="submit" name="update" value="Mettre à jour le projet">
             </form>
             </article>
         </div>

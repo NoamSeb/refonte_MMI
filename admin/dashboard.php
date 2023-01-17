@@ -94,9 +94,6 @@ if (!isset($_SESSION["login"])) {
 
 
 <body>
-    <!-- <header>
-        <img src="../medias/user.png">
-    </header> -->
     <div class="backoffice">
         <aside class="navigation">
             <a href="dashboard.php" class="dashboardbutton"><i class="fa fa-tachometer" aria-hidden="true"></i>&#160;&#160;Dashboard</a>
@@ -184,7 +181,7 @@ if (!isset($_SESSION["login"])) {
                                     <td><?= $value['image'] ?></td>
                                     <td><?= $value['ext_module'] ?></td>
                                     <td><?=
-                                        '<div style="display:flex; gap:1rem"><a type="button" class="btn btn-xs btn-info" href="readproject.php?id_projet=' . $value['id_projet'] . '" >&#128065;</a><a type="button" class="btn btn-xs btn-warning" href="editproject.php?action=edit & id=' . $value['id_projet'] . '">&#9998;</a><a type="button" class="btn btn-xs btn-danger" onclick="return confirm(`Êtes-vous sûr de vouloir supprimer l\'article ?`)" href="deleteprojet.php?id_projet=' . $value['id_projet'] . '">&#128465;</a></div>'; ?></td>
+                                        '<div style="display:flex; gap:1rem"><a type="button" class="btn btn-xs btn-info" href="readproject.php?id_projet=' . $value['id_projet'] . '" >&#128065;</a><a type="button" class="btn btn-xs btn-warning" href="editproject.php?id=' . $value['id_projet'] . '">&#9998;</a><a type="button" class="btn btn-xs btn-danger" onclick="return confirm(`Êtes-vous sûr de vouloir supprimer l\'article ?`)" href="deleteprojet.php?id_projet=' . $value['id_projet'] . '">&#128465;</a></div>'; ?></td>
                                 </tr>
                             <?php } ?>
                         </tbody>
