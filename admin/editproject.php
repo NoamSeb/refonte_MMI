@@ -7,7 +7,7 @@ if (!isset($_SESSION["login"])) {
 }
 
 if (isset($_POST["update"])) {
-    $id = $_POST['id'];
+    $id = $_POST['id_projet'];
     $title = $_POST['titre'];
     $content = $_POST['contenu'];
     $date = $_POST['date'];
@@ -50,10 +50,10 @@ if (isset($_POST["update"])) {
         </aside>
         <div class="dashboard">
             <?php foreach ($resultDetailEvent as $result) {
-                $editId = $result['id_event'];
-                $editTitle = $result['nom_event'];
-                $editContent = $result['description_event'];
-                $editDate = $result['date_event'];
+                $editId = $result['id_projet'];
+                $editTitle = $result['titre'];
+                $editContent = $result['description'];
+                $editAuteur = $result['auteur'];
 
             }
 
@@ -66,8 +66,8 @@ if (isset($_POST["update"])) {
                 <input placeholder="Titre" name="titre" value="<?php echo $editTitle; ?>">
                 <label for="contenu">Contenu</label>
                 <textarea placeholder="Contenu" name="contenu"><?php echo $editContent; ?></textarea>
-                <label for="date">Date de l'évènement</label>
-                <input type="date" placeholder="Date de l'évènement" name="date" value="<?php echo $editDate; ?>">
+                <label for="auteur">Date de l'évènement</label>
+                <input type="text" placeholder="auteur" name="auteur" value="<?php echo $editAuteur; ?>">
 
                 <input type="submit" name="update" value="Mettre à jour l'article">
 

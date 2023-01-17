@@ -152,7 +152,7 @@ function insertProjet($titre, $description, $auteur, $image, $module)
     $description = $_POST['description'];
     $auteur= $_POST['auteur'];
     $module = $_POST['module'];
-    $insert = "INSERT INTO projet (id_projet, titre, description, auteur, image, ext_module) VALUES (NULL,'$titre', '$description', '$auteur', '$image', '$module')";
+    $insert = "INSERT INTO projet (id_projet, titre, description, auteur, image, ext_module) VALUES (NULL,\"$titre\", \"$description\", \"$auteur\", \"$image\", \"$module\")";
     $db->query($insert);
 };
 
