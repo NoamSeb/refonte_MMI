@@ -12,7 +12,7 @@
 <body>
 <nav class="navbar" data-scroll>
         <a href="index.php" class="imgNav">
-            <img src="medias/logo_MMI.svg" alt="Logo">
+            <img src="medias/icons/logo_MMI.svg" alt="Logo">
         </a>
 
         <div class="navLinks">

@@ -6,3 +6,4 @@ LIÉ À, NN modules, NN projet
 evenements: id_event, nom_event, description_event, date_event, img_event
 temoignage: id_temoignage, nom_etudiant, contenu_temoignage, promo_etudiant
 utilisateur: id_user, login, password
+competences: id_competence, module_lie, nom_competence, description_competence, img_competence

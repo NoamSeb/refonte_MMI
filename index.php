@@ -44,7 +44,7 @@
 
     <nav class="navbar" data-scroll>
         <a href="index.php" class="imgNav">
-            <img src="medias/logo_MMI.svg" alt="Logo">
+            <img src="medias/icons/logo_MMI.svg" alt="Logo">
         </a>
 
         <div class="navLinks">
@@ -82,22 +82,22 @@
     <main>
         <div class="stats">
             <div class="diplome">
-                <img src="medias/diplome.svg" alt="">
+                <img src="medias/icons/diplome.svg" alt="">
                 <p class="number1">1600</p>
                 <p>DIPLOMÉS</p>
             </div>
             <div class="candidate">
-                <img src="medias/candidat.svg" alt="">
+                <img src="medias/icons/candidat.svg" alt="">
                 <p class="number2">2500</p>
                 <p>CANDIDATS CHAQUE ANNÉE</p>
             </div>
             <div class="places">
-                <img src="medias/places.svg" alt="">
+                <img src="medias/icons/places.svg" alt="">
                 <p class="number3">56</p>
                 <p>PLACES</p>
             </div>
             <div class="anciennete">
-                <img src="medias/anciennete.svg" alt="">
+                <img src="medias/icons/anciennete.svg" alt="">
                 <p class="number4">28</p>
                 <p>ANS D'EXISTENCE</p>
             </div>
@@ -234,8 +234,8 @@
                     <li> mmi-dir.iut@univ-eiffel.fr</li>
                 </ul>
                 <div class="socials">
-                    <a href="https://www.instagram.com/mmi_champs/" target="_blank"><img src="medias/insta_icon.svg" alt="Page Instagram"></a>
-                    <a href="https://twitter.com/mmi_champs" target="_blank"><img src="medias/twitter_icon.svg" alt="Page Twitter"></a>
+                    <a href="https://www.instagram.com/mmi_champs/" target="_blank"><img src="medias/icons/insta_icon.svg" alt="Page Instagram"></a>
+                    <a href="https://twitter.com/mmi_champs" target="_blank"><img src="medias/icons/twitter_icon.svg" alt="Page Twitter"></a>
                     
                 </div>
             </div>
