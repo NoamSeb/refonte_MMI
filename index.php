@@ -47,7 +47,7 @@ $events = getEvent();
 
     <nav class="navbar" data-scroll>
         <a href="index.php" class="imgNav">
-            <img src="medias/logo_MMI.svg" alt="Logo">
+            <img src="medias/icons/logo_MMI.svg" alt="Logo">
         </a>
 
         <div class="navLinks">
@@ -233,9 +233,9 @@ $events = getEvent();
                     <li> mmi-dir.iut@univ-eiffel.fr</li>
                 </ul>
                 <div class="socials">
-                    <a href="https://www.instagram.com/mmi_champs/" target="_blank"><img src="medias/insta_icon.svg" alt="Page Instagram"></a>
-                    <a href="https://twitter.com/mmi_champs" target="_blank"><img src="medias/twitter_icon.svg" alt="Page Twitter"></a>
-
+                    <a href="https://www.instagram.com/mmi_champs/" target="_blank"><img src="medias/icons/insta_icon.svg" alt="Page Instagram"></a>
+                    <a href="https://twitter.com/mmi_champs" target="_blank"><img src="medias/icons/twitter_icon.svg" alt="Page Twitter"></a>
+                    
                 </div>
             </div>
         </div>
