@@ -124,7 +124,7 @@ h3 {
 }
 
 h4 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     line-height: 1.5rem;
     font-weight: 600;
 }
@@ -367,6 +367,7 @@ main {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    gap: 2rem;
 }
 
 .stats div {
@@ -398,7 +399,8 @@ main {
 }
 
 .mmiGeneral {
-    margin-top: 10rem;
+    width: 70%;
+    margin: 10rem auto;
 }
 
 .mmiGeneral h2 {
@@ -609,7 +611,7 @@ footer {
     display: flex;
     height: 50vh;
     gap: 4rem;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -638,7 +640,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     gap: 2rem;
-    width: 40vw;
+    /* width: 40vw; */
 }
 
 .item-modules .desc-and-button a {
@@ -932,16 +934,6 @@ footer {
 }
 
 
-.mmind img {
-    height: 70vh;
-    border-radius: 27px;
-}
-
-.mmind {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .paragraphe-left {
     background-color: var(--color-green);
@@ -965,6 +957,16 @@ footer {
     list-style: circle;
 }
 
+.mmind img {
+    height: 70vh;
+    border-radius: 27px;
+}
+
+.mmind {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* PAGE FORMATION */
 
