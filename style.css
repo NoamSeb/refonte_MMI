@@ -49,7 +49,6 @@
 /* DM Sans, sans-serif */
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Inter:wght@500;600;700;800&display=swap');
-
 :root {
     --color-black: #090909;
     --color-white: #f5f5f5;
@@ -131,7 +130,10 @@ h6 {
     font-weight: 200;
 }
 
-table, tr, th, td {
+table,
+tr,
+th,
+td {
     font-family: "DM Sans", sans-serif;
 }
 
@@ -519,7 +521,7 @@ footer {
 }
 
 .international {
-    background-image: url('medias/event.png');
+    background-image: url('medias/international.png');
 }
 
 .content {
@@ -873,11 +875,26 @@ footer {
     text-transform: uppercase;
 }
 
-.pedagogie-projet {
+.pedagogie-projet,
+.mmind {
     display: flex;
     justify-content: center;
     margin-bottom: 20vh;
     margin-top: 10vh;
+}
+
+.carousel-pedagogie .owl-dots .owl-dot.active span,
+.carousel-pedagogie .owl-dots .owl-dot:hover span {
+    background-color: #10DCB7;
+    transition: 0.5s ease;
+}
+
+.carousel-pedagogie .owl-dots .owl-dot.active span {
+    width: 24px;
+}
+
+.carousel-pedagogie .owl-dots .owl-dot span {
+    transition: 0.5s ease;
 }
 
 .paragraphe-right {
@@ -899,6 +916,40 @@ footer {
     font-size: 1.25rem;
     line-height: 161.2%;
     margin-top: 30px;
+}
+
+.paragraphe-right a {
+    color: var(--color-white);
+    border: none;
+    background-color: #10DCB7;
+    padding: 1vw;
+    border-radius: 15px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    display: block;
+    text-align: center;
+    width: 60%;
+}
+
+.mmind .paragraphe-right p {
+    margin-bottom: 2.5rem;
+}
+
+.mmind .paragraphe-right {
+    width: 47%;
+}
+
+.mmind img {
+    height: 70vh;
+    border-radius: 27px;
+    margin-left: 2rem;
+}
+
+.mmind {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .paragraphe-left {
@@ -1101,15 +1152,12 @@ form input[type=submit]:hover {
     transition: background-color 0.2s ease;
 }
 
-.searchevents, .searchprojects {
+.searchevents,
+.searchprojects {
     border-radius: 15px;
     padding: 1rem 1.5rem;
     margin: 0;
 }
-
-
-
-
 
 .backoffice {
     width: 100%;
@@ -1157,7 +1205,6 @@ form input[type=submit]:hover {
     justify-self: flex-end;
 }
 
-
 .backoffice .dashboard nav {
     background-color: var(--color-white);
     display: flex;
@@ -1172,12 +1219,9 @@ form input[type=submit]:hover {
     margin-bottom: 2rem;
 }
 
-
 .backoffice .dashboard nav div:nth-child(2) {
     width: 100%;
 }
-
-
 
 .backoffice ul a {
     color: var(--color-white);
@@ -1227,11 +1271,9 @@ form input[type=submit]:hover {
     .navLinks ul {
         display: none;
     }
-
     .menu {
         display: block;
     }
-
     .navLinks ul {
         display: none;
         transition: all 0.2s ease;

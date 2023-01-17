@@ -20,6 +20,28 @@ owl_modules.owlCarousel({
         }
     }
 })
+let owl_pedagogie = $('.carousel-pedagogie');
+owl_pedagogie.owlCarousel({
+    margin: 10,
+    nav: false,
+    loop: true,
+    dots: true,
+    autoplay: true,
+    autoplayTimeout: 6000,
+    autoplayHoverPause: true,
+    // animateOut: 'fadeOut',
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 1
+        },
+        1000: {
+            items: 1
+        }
+    }
+})
 
 
 let owl_events = $('.carousel-events');
@@ -43,6 +65,8 @@ owl_events.owlCarousel({
         }
     }
 })
+
+
 
 let owl_competences = $('.carousel-competences');
 owl_competences.owlCarousel({

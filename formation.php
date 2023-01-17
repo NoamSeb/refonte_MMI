@@ -108,10 +108,15 @@ $module = $res->fetchAll(PDO::FETCH_ASSOC);
     
     
     <section class="pluridisciplinaire">
-        <h2>Une formation <span>pluridisciplinaire</span></h2>
-        <p>Au cours de sa formation, l’étudiant développe des compétences pluridisciplinaires tant dans le domaine de la programmation que dans le graphisme ou les réseaux. Son atout principal au sortir de la formation est sa polyvalence dans les domaine de la conception, de la réalisation, de la commercialisation de produits et de services web et multimédia.
-            </p>
-        </section>
+        
+                        <h2>Une formation <span>pluridisciplinaire</span></h2>
+                        <p>Au cours de sa formation, l’étudiant développe des compétences pluridisciplinaires tant dans le domaine de la programmation que dans le graphisme ou les réseaux. Son atout principal au sortir de la formation est sa polyvalence dans les domaine de la conception, de la réalisation, de la commercialisation de produits et de services web et multimédia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
         
         <section class="voir-projets">
             <?php
@@ -129,10 +134,22 @@ $module = $res->fetchAll(PDO::FETCH_ASSOC);
 
 <div class="pedagogie-projet">
     <div class="paragraphe-right">
-        <h2>Un pédagogie par projet</h2>
-        <p>Tout au long du cursus, des produits multimédia (sites web, applications mobiles, installations plurimédia) sont élaborés sous forme de projets. Ce mode de conception permet à l’étudiant d’acquérir des compétences transverses (design, développement informatique, marketing, …) et professionnelles. </br>
-        </br>
-        Le BUT Métiers du Multimédia et de l’Internet s’appuie sur un Programme Pédagogique National qui garantit un diplôme de valeur nationale et une reconnaissance par les écoles et par les professionnels.</p>
+        <div class="row">
+            <div class="large-12 columns slider-background">
+                <div class="carousel-pedagogie owl-carousel owl-theme">
+                    <div class="item">
+                        <h2>Un pédagogie par projet</h2>
+                        <p>Tout au long du cursus, des produits multimédia (sites web, applications mobiles, installations plurimédia) sont élaborés sous forme de projets. Ce mode de conception permet à l’étudiant d’acquérir des compétences transverses (design, développement informatique, marketing, …) et professionnelles. </br>
+                        </br>
+                        Le BUT Métiers du Multimédia et de l’Internet s’appuie sur un Programme Pédagogique National qui garantit un diplôme de valeur nationale et une reconnaissance par les écoles et par les professionnels.</p>
+                    </div>
+                    <div class="item">
+                        <h2>Un semestre au canada ça vous tente ?</h2>
+                        <p>MMI vise à entretenir des relation a travers le monde afin de pouvoir en faire profiter les étudiants. Pour les étudiants se dirigeant vers le parcours créatif, l'université UQAC se fera un plaisir d'accueillir les étudiants afin qu'il suivent des cours anglophone. Pour les étudiant visant à rejoindre le parcours développement et media intéractif, le Cegep acceullera les étudiant dans le but de leur apporté des connaissances lié au web dans un contexte anglophone</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="paragraphe-left">
         <h2>La formation en chiffres</h2>
@@ -147,6 +164,15 @@ $module = $res->fetchAll(PDO::FETCH_ASSOC);
         </ul>
     </div>
 </div>
+
+<section class="mmind">
+    <div class="paragraphe-right">
+        <h2>MMIND : L’anglais  depuis la france</h2>
+        <p>Dans l'optique de toujours entretenir des liens étroit avec la langue anglaise, les étudiants sont en charge du compte instagram mmind qui permet de mettre en avant des évènements de façon hebdomadaire. les étudiants doivent rédiger les posts en anglais. De plus, tout les ans, les étudiants de deuxième années sont chargé d'imaginer un nouveau design pour les posts instagram qui vont suivre durant tout l'année scolaire.</p>
+        <a href="https://www.instagram.com/mmind_mmi/" alt="instagram d'mmind">Accéder au profil sur instagram</a>
+    </div>
+    <img src="medias/instagram.png" alt="">
+</section>
 <footer>
         <div class="footer">
             <div class="map">
