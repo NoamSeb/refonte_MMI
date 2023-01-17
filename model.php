@@ -47,8 +47,8 @@ function getModules()
     $db = dbConnect();
     $requete = "SELECT * FROM modules";
     $stmt = $db->query($requete);
-    $stmt = $stmt->fetchall(PDO::FETCH_ASSOC);
-    return $stmt;
+    $result = $stmt->fetchall(PDO::FETCH_ASSOC);
+    return $result;
 }
 
 function getEvent()
@@ -108,6 +108,38 @@ function insertEvent($titre, $contenu, $date)
 };
 
 function editEvent($id, $title, $content, $date)
+{
+    $db = dbConnect();
+    $id = $_POST['id'];
+    $title = $_POST['titre'];
+    $content = $_POST['contenu'];
+    $date = $_POST['date'];
+    $query = 'UPDATE evenements SET nom_event ="' . $title . '", description_event ="' . $content . '", date_event ="' . $date . '" WHERE id_event ="' . $id . '"';
+    $db->query($query);
+}
+
+function detailProjet($projet)
+{
+    $db = dbConnect();
+    $requete = "SELECT * FROM projet WHERE " . $projet . "=id_projet";
+    $stmt = $db->query($requete);
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $result;
+}
+
+// insérer un nouvel evenement
+function insertProjet($titre, $description, $auteur, $image, $module)
+{
+    $db = dbConnect();
+    // $auteur = $_SESSION['login'];
+    $titre = $_POST['titre'];
+    $contenu = $_POST['contenu'];
+    $date = $_POST['date'];
+    $insert = "INSERT INTO evenements (id_event, nom_event, description_event, date_event, img_event) VALUES (NULL,'$titre','$contenu', '$date','test')";
+    $db->query($insert);
+};
+
+function editProjet($id, $title, $content, $date)
 {
     $db = dbConnect();
     $id = $_POST['id'];

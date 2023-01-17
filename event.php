@@ -92,7 +92,7 @@ include('model.php');
                     '<div class="event-darken">' .
                         '<h3 class="titleEvent">'.$result['nom_event'].'</h3>' .
                         '<p class="dateEvent">'.$result['date_event'].'</p>' .
-                        '<p class="descripEvent">'.$result['description_event'].'</p>' .
+                        '<p class="descripEvent">'.mb_strimwidth($result['description_event'], 0, 100, "...").'</p>' .
                         '<a href="affiche-event.php?id='.$result['id_event'].'">Voir plus</a>' .
                     '</div>'.
                     '</div>';
