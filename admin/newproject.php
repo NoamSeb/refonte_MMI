@@ -13,14 +13,13 @@ if (isset($_POST["publier"])) {
     $name = $_FILES['image']['name'];
     $size = $_FILES['image']['size'];
     $error = $_FILES['image']['error'];
-    move_uploaded_file($tmpName, './medias/' . $name);
+    move_uploaded_file($tmpName, '../medias/' . $name);
 
     $titre = $_POST['titre'];
     $description = $_POST['description'];
     $auteur = $_POST['auteur'];
-    $image = $_POST['image'];
     $module = $_POST['module'];
-    insertProjet($titre, $description, $auteur, $image, $module);
+    insertProjet($titre, $description, $auteur, $name, $module);
     echo '<script type="text/javascript">
     alert("Projet publié avec succès!");
     window.location = "dashboard.php";
@@ -58,14 +57,14 @@ if (isset($_POST["publier"])) {
             <div class="spacebetween">
                 <a class="ariane" href="dashboard.php">Retourner au back-office</a>
                 <h2 style="margin:2rem 0">Publier un nouvel évènement</h2>
-                <form class="newarticle" name="article" method="POST" action="newproject.php">
+                <form class="newarticle" name="article" method="POST" action="newproject.php" enctype="multipart/form-data">
                     <label for="titre">Titre</label>
                     <input type="text" id="titre" name="titre" placeholder="Titre" require>
                     <label for="description">Description</label><textarea id="description" name="description" placeholder="Description" require></textarea>
                     <label for="auteur">Auteur</label>
                     <input type="text" id="auteur" name="auteur" placeholder="Auteur du projet" require>
                     <label for="image">Image</label>
-                    <input type="file" id="image" name="image" enctype="multipart/form-data" placeholder="Image du projet" require>
+                    <input type="file" id="image" name="image" placeholder="Image du projet" require>
                     <label for="module">Module</label><br>
                     <select name="module" id="module">
                         <option value="">Choisissez un module</option>

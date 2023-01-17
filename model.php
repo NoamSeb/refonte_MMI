@@ -149,8 +149,9 @@ function insertProjet($titre, $description, $auteur, $image, $module)
     $db = dbConnect();
     // $auteur = $_SESSION['login'];
     $titre = $_POST['titre'];
-    $contenu = $_POST['contenu'];
-    $date = $_POST['date'];
+    $description = $_POST['description'];
+    $auteur= $_POST['auteur'];
+    $module = $_POST['module'];
     $insert = "INSERT INTO projet (id_projet, titre, description, auteur, image, ext_module) VALUES (NULL,'$titre', '$description', '$auteur', '$image', '$module')";
     $db->query($insert);
 };
