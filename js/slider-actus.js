@@ -1,13 +1,12 @@
 let owl_modules = $('.carousel-modules');
 owl_modules.owlCarousel({
     margin: 10,
-    nav: false,
+    nav: true,
     loop: true,
     dots: true,
     autoplay: true,
     autoplayTimeout: 6000,
     autoplayHoverPause: true,
-    // animateOut: 'fadeOut',
     responsive: {
         0: {
             items: 1

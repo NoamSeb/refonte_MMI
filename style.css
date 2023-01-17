@@ -49,6 +49,7 @@
 /* DM Sans, sans-serif */
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Inter:wght@500;600;700;800&display=swap');
+
 :root {
     --color-black: #090909;
     --color-white: #f5f5f5;
@@ -125,7 +126,6 @@ h3 {
 
 h4 {
     font-size: 1.5rem;
-    line-height: 1.5rem;
     font-weight: 600;
 }
 
@@ -452,22 +452,20 @@ main {
     margin-top: 20vw;
 }
 
-.parcoursTitle {
-    text-align: center;
-}
-
 .course {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 7rem;
+    height: 20rem;
 }
 
-.parcourName {
-    font-size: 1.2rem;
-    text-align: center;
-}
-
-.parcourTxt {
-    max-width: 30vw;
+.spe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 40%;
+    height: fit-content;
     text-align: center;
 }
 
@@ -609,7 +607,6 @@ footer {
 .item-modules {
     justify-content: center;
     display: flex;
-    height: 50vh;
     gap: 4rem;
     width: 100%;
     margin: 0 auto;
@@ -640,13 +637,34 @@ footer {
     flex-direction: column;
     justify-content: center;
     gap: 2rem;
-    /* width: 40vw; */
+    width: 50%;
 }
 
 .item-modules .desc-and-button a {
     text-align: center;
     font-family: 'DM sans', sans-serif;
     color: var(--color-white);
+}
+
+.carousel-modules .owl-nav {
+    display: flex;
+    bottom: 50%;
+    left: -5rem;
+    right: -5rem;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 120%;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.carousel-modules .owl-nav button {
+    border-radius: 50% !important;
+}
+
+.carousel-modules .owl-nav button span {
+    font-size: 2rem;
+    padding: 1rem;
 }
 
 .carousel-modules .owl-dots {
@@ -880,7 +898,7 @@ footer {
     display: flex;
     justify-content: center;
     margin: 10rem auto;
-    gap:2rem
+    gap: 2rem
 }
 
 .carousel-pedagogie .owl-dots .owl-dot.active span,
@@ -1026,7 +1044,8 @@ aside.tab {
     flex-direction: column;
 }
 
-aside.tab .modules-tablinks:hover, aside.tab .modules-tablinks.active {
+aside.tab .modules-tablinks:hover,
+aside.tab .modules-tablinks.active {
     font-weight: 800;
     color: var(--color-green);
 }
@@ -1036,13 +1055,23 @@ aside.tab .modules-tablinks:hover, aside.tab .modules-tablinks.active {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-      to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes fadeOut {
-    from { opacity: 1; }
-      to { opacity: 0; }
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
 }
 
 
@@ -1332,9 +1361,11 @@ form input[type=submit]:hover {
     .navLinks ul {
         display: none;
     }
+
     .menu {
         display: block;
     }
+
     .navLinks ul {
         display: none;
         transition: all 0.2s ease;

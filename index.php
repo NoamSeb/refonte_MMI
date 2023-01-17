@@ -158,15 +158,17 @@ $events = getEvent();
             </div>
         </div>
         <div class="parcours">
-            <h2 class="parcoursTitle">2 PARCOURS</h2>
+            <h3 class="parcoursTitle">2 PARCOURS</h3>
             <div class="course">
-                <div class="craNum">
-                    <p class=parcourName>Création numérique</p>
-                    <p class=parcourTxt>Métiers : directeur artistique, designer interactif, web/UI designer, motion designer, réalisateur, infographiste, game designer...</p>
+                <div class="spe">
+                    <div class="img"><img src="./medias/crea.png" alt="imageparcourscreationnumerique"></div>
+                    <h4>Création numérique</h4>
+                    <p>Métiers : directeur artistique, designer interactif, web/UI designer, motion designer, réalisateur, infographiste, game designer...</p>
                 </div>
-                <div class="dev">
-                    <p class=parcourName>Développement web & dispositifs interactifs</p>
-                    <p class=parcourTxt>Métiers : Intégrateur, développeur front, développeur back, développeur full-stack, métiers de la scénographie numérique, intégrateur de dispositif de réalité virtuelle...
+                <div class="spe">
+                <div class="img"><img src="./medias/dev.png" alt="imageparcoursdeveloppementweb"></div>
+                    <h4>Développement web & dispositifs interactifs</h4>
+                    <p>Métiers : Intégrateur, développeur front, développeur back, développeur full-stack, métiers de la scénographie numérique, intégrateur de dispositif de réalité virtuelle...
                     </p>
                 </div>
             </div>
