@@ -8,43 +8,13 @@ if (!isset($_SESSION["login"])) {
 
 $resultModules = getModules();
 
-
-$msg = "";
-
-// check if the user has clicked the button "UPLOAD" 
-
-if (isset($_POST['publier'])) {
-
-    $filename = $_FILES["image"]["name"];
-
-    $tempname = $_FILES["image"]["tmp_name"];
-
-    $folder = "./medias/" . $filename;
-
-    // connect with the database
-
-    $db = mysqli_connect("localhost", "root", "root", "refonte_mmi");
-
-    $sql = "INSERT INTO image (filename) VALUES ('$filename')";
-
-    // function to execute above query
-
-    mysqli_query($db, $sql);
-
-    // Add the image to the "image" folder"
-
-    if (move_uploaded_file($tempname, $folder)) {
-
-        $msg = "Image uploaded successfully";
-    } else {
-
-        $msg = "Failed to upload image";
-    }
-}
-$db = mysqli_connect("localhost", "root", "root", "refonte_mmi");
-$result = mysqli_query($db, "SELECT * FROM projet");
-
 if (isset($_POST["publier"])) {
+    $tmpName = $_FILES['image']['tmp_name'];
+    $name = $_FILES['image']['name'];
+    $size = $_FILES['image']['size'];
+    $error = $_FILES['image']['error'];
+    move_uploaded_file($tmpName, './medias/' . $name);
+
     $titre = $_POST['titre'];
     $description = $_POST['description'];
     $auteur = $_POST['auteur'];
@@ -56,9 +26,8 @@ if (isset($_POST["publier"])) {
     window.location = "dashboard.php";
 </script>';
 }
-
-
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -96,7 +65,7 @@ if (isset($_POST["publier"])) {
                     <label for="auteur">Auteur</label>
                     <input type="text" id="auteur" name="auteur" placeholder="Auteur du projet" require>
                     <label for="image">Image</label>
-                    <input type="file" id="image" name="image" placeholder="Image du projet" require>
+                    <input type="file" id="image" name="image" enctype="multipart/form-data" placeholder="Image du projet" require>
                     <label for="module">Module</label><br>
                     <select name="module" id="module">
                         <option value="">Choisissez un module</option>
