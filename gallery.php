@@ -1,7 +1,5 @@
-<?php include('connexion.php');
-$requete = "SELECT * FROM projet, modules WHERE ext_module=id_module";
-$stmt = $db->query($requete);
-$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+<?php include('model.php');
+$resultatProjets = getOneModule();
 ?>
 
 <!DOCTYPE html>
@@ -67,10 +65,10 @@ $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </div>
         </div>
     </nav>
-    <div class="pageTitle">
+    <header class="header gallery">
         <h1>GALERIE</h1>
         <p>découvrez les projets de nos étudiants</p>
-    </div>
+    </header>
     <main>
         <div class="content">
             <div class="pagesSecondTitle">
@@ -81,13 +79,13 @@ $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </div>
             <div class="pageSlider">
                 <?php
-                foreach($result as $r) { ?>
+                foreach($resultatProjets as $r) { ?>
                 <div class="projet">
-                    <img src="<?=$r['image']?>" alt="<?=$r['titre']?>">
-                    <p class="moduleProjet"><?=$r['nom_module']?></p>
-                    <p class="titleProjet"><?=$r['titre']?></p>
-                    <p class="auteurProjet"> Par <?=$r['auteur']?></p>
-                    <p class="descriProjet"><?=$r['description']?></p>
+                    <img src="./medias/<?=$r['image']?>" alt="<?=$r['titre']?>">
+                    <p><?=$r['nom_module']?></p>
+                    <p><?=$r['titre']?></p>
+                    <p> Par <?=$r['auteur']?></p>
+                    <p><?=$r['description']?></p>
                 </div>
                 <?php } ?>
             </div>

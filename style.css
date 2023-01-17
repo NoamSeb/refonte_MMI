@@ -1151,6 +1151,21 @@ article .modules-tabcontent:first-child {
 }
 
 
+
+
+
+
+
+/* gallery */
+
+header.gallery {
+    background-image: url('./medias/gallery.png');
+}
+
+
+
+
+
 /* admin */
 
 
