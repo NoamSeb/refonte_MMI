@@ -16,7 +16,7 @@ if (isset($_POST["publier"])) {
     $module = $_POST['module'];
     insertProjet($titre, $description, $auteur, $image, $module);
     echo '<script type="text/javascript">
-    alert("Article publié avec succès!");
+    alert("Projet publié avec succès!");
     window.location = "dashboard.php";
 </script>';
 }
@@ -53,7 +53,7 @@ if (isset($_POST["publier"])) {
             <div class="spacebetween">
                 <a class="ariane" href="dashboard.php">Retourner au back-office</a>
                 <h2 style="margin:2rem 0">Publier un nouvel évènement</h2>
-                <form class="newarticle" name="article" method="POST" action="newprojet.php">
+                <form class="newarticle" name="article" method="POST" action="newproject.php">
                     <label for="titre">Titre</label>
                     <input type="text" id="titre" name="titre" placeholder="Titre" require>
                     <label for="description">Description</label><textarea id="description" name="description" placeholder="Description" require></textarea>
@@ -66,7 +66,7 @@ if (isset($_POST["publier"])) {
                         <option value="">Choisissez un module</option>
                         <?php
                         foreach ($resultModules as $rm) {
-                            echo '<option value="module_' . $rm["id_module"]. '">'. $rm["nom_module"] .'</option>';
+                            echo '<option value="'. $rm["id_module"]. '">'. $rm["nom_module"] .'</option>';
                         } ?>
                     </select>
                     <!-- <input type="text" id="module" name="module" placeholder="Module du projet" require> -->

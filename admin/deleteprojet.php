@@ -1,6 +1,5 @@
 <?php
 require_once('../model.php');
-$resultevent = detailProjet($_GET["id_projet"]);
 session_start();
 if (!isset($_SESSION["login"])) {
     header('location: ../index.php');
@@ -15,17 +14,11 @@ if (!isset($_SESSION["login"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
 
 <body>
 
-
-    <!-- <header>
-        <img src="../medias/user.png">
-    </header> -->
     <div class="backoffice">
     <aside class="navigation">
             <a href="dashboard.php" class="dashboardbutton"><i class="fa fa-tachometer" aria-hidden="true"></i>&#160;&#160;Dashboard</a>
@@ -36,22 +29,15 @@ if (!isset($_SESSION["login"])) {
             <a href="../index.php" class="homebutton justify-self-end">&larr;&#160;&#160;Retour au site</a>
         </aside>
         <div class="dashboard">
-        <div class="spacebetween">
-            <a class="ariane" href="javascript:history.go(-1)">Retour à la page précédente</a>
             <?php
-                    foreach ($resultevent as $value) {
-                        echo '<div><a type="button" class="btn btn-warning" href="editevent.php?action=edit & id_event=' . $value['id_event'] . '">&#9999; MODIFIER</a>&nbsp;&nbsp;<a type="button" class="btn btn-danger" onclick="return confirm(`Êtes-vous sûr de vouloir supprimer l\'article ?`)" href="deleteevent.php?type=id_event&delete & id_event=' . $value['id_event'] . '">&#128465; SUPPRIMER</a></div>';
-                    };
+            $db = dbConnect();
+            $requete = 'DELETE FROM projet WHERE id_projet = ' . $_GET['id_projet'];
+            $db->query($requete);
             ?>
-        </div>
-            <?php
-            foreach ($resultevent as $value) {
-                echo
-                '<article><h2>' . $value["nom_event"] . '</h2>' .
-                    '<h6>' . $value["date_event"] . '</h6>' .
-                    '<p>' . $value["description_event"] . '</p></article>';
-            }
-            ?>
+            <script type="text/javascript">
+                alert("Projet supprimé avec succès.");
+                window.location = "dashboard.php";
+            </script>
 
         </div>
     </div>

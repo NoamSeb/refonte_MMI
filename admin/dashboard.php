@@ -152,7 +152,7 @@ if (!isset($_SESSION["login"])) {
                                     <td><?= date('M d, Y', strtotime($value['date_event'])) ?></td>
                                     <td><?= $value['img_event'] ?></td>
                                     <td><?=
-                                        '<div style="display:flex; gap:1rem"><a type="button" class="btn btn-xs btn-info" href="readevent.php?id_event=' . $value['id_event'] . '" >&#128065;</a><a type="button" class="btn btn-xs btn-warning" href="editevent.php?action=edit & id_event=' . $value['id_event'] . '">&#9999;</a><a type="button" class="btn btn-xs btn-danger" onclick="return confirm(`Êtes-vous sûr de vouloir supprimer l\'article ?`)" href="deleteevent.php?type=id_event&delete & id_event=' . $value['id_event'] . '">&#128465;</a></div>'; ?></td>
+                                        '<div style="display:flex; gap:1rem"><a type="button" class="btn btn-xs btn-info" href="readevent.php?id_event=' . $value['id_event'] . '" >&#128065;</a><a type="button" class="btn btn-xs btn-warning" href="editevent.php?action=edit & id_event=' . $value['id_event'] . '">&#9999;</a><a type="button" class="btn btn-xs btn-danger" onclick="return confirm(`Êtes-vous sûr de vouloir supprimer l\'article ?`)" href="deleteevent.php?id_event=' . $value['id_event'] . '">&#128465;</a></div>'; ?></td>
                                 </tr>
                             <?php } ?>
                         </tbody>
@@ -184,7 +184,7 @@ if (!isset($_SESSION["login"])) {
                                     <td><?= $value['image'] ?></td>
                                     <td><?= $value['ext_module'] ?></td>
                                     <td><?=
-                                        '<div style="display:flex; gap:1rem"><a type="button" class="btn btn-xs btn-info" href="read.php?billet=' . $value['id_projet'] . '" >&#128065;</a><a type="button" class="btn btn-xs btn-warning" href="edit.php?action=edit & id=' . $value['id_projet'] . '">&#9998;</a><a type="button" class="btn btn-xs btn-danger" onclick="return confirm(`Êtes-vous sûr de vouloir supprimer l\'article ?`)" href="delete.php?type=billet&delete & id=' . $value['id_projet'] . '">&#128465;</a></div>'; ?></td>
+                                        '<div style="display:flex; gap:1rem"><a type="button" class="btn btn-xs btn-info" href="readproject.php?id_projet=' . $value['id_projet'] . '" >&#128065;</a><a type="button" class="btn btn-xs btn-warning" href="editproject.php?action=edit & id=' . $value['id_projet'] . '">&#9998;</a><a type="button" class="btn btn-xs btn-danger" onclick="return confirm(`Êtes-vous sûr de vouloir supprimer l\'article ?`)" href="deleteprojet.php?id_projet=' . $value['id_projet'] . '">&#128465;</a></div>'; ?></td>
                                 </tr>
                             <?php } ?>
                         </tbody>

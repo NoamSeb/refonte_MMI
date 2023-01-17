@@ -1,6 +1,7 @@
 <?php
 require_once('../model.php');
-$resultevent = detailEvent($_GET["id_projet"]);
+$resultProjet = detailProjet($_GET["id_projet"]);
+$resultModule = getOneModule($_GET["id_projet"]);
 session_start();
 if (!isset($_SESSION["login"])) {
     header('location: ../index.php');
@@ -39,17 +40,21 @@ if (!isset($_SESSION["login"])) {
         <div class="spacebetween">
             <a class="ariane" href="javascript:history.go(-1)">Retour à la page précédente</a>
             <?php
-                    foreach ($resultevent as $value) {
-                        echo '<div><a type="button" class="btn btn-warning" href="editevent.php?action=edit & id_event=' . $value['id_event'] . '">&#9999; MODIFIER</a>&nbsp;&nbsp;<a type="button" class="btn btn-danger" onclick="return confirm(`Êtes-vous sûr de vouloir supprimer l\'article ?`)" href="deleteevent.php?type=id_event&delete & id_event=' . $value['id_event'] . '">&#128465; SUPPRIMER</a></div>';
+                    foreach ($resultProjet as $value) {
+                        echo '<div><a type="button" class="btn btn-warning" href="editevent.php?action=edit & id_projet=' . $value['id_projet'] . '">&#9999; MODIFIER</a>&nbsp;&nbsp;<a type="button" class="btn btn-danger" onclick="return confirm(`Êtes-vous sûr de vouloir supprimer l\'article ?`)" href="deleteprojet.php?type=id_projet&delete & id_projet=' . $value['id_projet'] . '">&#128465; SUPPRIMER</a></div>';
                     };
             ?>
         </div>
             <?php
-            foreach ($resultevent as $value) {
+            foreach ($resultProjet as $value) {
                 echo
-                '<article><h2>' . $value["nom_event"] . '</h2>' .
-                    '<h6>' . $value["date_event"] . '</h6>' .
-                    '<p>' . $value["description_event"] . '</p></article>';
+                '<article><h2>' . $value["titre"] . '</h2>' .
+                    '<h6>' . $value["description"] . '</h6>' .
+                    '<p>' . $value["auteur"] . '</p>' . '</article>';
+            }
+            foreach($resultModule as $rM){
+                echo
+                '<article><p>' . $rM['nom_module'] . '<p></article>';
             }
             ?>
 

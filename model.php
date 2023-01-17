@@ -50,6 +50,14 @@ function getModules()
     $result = $stmt->fetchall(PDO::FETCH_ASSOC);
     return $result;
 }
+function getOneModule()
+{
+    $db = dbConnect();
+    $requete = "SELECT * FROM modules, projet WHERE id_module = ext_module";
+    $stmt = $db->query($requete);
+    $result = $stmt->fetchall(PDO::FETCH_ASSOC);
+    return $result;
+}
 
 function getEvent()
 {
@@ -135,7 +143,7 @@ function insertProjet($titre, $description, $auteur, $image, $module)
     $titre = $_POST['titre'];
     $contenu = $_POST['contenu'];
     $date = $_POST['date'];
-    $insert = "INSERT INTO evenements (id_event, nom_event, description_event, date_event, img_event) VALUES (NULL,'$titre','$contenu', '$date','test')";
+    $insert = "INSERT INTO projet (id_projet, titre, description, auteur, image, ext_module) VALUES (NULL,'$titre', '$description', '$auteur', '$image', '$module')";
     $db->query($insert);
 };
 

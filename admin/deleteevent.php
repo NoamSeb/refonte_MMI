@@ -36,7 +36,7 @@ if (!isset($_SESSION["login"])) {
             ?>
             <script type="text/javascript">
                 alert("Article supprimé avec succès.");
-                window.location = "evenement.php";
+                window.location = "dashboard.php";
             </script>
 
         </div>
