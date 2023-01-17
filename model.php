@@ -143,7 +143,7 @@ function detailProjet($projet)
     return $result;
 }
 
-// insérer un nouvel evenement
+// insérer un nouveau projet
 function insertProjet($titre, $description, $auteur, $image, $module)
 {
     $db = dbConnect();
@@ -156,13 +156,14 @@ function insertProjet($titre, $description, $auteur, $image, $module)
     $db->query($insert);
 };
 
-function editProjet($id, $title, $content, $date)
+function editProjet($id, $titre, $description, $auteur, $module)
 {
     $db = dbConnect();
     $id = $_POST['id'];
-    $title = $_POST['titre'];
-    $content = $_POST['contenu'];
-    $date = $_POST['date'];
-    $query = 'UPDATE evenements SET nom_event ="' . $title . '", description_event ="' . $content . '", date_event ="' . $date . '" WHERE id_event ="' . $id . '"';
+    $titre = $_POST['titre'];
+    $description = $_POST['description'];
+    $auteur = $_POST['auteur'];
+    $module = $_POST['module'];
+    $query = 'UPDATE projet SET titre ="' . $titre . '", description ="' . $description . '", auteur ="' . $auteur . '", ext_module="' . $module . '" WHERE id_projet ="' . $id . '"';
     $db->query($query);
 }

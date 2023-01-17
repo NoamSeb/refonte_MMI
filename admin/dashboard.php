@@ -94,9 +94,6 @@ if (!isset($_SESSION["login"])) {
 
 
 <body>
-    <!-- <header>
-        <img src="../medias/user.png">
-    </header> -->
     <div class="backoffice">
         <aside class="navigation">
             <a href="dashboard.php" class="dashboardbutton"><i class="fa fa-tachometer" aria-hidden="true"></i>&#160;&#160;Dashboard</a>
