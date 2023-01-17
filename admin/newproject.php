@@ -56,19 +56,18 @@ if (isset($_POST["publier"])) {
                 <form class="newarticle" name="article" method="POST" action="newprojet.php">
                     <label for="titre">Titre</label>
                     <input type="text" id="titre" name="titre" placeholder="Titre" require>
-                    <label for="description">Description</label><textarea id="description" name="description" placeholder="Description" require>
-                    </textarea>
+                    <label for="description">Description</label><textarea id="description" name="description" placeholder="Description" require></textarea>
                     <label for="auteur">Auteur</label>
                     <input type="text" id="auteur" name="auteur" placeholder="Auteur du projet" require>
                     <label for="image">Image</label>
                     <input type="file" id="image" name="image" placeholder="Image du projet" require>
-                    <label for="module">Module</label>
+                    <label for="module">Module</label><br>
                     <select name="module" id="module">
                         <option value="">Choisissez un module</option>
                         <?php
-                        foreach ($resultModules as $rm) { ?>
-                            <option value="module_<?php $rm['id_module'];?>"><?php $rm['nom_module'];?></option>
-                        <?php } ?>
+                        foreach ($resultModules as $rm) {
+                            echo '<option value="module_' . $rm["id_module"]. '">'. $rm["nom_module"] .'</option>';
+                        } ?>
                     </select>
                     <!-- <input type="text" id="module" name="module" placeholder="Module du projet" require> -->
                     <input type="submit" id="publier" name="publier" value="Publier"><input type="reset" value="Effacer">
