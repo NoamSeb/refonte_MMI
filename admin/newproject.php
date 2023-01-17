@@ -9,39 +9,40 @@ if (!isset($_SESSION["login"])) {
 $resultModules = getModules();
 
 
-// // Get reference to uploaded image
-// $image_file = $_FILES["$image"];
+$msg = "";
 
-// // Exit if no file uploaded
-// if (!isset($image_file)) {
-//     die('Pas de fichiers uploader.');
-// }
+// check if the user has clicked the button "UPLOAD" 
 
-// // Exit if image file is zero bytes
-// if (filesize($image_file["tmp_name"]) <= 0) {
-//     die('Le fichier uploader ne contient rien.');
-// }
+if (isset($_POST['publier'])) {
 
-// // Exit if is not a valid image file
-// $image_type = exif_imagetype($image_file["tmp_name"]);
-// if (!$image_type) {
-//     die("Le fichier uploader n'est pas une image.");
-// }
+    $filename = $_FILES["image"]["name"];
 
-// // Get file extension based on file type, to prepend a dot we pass true as the second parameter
-// $image_extension = image_type_to_extension($image_type, true);
+    $tempname = $_FILES["image"]["tmp_name"];
 
-// // Create a unique image name
-// $image_name = bin2hex(random_bytes(16)) . $image_extension;
+    $folder = "./medias/" . $filename;
 
-// // Move the temp image file to the images directory
-// move_uploaded_file(
-//     // Temp image location
-//     $image_file["tmp_name"],
+    // connect with the database
 
-//     // New image location
-//     __DIR__ . "/images/" . $image_name
-// );
+    $db = mysqli_connect("localhost", "root", "root", "refonte_mmi");
+
+    $sql = "INSERT INTO image (filename) VALUES ('$filename')";
+
+    // function to execute above query
+
+    mysqli_query($db, $sql);
+
+    // Add the image to the "image" folder"
+
+    if (move_uploaded_file($tempname, $folder)) {
+
+        $msg = "Image uploaded successfully";
+    } else {
+
+        $msg = "Failed to upload image";
+    }
+}
+$db = mysqli_connect("localhost", "root", "root", "refonte_mmi");
+$result = mysqli_query($db, "SELECT * FROM projet");
 
 if (isset($_POST["publier"])) {
     $titre = $_POST['titre'];
@@ -101,7 +102,7 @@ if (isset($_POST["publier"])) {
                         <option value="">Choisissez un module</option>
                         <?php
                         foreach ($resultModules as $rm) {
-                            echo '<option value="'. $rm["id_module"]. '">'. $rm["nom_module"] .'</option>';
+                            echo '<option value="' . $rm["id_module"] . '">' . $rm["nom_module"] . '</option>';
                         } ?>
                     </select>
                     <!-- <input type="text" id="module" name="module" placeholder="Module du projet" require> -->
