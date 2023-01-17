@@ -1,8 +1,8 @@
 <?php
 require_once('../model.php');
-$resultDetailProjet = detailProjet($_GET["id"]);
-$resultModule = getModules();
-$resultOneModule = getOneModule();
+$resultDetailProjet = detailProjet($_GET["id_projet"]);
+$resultModules = getAllModulesExcept($_GET["id_projet"]);
+$resultOneModule = getOneModule($_GET["id_projet"]);
 
 session_start();
 if (!isset($_SESSION["login"])) {
@@ -10,10 +10,11 @@ if (!isset($_SESSION["login"])) {
 }
 
 if (isset($_POST["update"])) {
-    $id = $_POST['id_projet'];
-    $title = $_POST['titre'];
-    $content = $_POST['contenu'];
-    $date = $_POST['date'];
+    $id = $_POST['id'];
+    $titre = $_POST['titre'];
+    $description = $_POST['description'];
+    $auteur = $_POST['auteur'];
+    $module = $_POST['module'];
 
     editProjet($id, $titre, $description, $auteur, $module);
 //     echo '<script type="text/javascript">
@@ -47,12 +48,13 @@ if (isset($_POST["update"])) {
             <a href="../index.php" class="homebutton justify-self-end">&larr;&#160;&#160;Retour au site</a>
         </aside>
         <div class="dashboard">
-            <?php foreach ($resultDetailEvent as $result) {
+            <?php foreach ($resultDetailProjet as $result) {
                 $editId = $result['id_projet'];
                 $editTitle = $result['titre'];
-                $editContent = $result['description'];
+                $editDescription = $result['description'];
                 $editAuteur = $result['auteur'];
-
+                $editImage = $result['image'];
+                $editModule = $result['ext_module'];
             }
 
             ?>

@@ -50,15 +50,22 @@ function getModules()
     $result = $stmt->fetchall(PDO::FETCH_ASSOC);
     return $result;
 }
-function getOneModule()
+function getOneModule($projet)
 {
     $db = dbConnect();
-    $requete = "SELECT * FROM modules, projet WHERE id_module = ext_module";
+    $requete = "SELECT * FROM modules, projet WHERE projet.ext_module = modules.id_module AND id_projet=".$projet;
     $stmt = $db->query($requete);
     $result = $stmt->fetchall(PDO::FETCH_ASSOC);
     return $result;
 }
-
+function getAllModulesExcept($projet)
+{
+    $db = dbConnect();
+    $requete = "SELECT * FROM modules, projet distinct SELECT * FROM modules, projet WHERE projet.ext_module = modules.id_module AND id_projet=".$projet;
+    $stmt = $db->query($requete);
+    $result = $stmt->fetchall(PDO::FETCH_ASSOC);
+    return $result;
+}
 function getEvent()
 {
     $db = dbConnect();
@@ -150,7 +157,7 @@ function insertProjet($titre, $description, $auteur, $image, $module)
     // $auteur = $_SESSION['login'];
     $titre = $_POST['titre'];
     $description = $_POST['description'];
-    $auteur= $_POST['auteur'];
+    $auteur = $_POST['auteur'];
     $module = $_POST['module'];
     $insert = "INSERT INTO projet (id_projet, titre, description, auteur, image, ext_module) VALUES (NULL,\"$titre\", \"$description\", \"$auteur\", \"$image\", \"$module\")";
     $db->query($insert);
