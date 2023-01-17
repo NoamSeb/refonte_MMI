@@ -80,3 +80,27 @@ function detailEvent($event){
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     return $result;
 }
+
+// insérer un nouvel evenement
+function insertEvent($titre, $contenu,$date)
+{
+    $db = dbConnect();
+    // $auteur = $_SESSION['login'];
+    $titre = $_POST['titre'];
+    $contenu = $_POST['contenu'];
+    $date = $_POST['date'];
+    $insert = "INSERT INTO evenements (id_event, nom_event, description_event, date_event, img_event) VALUES (NULL,'$titre','$contenu', '$date','test')";
+    $db->query($insert);
+};
+
+function editEvent($id, $title, $content, $date)
+{
+    $db = dbConnect();
+    $id = $_POST['id'];
+    $title = $_POST['titre'];
+    $content = $_POST['contenu'];
+    $date = $_POST['date'];
+    $query = 'UPDATE evenements SET nom_event ="' . $title . '", description_event ="' . $content . '", date_event ="' . $date . '" WHERE id_event ="' . $id . '"';
+    $db->query($query);
+}
+

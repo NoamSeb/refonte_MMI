@@ -1,23 +1,23 @@
 <?php
 require_once('../model.php');
-$resultDetailEvent = detailEvent($_GET["id_event"]);
+// $resultevent = detailEvent($_GET["id_event"]);
 session_start();
 if (!isset($_SESSION["login"])) {
     header('location: ../index.php');
 }
 
-if (isset($_POST["update"])) {
-    $id = $_POST['id'];
-    $title = $_POST['titre'];
-    $content = $_POST['contenu'];
-    $date = $_POST['date'];
-
-    editEvent($id, $title, $content, $date);
-    echo'<script type="text/javascript">
-    alert("Article modifié avec succès!");
+if (isset($_POST["publier"])) {
+    $titre = $_POST["titre"];
+    $contenu = $_POST["contenu"];
+    $date = $_POST["date"];
+    insertEvent($titre, $contenu, $date);
+    echo '<script type="text/javascript">
+    alert("Article publié avec succès!");
     window.location = "dashboard.php";
 </script>';
 }
+
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -34,11 +34,6 @@ if (isset($_POST["update"])) {
 </head>
 
 <body>
-
-
-    <!-- <header>
-        <img src="../medias/user.png">
-    </header> -->
     <div class="backoffice">
         <aside class="navigation">
             <a href="dashboard.php" class="dashboardbutton"><i class="fa fa-tachometer" aria-hidden="true"></i>&#160;&#160;Dashboard</a>
@@ -48,33 +43,17 @@ if (isset($_POST["update"])) {
             <a class="btn btn-danger justify-self-end" href="../controllers/logout.php" type="button"><i class="fa fa-power-off"></i>&#160;&#160;Déconnexion</a>
             <a href="../index.php" class="homebutton justify-self-end">&larr;&#160;&#160;Retour au site</a>
         </aside>
+
+
         <div class="dashboard">
-            <?php foreach ($resultDetailEvent as $result) {
-                $editId = $result['id_event'];
-                $editTitle = $result['nom_event'];
-                $editContent = $result['description_event'];
-                $editDate = $result['date_event'];
+            <div class="spacebetween">
+                <a class="ariane" href="dashboard.php">Retourner au back-office</a>
+                <h2 style="margin:2rem 0">Publier un nouvel évènement</h2>
+                <form class="newarticle" name="article" method="POST" action="newevent.php"><label for="titre">Titre</label><input type="text" id="titre" name="titre" placeholder="Titre" require><label for="contenu">Contenu</label><textarea id="contenu" name="contenu" placeholder="Contenu" require></textarea><label for="date">Titre</label><input type="date" id="date" name="date" placeholder="Date de l'évènement" require><input type="submit" id="publier" name="publier" value="Publier"><input type="reset" value="Effacer"></form>
 
-            }
 
-            ?>
-            <h2>Modifier l'article</h2>
-
-            <form class="edit" role="form" method="post" action="">
-                <input type="hidden" name="id" value="<?php echo $editId; ?>">
-                <label for="titre">Titre</label>
-                <input placeholder="Titre" name="titre" value="<?php echo $editTitle; ?>">
-                <label for="contenu">Contenu</label>
-                <textarea placeholder="Contenu" name="contenu"><?php echo $editContent; ?></textarea>
-                <label for="date">Date de l'évènement</label>
-                <input type="date" placeholder="Date de l'évènement" name="date" value="<?php echo $editDate; ?>">
-
-                <input type="submit" name="update" value="Mettre à jour l'article">
-
-            </form>
-            </article>
+            </div>
         </div>
-    </div>
 </body>
 <!-- <script src=" https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>

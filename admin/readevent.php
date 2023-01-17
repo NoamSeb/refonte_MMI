@@ -15,6 +15,8 @@ if (!isset($_SESSION["login"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
 
@@ -25,14 +27,14 @@ if (!isset($_SESSION["login"])) {
         <img src="../medias/user.png">
     </header> -->
     <div class="backoffice">
-        <nav>
-            <ul>
-                <li><a href="dashboard.php">Dashboard</a></li>
-                <li><a href="projet.php">Projets</a></li>
-                <li><a href="evenement.php">Évènements</a></li>
-                <li><a href="../controllers/logout.php">Déconnexion</a></li>
-            </ul>
-        </nav>
+    <aside class="navigation">
+            <a href="dashboard.php" class="dashboardbutton"><i class="fa fa-tachometer" aria-hidden="true"></i>&#160;&#160;Dashboard</a>
+            <a href="newevent.php" class="btn btn-primary" type="button">Ajouter un évènement</a>
+            <a href="newproject.php" class="btn btn-primary" type="button">Ajouter un projet</a>
+
+            <a class="btn btn-danger justify-self-end" href="../controllers/logout.php" type="button"><i class="fa fa-power-off"></i>&#160;&#160;Déconnexion</a>
+            <a href="../index.php" class="homebutton justify-self-end">&larr;&#160;&#160;Retour au site</a>
+        </aside>
         <div class="dashboard">
         <div class="spacebetween">
             <a class="ariane" href="javascript:history.go(-1)">Retour à la page précédente</a>
@@ -46,7 +48,7 @@ if (!isset($_SESSION["login"])) {
             foreach ($resultevent as $value) {
                 echo
                 '<article><h2>' . $value["nom_event"] . '</h2>' .
-                    '<h6>Publié le ' . $value["date_event"] . '</h6>' .
+                    '<h6>' . $value["date_event"] . '</h6>' .
                     '<p>' . $value["description_event"] . '</p></article>';
             }
             ?>
