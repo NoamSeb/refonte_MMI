@@ -921,8 +921,7 @@ footer {
     text-transform: uppercase;
 }
 
-.pedagogie-projet,
-.mmind {
+.pedagogie-projet {
     display: flex;
     justify-content: center;
     margin: 10rem auto;
@@ -1058,6 +1057,22 @@ footer {
     align-items: center;
 }
 
+.canada, .mmind {
+    margin: 6rem auto;
+    display: flex;
+    align-items: center;
+    gap:3rem;
+}
+
+.canada article {
+    width: 50%;
+}
+.canada-img {
+    border-radius: 20px;
+    height: 18rem;
+    width:50%;
+    background-image: url(./medias/international.png);
+}
 
 
 .modules {

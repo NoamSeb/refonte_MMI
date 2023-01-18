@@ -173,18 +173,22 @@ $resultModules = getModules();
             </div>
         </div>
 
-        <div class="item">
-            <h2>Un semestre au canada ça vous tente ?</h2>
-            <p>MMI vise à entretenir des relation a travers le monde afin de pouvoir en faire profiter les étudiants. Pour les étudiants se dirigeant vers le parcours créatif, l'université UQAC se fera un plaisir d'accueillir les étudiants afin qu'il suivent des cours anglophone. Pour les étudiant visant à rejoindre le parcours développement et media intéractif, le Cegep acceullera les étudiant dans le but de leur apporté des connaissances lié au web dans un contexte anglophone</p>
-        </div>
+        <section class="canada">
+            <div class="canada-img"></div>
+            <article>
+                <h3>Un semestre au canada ça vous tente ?</h3>
+                <p>MMI vise à entretenir des relation a travers le monde afin de pouvoir en faire profiter les étudiants. Pour les étudiants se dirigeant vers le parcours créatif, l'université UQAC se fera un plaisir d'accueillir les étudiants afin qu'il suivent des cours anglophone. Pour les étudiant visant à rejoindre le parcours développement et media intéractif, le Cegep acceullera les étudiant dans le but de leur apporté des connaissances lié au web dans un contexte anglophone.</p>
+            </article>
+
+        </section>
 
         <section class="mmind">
             <div class="paragraphe-right">
                 <h2>MMIND : L’anglais depuis la france</h2>
                 <p>Dans l'optique de toujours entretenir des liens étroit avec la langue anglaise, les étudiants sont en charge du compte instagram mmind qui permet de mettre en avant des évènements de façon hebdomadaire. les étudiants doivent rédiger les posts en anglais. De plus, tout les ans, les étudiants de deuxième années sont chargé d'imaginer un nouveau design pour les posts instagram qui vont suivre durant tout l'année scolaire.</p>
-                <a href="https://www.instagram.com/mmind_mmi/" alt="instagram d'mmind">Accéder au profil sur instagram</a>
+                <a href="https://www.instagram.com/mmind_mmi/" target="_blank" alt="instagram d'mmind">Accéder au profil sur instagram</a>
             </div>
-            <img src="medias/instagram.png" alt="">
+            <img src="./medias/international/instagram.png" alt="">
         </section>
 
     </main>
