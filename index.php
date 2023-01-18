@@ -27,7 +27,7 @@ $resultTemoignage = getTemoignages();
 
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="icon" href="./medias/icons/logo_MMI.svg">
-    <script src="./js/script.js"></script>
+    <script src="./js/script.js" defer></script>
     <title>MMI-Champs</title>
 </head>
 

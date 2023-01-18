@@ -1422,6 +1422,12 @@ form input[type=submit]:hover {
 }
 
 
+
+
+.mentions {
+    margin-top: 10rem;
+}
+
 /* responsive */
 
 @media screen and (max-width:1280px) {
