@@ -1193,6 +1193,7 @@ header.gallery {
     display: flex;
     flex-direction: row;
     width: 960px;
+    margin-bottom: 10rem;
 }
 
 .panel {
@@ -1250,7 +1251,7 @@ header.gallery {
 .panel .button {
     background-color: var(--color-yellow);
     width: fit-content;
-    padding: 1rem 2rem !important;
+    padding: 0.8rem 1.5rem !important;
 
 }
 
