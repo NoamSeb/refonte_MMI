@@ -12,6 +12,8 @@ $resultatProjets = getProjectsAndModules();
     <title>Galerie</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+
 
     <script src="./js/slider-projets.js" defer></script>
     <link rel="icon" href="./medias/icons/logo_MMI.svg">
