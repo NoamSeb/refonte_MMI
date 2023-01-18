@@ -49,7 +49,7 @@ $resultModules = getModules();
 
     <nav class="navbar" data-scroll>
         <a href="index.php" class="imgNav">
-            <img src="medias/icons/logo_MMI.svg" alt="Logo">
+            <img src="medias/icons/logo_MMI.svg" alt="Retour à l'accueil">
         </a>
 
         <div class="navLinks">
