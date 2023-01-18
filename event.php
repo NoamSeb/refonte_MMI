@@ -100,7 +100,6 @@ $result = getEvent();
             </div>
 
         </div>
-        <p class="seeMore"> <strong>Voir les évènements passés ></strong></p>
     </main>
     <footer>
         <div class="footer">
