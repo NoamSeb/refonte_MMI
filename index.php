@@ -124,7 +124,7 @@ $resultTemoignage = getTemoignages();
                             echo
                             '<div class="item item-modules">' .
                                 '<div class="img-and-title">' .
-                                '<img src="medias/' . $module['img_module'] . '" alt="">' .
+                                '<img src="medias/module/' . $module['img_module'] . '" alt="">' .
                                 '<h4>' . $module['nom_module'] . '</h4>' .
                                 '</div>' .
                                 '<div class="desc-and-button">' .

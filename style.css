@@ -49,10 +49,9 @@
 /* DM Sans, sans-serif */
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Inter:wght@500;600;700;800&display=swap');
-
 :root {
     --color-black: #090909;
-    --color-white: #f5f5f5;
+    --color-white: #fff;
     --color-green: #15c8ad;
     --color-red: #e62929;
     --color-pink: #e32d70;
@@ -485,7 +484,6 @@ main {
 
 .actu .voirplus {
     margin: 0 auto;
-
 }
 
 .actuTitle {
@@ -978,8 +976,6 @@ footer {
     margin-bottom: 2.5rem;
 }
 
-
-
 .paragraphe-left {
     background-color: var(--color-green);
     border-radius: 27px;
@@ -1013,6 +1009,7 @@ footer {
     align-items: center;
 }
 
+
 /* PAGE FORMATION */
 
 .header-event {
@@ -1025,7 +1022,11 @@ footer {
     font-weight: 900;
     font-size: 2.5rem;
 }
-section.flex {justify-content: center;}
+
+section.flex {
+    justify-content: center;
+}
+
 .paragraphe {
     padding: 2rem;
     color: var(--color-white);
@@ -1033,6 +1034,7 @@ section.flex {justify-content: center;}
     width: 30%;
     box-sizing: content-box;
 }
+
 .evenements {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1051,23 +1053,25 @@ section.flex {justify-content: center;}
     align-items: center;
 }
 
-.canada, .mmind, .flex {
+.canada,
+.mmind,
+.flex {
     margin: 6rem auto;
     display: flex;
     align-items: center;
-    gap:3rem;
+    gap: 3rem;
 }
 
 .canada article {
     width: 50%;
 }
+
 .canada-img {
     border-radius: 20px;
     height: 18rem;
-    width:50%;
+    width: 50%;
     background-image: url(./medias/international.png);
 }
-
 
 .modules {
     display: flex;
@@ -1094,7 +1098,6 @@ aside.tab .modules-tablinks.active {
     from {
         opacity: 0;
     }
-
     to {
         opacity: 1;
     }
@@ -1104,12 +1107,10 @@ aside.tab .modules-tablinks.active {
     from {
         opacity: 1;
     }
-
     to {
         opacity: 0;
     }
 }
-
 
 article .modules-tabcontent:first-child {
     display: block;
@@ -1188,10 +1189,6 @@ article .modules-tabcontent:first-child {
 }
 
 
-
-
-
-
 /* gallery */
 
 header.gallery {
@@ -1218,6 +1215,7 @@ header.gallery {
     position: relative;
     transition: flex 0.7s ease-in;
 }
+
 .panel.active {
     transition: all 1s ease;
     display: flex;
@@ -1229,6 +1227,7 @@ header.gallery {
     display: none;
     transition: all 1s ease;
 }
+
 .panel.active article {
     display: flex;
     flex-direction: column;
@@ -1261,21 +1260,17 @@ header.gallery {
     background-color: var(--color-yellow);
     width: fit-content;
     padding: 0.8rem 1.5rem !important;
-
 }
-
 
 @media(max-width: 480px) {
     .projectscontainer {
         width: 100vw;
     }
-
     .panel:nth-of-type(4),
     .panel:nth-of-type(5) {
         display: none;
     }
 }
-
 
 
 /* admin */
@@ -1430,12 +1425,10 @@ form input[type=submit]:hover {
     color: #555555;
 }
 
-
-
-
 .mentions {
     margin-top: 10rem;
 }
+
 
 /* responsive */
 
@@ -1449,11 +1442,9 @@ form input[type=submit]:hover {
     .navLinks ul {
         display: none;
     }
-
     .menu {
         display: block;
     }
-
     .navLinks ul {
         display: none;
         transition: all 0.2s ease;
