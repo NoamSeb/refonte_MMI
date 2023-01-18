@@ -12,7 +12,7 @@ $result = getOneEvent();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="style.css" type="text/css">
-    <script src="./js/script.js"></script>
+    <script src="./js/script.js" defer></script>
 
     <title><?php $result['nom_event']?></title>
     <link rel="stylesheet" href="style.css">
@@ -86,7 +86,7 @@ $result = getOneEvent();
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.1005349879015!2d2.58308131562675!3d48.837221010151026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e60e33dd9a3fdd%3A0x7e5ced48ab7fc8df!2sIUT%20de%20Marne-la-Vall%C3%A9e%20-%20Universit%C3%A9%20Gustave%20Eiffel!5e0!3m2!1sfr!2sfr!4v1672012216586!5m2!1sfr!2sfr" style="border:0; border-radius: 30px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="campus">
-                <h3>Campus</h3>
+                <h4>Campus</h4>
                 <ul>
                     <li>2 rue Albert Einstein</li>
                     <li>77420 Champs Sur Marne</li>
@@ -95,7 +95,7 @@ $result = getOneEvent();
                 </ul>
             </div>
             <div class="contact">
-                <h3>Contact</h3>
+                <h4>Contact</h4>
                 <ul>
                     <li>01 60 95 85 90</li>
                     <li> mmi-dir.iut@univ-eiffel.fr</li>
@@ -109,7 +109,10 @@ $result = getOneEvent();
         </div>
         <div class="credits">
             <p>2023&#160;&#160;&#160;-&#160;&#160;&#160;BUT Métiers du Multimédia & de l’Internet, Champs-sur-Marne © Tous droits réservés</p>
-            <h3>mentions légales</h3>
+            <h4>mentions légales</h4>
+            <a href="./login.php">
+                <h4>Back-office</h4>
+            </a>
         </div>
 
     </footer>

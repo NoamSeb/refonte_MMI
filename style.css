@@ -921,8 +921,7 @@ footer {
     text-transform: uppercase;
 }
 
-.pedagogie-projet,
-.mmind {
+.pedagogie-projet {
     display: flex;
     justify-content: center;
     margin: 10rem auto;
@@ -1026,20 +1025,14 @@ footer {
     font-weight: 900;
     font-size: 2.5rem;
 }
-
-.pagesSecondTitleTxt {
-    display: block;
-    margin: auto;
-    margin-top: 1.5rem;
+section.flex {justify-content: center;}
+.paragraphe {
+    padding: 2rem;
+    color: var(--color-white);
+    border-radius: 20px;
+    width: 30%;
+    box-sizing: content-box;
 }
-
-.pagesSecondTitleTxt p {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 1.25rem;
-    line-height: 161.2%;
-    margin-bottom: 7rem;
-}
-
 .evenements {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1058,6 +1051,22 @@ footer {
     align-items: center;
 }
 
+.canada, .mmind, .flex {
+    margin: 6rem auto;
+    display: flex;
+    align-items: center;
+    gap:3rem;
+}
+
+.canada article {
+    width: 50%;
+}
+.canada-img {
+    border-radius: 20px;
+    height: 18rem;
+    width:50%;
+    background-image: url(./medias/international.png);
+}
 
 
 .modules {
@@ -1421,6 +1430,12 @@ form input[type=submit]:hover {
     color: #555555;
 }
 
+
+
+
+.mentions {
+    margin-top: 10rem;
+}
 
 /* responsive */
 
