@@ -15,6 +15,7 @@ require_once('model.php');
 
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./medias/icons/logo_MMI.svg">
 </head>
 
 <body>

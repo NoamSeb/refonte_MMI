@@ -19,7 +19,13 @@ $events = getEvent();
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
 
+    <meta name="twitter:card" content="Site MMI champs"></meta>
+    <link rel="canonical" href="http://mmi-champs.noamsebahoun.fr/index.php">
+    <meta name="description" content=" Tout au long de MMI, l’étudiant développe des compétences pluridisciplinaires tant dans le domaine de la programmation que dans le graphisme ou les réseaux. Son atout principal au sortir de la formation est sa polyvalence dans les différents domaine du multimédia.">
+    <meta name="keywords" content="MMI, multimédia, internet, web, audiovisuel, études, post-bac">
+
     <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="icon" href="./medias/icons/logo_MMI.svg">
     <script src="./js/script.js"></script>
     <title>MMI-Champs</title>
 </head>

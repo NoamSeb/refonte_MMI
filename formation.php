@@ -20,6 +20,7 @@ $resultModules = getModules();
     <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/vendors/jquery.min.js"></script>
     <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
     <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="icon" href="./medias/icons/logo_MMI.svg">
     <script src="./js/script.js"></script>
     <title>MMI-Champs</title>
 </head>
