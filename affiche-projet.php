@@ -1,6 +1,6 @@
-<?php 
+<?php
 require_once('model.php');
-$result = getOneEvent();
+$result = getOneModule($_GET['id_projet']);
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +14,8 @@ $result = getOneEvent();
     <link rel="stylesheet" href="style.css" type="text/css">
     <script src="./js/script.js"></script>
 
-    <title><?php $result['nom_event']?></title>
+    <title><?php
+    foreach ($result as $r) { echo $r['titre'];}?></title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./medias/icons/logo_MMI.svg">
 </head>
@@ -29,7 +30,7 @@ $result = getOneEvent();
                 <a href="gallery.php">
                     <li>Projets</li>
                 </a>
-                <a href="event.php">
+                <a href="projet.php">
                     <li>Évènements</li>
                 </a>
                 <a href="international.html">
@@ -53,7 +54,7 @@ $result = getOneEvent();
                 <a href="gallery.php">
                     <li>Projets</li>
                 </a>
-                <a href="event.php">
+                <a href="projet.php">
                     <li>Évènements</li>
                 </a>
                 <a href="international.html">
@@ -74,10 +75,20 @@ $result = getOneEvent();
 
     <?php
     foreach ($result as $r) { ?>
-        <img src="<?= $r['img_event'] ?>" alt="">
-        <h1><?= $r['nom_event'] ?></h1>
-        <p><?= $r['date_event'] ?></p>
-        <p><?= $r['description_event'] ?></p>
+
+        <header class="header header-eventdetail" style="background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('medias/projets/<?= $r['image'] ?>')">
+            <h1><?= $r['titre'] ?></h1>
+            <h3><?= $r['auteur'] ?></h3>
+        </header>
+
+        <main class="eventdetail">
+            <a class="ariane" href="javascript:history.go(-1)">Retour à la page précédente</a>
+            <h1><?= $r['titre'] ?></h1>
+            <p><?= $r['nom_module'] ?></p>
+            <br>
+            <p><?= $r['description'] ?></p>
+        </main>
+
     <?php } ?>
 
     <footer>
