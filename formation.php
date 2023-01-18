@@ -22,7 +22,7 @@ $resultModules = getModules();
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="icon" href="./medias/icons/logo_MMI.svg">
     <script src="./js/script.js"></script>
-    <title>MMI-Champs</title>
+    <title>Formation</title>
 </head>
 
 <body>

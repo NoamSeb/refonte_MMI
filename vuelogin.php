@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="./style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Connexion</title>
     <link rel="icon" href="./medias/icons/logo_MMI.svg">
 </head>
 
@@ -60,8 +60,8 @@
             if (isset($err) && $err == "password") {
                 echo "<br><h6 style='color:#FF4C4C'>Votre mot de passe est incorrect</h6>";
             };
-
             ?><br>
+            <button id="show-hide-btn" type="button" onclick="showHidePassword()">Show/Hide Password</button>
             <input type=submit name="allez" value="Se connecter">
         </form>
     </div>
@@ -70,5 +70,14 @@
     }
     ?>
 </body>
-
+<script>
+    function showHidePassword() {
+    var x = document.getElementById("password");
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
+}
+</script>
 </html>

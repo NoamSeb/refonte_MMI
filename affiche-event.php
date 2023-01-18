@@ -1,5 +1,6 @@
 <?php 
 require_once('model.php');
+$result = getOneEvent();
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +14,7 @@ require_once('model.php');
     <link rel="stylesheet" href="style.css" type="text/css">
     <script src="./js/script.js"></script>
 
-    <title>Document</title>
+    <title><?php $result['nom_event']?></title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./medias/icons/logo_MMI.svg">
 </head>
@@ -72,7 +73,6 @@ require_once('model.php');
     </nav>
 
     <?php
-    $result = getOneEvent();
     foreach ($result as $r) { ?>
         <img src="<?= $r['img_event'] ?>" alt="">
         <h1><?= $r['nom_event'] ?></h1>
