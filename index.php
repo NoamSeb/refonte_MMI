@@ -213,13 +213,17 @@ $resultTemoignage = getTemoignages();
             </div>
         </div>
         <div class="temoignages">
-            <h2 class="testimonyTitle">NOS ANCIENS TÉMOIGNENT</h2>
-            <div class="carousel-events owl-carousel owl-theme">
+            <h3 class="testimonyTitle">NOS ANCIENS TÉMOIGNENT</h3>
+            <div class="carousel-temoignages owl-carousel owl-theme">
                 <?php
                 foreach ($resultTemoignage as $value) {
                     echo
                     '<div class="item">' .
-                        '</div>';
+                    '<h4 class="purple">' . $value["nom_etudiant"] . '</h4>'.
+                    '<br><p>' . $value["contenu_temoignage"] . '</p>' .
+                    '<br><h5 class="purple">' . $value["promo_etudiant"] . '</h5>' .
+
+                    '</div>';
                 };
                 ?>
             </div>

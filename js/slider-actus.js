@@ -65,6 +65,28 @@ owl_events.owlCarousel({
     }
 })
 
+let owl_temoin = $('.carousel-temoignages');
+owl_temoin.owlCarousel({
+    margin: 10,
+    loop: true,
+    nav: true,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
+    dots: false,
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 1
+        },
+        1000: {
+            items: 1
+        }
+    }
+})
+
 
 
 let owl_competences = $('.carousel-competences');
