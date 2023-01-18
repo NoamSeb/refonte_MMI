@@ -1,5 +1,6 @@
 <?php 
 include('model.php');
+$result = getEvent();
 ?>
 
 <!DOCTYPE html>
@@ -78,17 +79,12 @@ include('model.php');
                     </p>
                 </div>
             </div>
-            <div class="pageContent">
-                <!-- 
-                    
-                    SLIDER 
-                
-                -->
-                <?php
-                $result = getEvent();
+            <div class="evenements">
+         
+               <?php
                 foreach($result as $result) { 
                     echo 
-                    '<div class="event event'.$result['id_event'].'" style="background:url(\'medias/'.$result['img_event'].'\') no-repeat center center/cover;">'.
+                    '<div class="event" style="background:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(\'medias/evenements/'.$result['img_event'].'\') no-repeat center center/cover;">'.
                     '<div class="event-darken">' .
                         '<h3 class="titleEvent">'.$result['nom_event'].'</h3>' .
                         '<p class="dateEvent">'.$result['date_event'].'</p>' .
@@ -97,11 +93,6 @@ include('model.php');
                     '</div>'.
                     '</div>';
                 } ?>
-                <!-- 
-                    
-                    SLIDER 
-                
-                -->
             </div>
 
         </div>

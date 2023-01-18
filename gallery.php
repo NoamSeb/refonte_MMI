@@ -1,5 +1,5 @@
 <?php include('model.php');
-$resultatProjets = getOneModule();
+$resultatProjets = getProjectsAndModules();
 ?>
 
 <!DOCTYPE html>
@@ -11,6 +11,9 @@ $resultatProjets = getOneModule();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="./js/slider-projets.js" defer></script>
 </head>
 
 <body>
@@ -77,18 +80,21 @@ $resultatProjets = getOneModule();
                     <p>Blabla sur les récompenses aux Festival MMI, Nuit de l’info... Les projets de nos étudiants leur permettent de se constituer un portfolio et un maximum d’expérience pour débuter dans le monde professionnel, au sein de stages etc.</p>
                 </div>
             </div>
-            <div class="pageSlider">
+            <div class="projectscontainer">
                 <?php
-                foreach($resultatProjets as $r) { ?>
-                <div class="projet">
-                    <img src="./medias/<?=$r['image']?>" alt="<?=$r['titre']?>">
-                    <p><?=$r['nom_module']?></p>
-                    <p><?=$r['titre']?></p>
-                    <p> Par <?=$r['auteur']?></p>
-                    <p><?=$r['description']?></p>
-                </div>
+                foreach ($resultatProjets as $r) { ?>
+                    <div class="panel" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./medias/projets/<?= $r['image'] ?>');" alt="<?= $r['titre'] ?>">
+                        <article>
+                            <h5>#<?= $r['nom_module'] ?></h5>
+                            <h2><?= $r['titre'] ?></h2>
+                            <h5>Par <?= $r['auteur'] ?></h5>
+                            <p>Par <?= mb_strimwidth($r['description'], 0, 200, "...") ?></p>
+                            <a class="button" href="affiche-projets.php?id_projet=<?= $r['id_projet'] ?>" type="button">Voir le projet</a>
+                        </article>
+                    </div>
                 <?php } ?>
             </div>
+        </div>
         </div>
     </main>
     <footer>
@@ -114,7 +120,7 @@ $resultatProjets = getOneModule();
                 <div class="socials">
                     <a href="https://www.instagram.com/mmi_champs/" target="_blank"><img src="medias/icons/insta_icon.svg" alt="Page Instagram"></a>
                     <a href="https://twitter.com/mmi_champs" target="_blank"><img src="medias/icons/twitter_icon.svg" alt="Page Twitter"></a>
-                    
+
                 </div>
             </div>
         </div>
@@ -123,6 +129,7 @@ $resultatProjets = getOneModule();
             <h3>mentions légales</h3>
         </div>
 
-    </footer></body>
+    </footer>
+</body>
 
 </html>

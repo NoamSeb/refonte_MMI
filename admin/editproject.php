@@ -1,7 +1,7 @@
 <?php
 require_once('../model.php');
 $resultDetailProjet = detailProjet($_GET["id_projet"]);
-$resultModules = getAllModulesExcept($_GET["id_projet"]);
+$resultModules = getModules();
 $resultOneModule = getOneModule($_GET["id_projet"]);
 
 session_start();
@@ -17,10 +17,10 @@ if (isset($_POST["update"])) {
     $module = $_POST['module'];
 
     editProjet($id, $titre, $description, $auteur, $module);
-//     echo '<script type="text/javascript">
-//     alert("Article modifié avec succès!");
-//     window.location = "dashboard.php";
-// </script>';
+    //     echo '<script type="text/javascript">
+    //     alert("Article modifié avec succès!");
+    //     window.location = "dashboard.php";
+    // </script>';
 }
 ?>
 <!DOCTYPE html>
@@ -43,11 +43,14 @@ if (isset($_POST["update"])) {
             <a href="dashboard.php" class="dashboardbutton"><i class="fa fa-tachometer" aria-hidden="true"></i>&#160;&#160;Dashboard</a>
             <a href="newevent.php" class="btn btn-primary" type="button">Ajouter un évènement</a>
             <a href="newproject.php" class="btn btn-primary" type="button">Ajouter un projet</a>
+            <a href="newtemoignage.php" class="btn btn-primary" type="button">Ajouter un témoignage</a>
 
             <a class="btn btn-danger justify-self-end" href="../controllers/logout.php" type="button"><i class="fa fa-power-off"></i>&#160;&#160;Déconnexion</a>
             <a href="../index.php" class="homebutton justify-self-end">&larr;&#160;&#160;Retour au site</a>
         </aside>
         <div class="dashboard">
+        <a class="ariane" href="dashboard.php">Retourner au back-office</a>
+
             <?php foreach ($resultDetailProjet as $result) {
                 $editId = $result['id_projet'];
                 $editTitle = $result['titre'];
@@ -73,12 +76,10 @@ if (isset($_POST["update"])) {
                 <label for="module">Module</label><br>
                 <select name="module" id="module" value="<?php echo $editModule; ?>">
                     <?php
-                    foreach ($resultOneModule as $rom) {
-                        echo '<option value="">' . $rom['nom_module'] . '</option>';
-                    } 
                     foreach ($resultModules as $rm) {
                         echo '<option value="' . $rm["id_module"] . '">' . $rm["nom_module"] . '</option>';
-                    } ?>
+                    }
+                    ?>
                 </select>
 
                 <input type="submit" name="update" value="Mettre à jour le projet">

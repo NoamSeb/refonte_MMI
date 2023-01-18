@@ -1,6 +1,7 @@
 <?php include('model.php');
 $modules = getModules();
 $events = getEvent();
+$resultTemoignage = getTemoignages();
 ?>
 
 <!DOCTYPE html>
@@ -87,22 +88,22 @@ $events = getEvent();
             <div class="diplome">
                 <img src="medias/icons/diplome.svg" alt="">
                 <h3>1600</h3>
-                <h4><b>DIPLOMÉS</b></h4>
+                <h5><b>DIPLOMÉS</b></h5>
             </div>
             <div class="candidate">
                 <img src="medias/icons/candidat.svg" alt="">
                 <h3>2500</h3>
-                <h4><b>CANDIDATS CHAQUE ANNÉE</b></h4>
+                <h5><b>CANDIDATS CHAQUE ANNÉE</b></h5>
             </div>
             <div class="places">
                 <img src="medias/icons/places.svg" alt="">
                 <h3>56</h3>
-                <h4><b>PLACES</b></h4>
+                <h5><b>PLACES</b></h5>
             </div>
             <div class="anciennete">
                 <img src="medias/icons/anciennete.svg" alt="">
                 <h3>28</h3>
-                <h4><b>ANS D'EXISTENCE</b></h4>
+                <h5><b>ANS D'EXISTENCE</b></h5>
             </div>
         </div>
         <div class="mmiGeneral">
@@ -132,33 +133,33 @@ $events = getEvent();
             </div>
         </div>
         <div class="competences">
-            <h3 class="skillsTitle">5 compétences</h3>
+            <h3 class="center">5 compétences</h3>
             <div class="skills">
                 <div class="comprendre">
-                    <p class="skillName">COMPRENDRE</p>
+                    <h5>COMPRENDRE</h5>
                     <p class=skillTxt>Comprendre les écosystèmes, les besoins des utilisateurs et les dispositifs de communication numérique</p>
                 </div>
                 <div class="concevoir">
-                    <p class="skillName">CONCEVOIR</p>
+                    <h5>CONCEVOIR</h5>
                     <p class=skillTxt>Concevoir ou co-concevoir une réponse stratégique pertinente à une problématique complexe
                     </p>
                 </div>
                 <div class="exprimer">
-                    <p class="skillName">EXPRIMER</p>
+                    <h5>EXPRIMER</h5>
                     <p class=skillTxt>Exprimer un message avec les médias numériques pour informer et communiquer</p>
                 </div>
                 <div class="developper">
-                    <p class="skillName">DÉVELOPPER</p>
+                    <h5>DÉVELOPPER</h5>
                     <p class=skillTxt>Développer pour le web et les médias numériques</p>
                 </div>
                 <div class="entreprendre">
-                    <p class="skillName">ENTREPRENDRE</p>
+                    <h5>ENTREPRENDRE</h5>
                     <p class=skillTxt>Entreprendre dans le secteur du numérique</p>
                 </div>
             </div>
         </div>
         <div class="parcours">
-            <h3 class="parcoursTitle">2 PARCOURS</h3>
+            <h3 class="center">2 PARCOURS</h3>
             <div class="course">
                 <div class="spe">
                     <div class="img"><img src="./medias/crea.png" alt="imageparcourscreationnumerique"></div>
@@ -166,7 +167,7 @@ $events = getEvent();
                     <p>Métiers : directeur artistique, designer interactif, web/UI designer, motion designer, réalisateur, infographiste, game designer...</p>
                 </div>
                 <div class="spe">
-                <div class="img"><img src="./medias/dev.png" alt="imageparcoursdeveloppementweb"></div>
+                    <div class="img"><img src="./medias/dev.png" alt="imageparcoursdeveloppementweb"></div>
                     <h4>Développement web & dispositifs interactifs</h4>
                     <p>Métiers : Intégrateur, développeur front, développeur back, développeur full-stack, métiers de la scénographie numérique, intégrateur de dispositif de réalité virtuelle...
                     </p>
@@ -174,7 +175,7 @@ $events = getEvent();
             </div>
         </div>
         <div class="actu">
-            <h2 class="actuTitle">ACTUALITÉS</h2>
+            <h3 class="actuTitle">ACTUALITÉS</h3>
             <div class="count-down">
                 <h3>Prochaine JPO</h3>
                 <p id="header--countDown">
@@ -191,27 +192,32 @@ $events = getEvent();
                         <?php
                         foreach ($events as $event) {
                             echo
-                            '<div class="item">' .
-                                '<div class="img-event-background" style="background:url(\'medias/' . $event['img_event'] . '\')no-repeat center center/cover;">' .
+                            '<a href="./affiche-event.php?id=' . $event['id_event'] . '"><div class="item">' .
+                                '<div class="img-event-background" style="background:url(\'medias/evenements/' . $event['img_event'] . '\')no-repeat center center/cover;">' .
                                 '</div>' .
                                 '<h3>' . $event['nom_event'] . '</h3>' .
-                                '<p>' . $event['date_event'] . '</p>' .
-                                '</div>';
+                                '<p>' . date('M d, Y', strtotime($event['date_event'])) . '</p>' .
+                                '</div></a>';
                         };
                         ?>
                     </div>
                 </div>
                 <div style></div>
-                <a href="event.php" class="button">Voir plus</a>
+                <a href="event.php" class="button voirplus">Voir plus</a>
             </div>
         </div>
         <div class="temoignages">
             <h2 class="testimonyTitle">NOS ANCIENS TÉMOIGNENT</h2>
-            <!-- 
-                
-                SLIDER 
-            
-            -->
+            <div class="carousel-events owl-carousel owl-theme">
+                <?php
+                foreach ($resultTemoignage as $value) {
+                    echo
+                    '<div class="item">' .
+                        '</div>';
+                };
+                ?>
+            </div>
+
         </div>
     </main>
     <footer>
@@ -237,7 +243,7 @@ $events = getEvent();
                 <div class="socials">
                     <a href="https://www.instagram.com/mmi_champs/" target="_blank"><img src="medias/icons/insta_icon.svg" alt="Page Instagram"></a>
                     <a href="https://twitter.com/mmi_champs" target="_blank"><img src="medias/icons/twitter_icon.svg" alt="Page Twitter"></a>
-                    
+
                 </div>
             </div>
         </div>

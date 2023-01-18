@@ -24,6 +24,7 @@ if (!isset($_SESSION["login"])) {
             <a href="dashboard.php" class="dashboardbutton"><i class="fa fa-tachometer" aria-hidden="true"></i>&#160;&#160;Dashboard</a>
             <a href="newevent.php" class="btn btn-primary" type="button">Ajouter un évènement</a>
             <a href="newproject.php" class="btn btn-primary" type="button">Ajouter un projet</a>
+            <a href="newtemoignage.php" class="btn btn-primary" type="button">Ajouter un témoignage</a>
 
             <a class="btn btn-danger justify-self-end" href="../controllers/logout.php" type="button"><i class="fa fa-power-off"></i>&#160;&#160;Déconnexion</a>
             <a href="../index.php" class="homebutton justify-self-end">&larr;&#160;&#160;Retour au site</a>

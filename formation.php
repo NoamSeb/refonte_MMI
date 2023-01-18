@@ -85,7 +85,7 @@ $resultModules = getModules();
                     <?php
                     foreach ($resultCompetences as $value) {
                         echo "<div class=\"item\" >";
-                        echo '<p class="competence5"> 5 compétences </p>';
+                        echo '<p class="competence5">5 compétences</p>';
                         echo "<p class=\"id-competence\"> #" . $value['id_competence'] . " </p>";
                         echo '<svg width="40" height="3" viewBox="0 0 40 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <line y1="1.5" x2="40" y2="1.5" stroke="white" stroke-width="3"/>
@@ -93,7 +93,8 @@ $resultModules = getModules();
                         echo "<h1 class=\"nom-competence\">" . $value['nom_competence'] . "</h1>";
                         echo "<p class=\"description-competence\">" . $value['description_competence'] . "</p>";
                         echo "<p class=\"modules-lies\"> <span class=\"uppercase\">Modules liés :</span> </br>" . $value['modules_lie'] . "</p>";
-                        echo "<img class=\"img-background-competences\" src=\"medias/" . $value['img_competence'] . "\" alt=\"\">";
+                        echo "<div class=\"dark-overlay\"></div>";
+                        echo "<img class=\"img-background-competences\" src=\"medias/ue/" . $value['img_competence'] . "\" alt=\"\">";
                         echo "</div>";
                     }
                     ?>

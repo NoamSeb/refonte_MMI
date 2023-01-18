@@ -58,14 +58,6 @@ function getOneModule($projet)
     $result = $stmt->fetchall(PDO::FETCH_ASSOC);
     return $result;
 }
-function getAllModulesExcept($projet)
-{
-    $db = dbConnect();
-    $requete = "SELECT * FROM modules, projet distinct SELECT * FROM modules, projet WHERE projet.ext_module = modules.id_module AND id_projet=".$projet;
-    $stmt = $db->query($requete);
-    $result = $stmt->fetchall(PDO::FETCH_ASSOC);
-    return $result;
-}
 function getEvent()
 {
     $db = dbConnect();
@@ -83,6 +75,17 @@ function getProject()
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     return $result;
 }
+
+function getProjectsAndModules()
+{
+    $db = dbConnect();
+    $requete = "SELECT * FROM modules, projet WHERE projet.ext_module = modules.id_module";
+    $stmt = $db->query($requete);
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $result;
+}
+
+
 function getEvents()
 {
     $db = dbConnect();
@@ -99,6 +102,46 @@ function getCompetences()
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     return $result;
 }
+
+function getTemoignages() {
+    $db = dbConnect();
+    $requete = "SELECT * FROM temoignages";
+    $stmt = $db->query($requete);
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $result;
+}
+
+function detailTemoignage($temoignage)
+{
+    $db = dbConnect();
+    $requete = "SELECT * FROM temoignages WHERE " . $temoignage . "=id_temoignage";
+    $stmt = $db->query($requete);
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $result;
+}
+
+// insérer un nouvel evenement
+function insertTemoignage($titre, $contenu, $promo)
+{
+    $db = dbConnect();
+    $titre = $_POST["auteur"];
+    $contenu = $_POST["contenu"];
+    $promo = $_POST["promo"];
+    $insert = "INSERT INTO temoignages (id_temoignage, nom_etudiant, contenu_temoignage, promo_etudiant) VALUES (NULL,\"$titre\",\"$contenu\",\"$promo\")";
+    $db->query($insert);
+};
+
+function editTemoignage($id, $title, $content, $promo)
+{
+    $db = dbConnect();
+    $id = $_POST['id'];
+    $title = $_POST['auteur'];
+    $content = $_POST['contenu'];
+    $promo = $_POST['promo'];
+    $query = 'UPDATE temoignages SET nom_etudiant ="' . $title . '", contenu_temoignage ="' . $content . '", promo_etudiant ="' . $promo . '" WHERE id_temoignage ="' . $id . '"';
+    $db->query($query);
+}
+
 
 function getOneEvent()
 {
@@ -126,7 +169,7 @@ function insertEvent($titre, $contenu, $date)
     $titre = $_POST['titre'];
     $contenu = $_POST['contenu'];
     $date = $_POST['date'];
-    $insert = "INSERT INTO evenements (id_event, nom_event, description_event, date_event, img_event) VALUES (NULL,'$titre','$contenu', '$date','test')";
+    $insert = "INSERT INTO evenements (id_event, nom_event, description_event, date_event) VALUES (NULL,\"$titre\",\"$contenu\",\"$date\")";
     $db->query($insert);
 };
 
