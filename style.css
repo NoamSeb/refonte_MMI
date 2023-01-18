@@ -452,6 +452,21 @@ main {
     margin-top: 20vw;
 }
 
+.carousel-temoignages {
+    margin: 5rem auto;
+    width: 60%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-temoignages .owl-item {
+    background-color: #dadada;
+    padding: 2rem 4rem;
+    border-radius: 50px;
+    height: 100%;
+}
+
 .testimonyTitle {
     text-align: center;
 }
@@ -630,13 +645,14 @@ footer {
     border-radius: 50%;
 }
 
-.carousel-modules .owl-nav button {
+.carousel-modules .owl-nav button, .carousel-temoignages .owl-nav button {
     border-radius: 50% !important;
     transition: all 0.5s ease;
 }
 
 .carousel-modules .owl-nav button span,
-.carousel-events .owl-nav button span {
+.carousel-events .owl-nav button span,
+.carousel-temoignages .owl-nav button span {
     font-size: 2rem;
     padding: 1rem;
 }
