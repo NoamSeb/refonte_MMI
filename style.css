@@ -1193,13 +1193,14 @@ header.gallery {
     display: flex;
     flex-direction: row;
     width: 960px;
+    margin-bottom: 10rem;
 }
 
 .panel {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 400px;
+    height: 30rem;
     border-radius: 10px;
     color: #fff;
     cursor: pointer;
@@ -1212,14 +1213,14 @@ header.gallery {
     transition: all 1s ease;
     display: flex;
     align-items: center;
-
+    padding: 2rem;
 }
+
 .panel article {
     display: none;
     transition: all 1s ease;
 }
 .panel.active article {
-    padding: 2rem;
     display: flex;
     flex-direction: column;
 }
@@ -1241,6 +1242,17 @@ header.gallery {
     opacity: 0;
     opacity: 1;
     transition: opacity 0.3s ease-in 0.4s;
+}
+
+.panel.active h5:first-child {
+    color: var(--color-yellow);
+}
+
+.panel .button {
+    background-color: var(--color-yellow);
+    width: fit-content;
+    padding: 0.8rem 1.5rem !important;
+
 }
 
 
