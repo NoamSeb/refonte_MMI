@@ -190,6 +190,75 @@ $resultModules = getModules();
             </div>
             <img src="./medias/international/instagram.png" alt="">
         </section>
+        <section class="equipe">
+            <h3>L'équipe pédagogique</h3>
+            <br>
+            <div class="profs">
+                <article><img class="memoji" src="./medias/profs/gaelle-min.png" alt="professeur">
+                    <h4>Gaelle Charpentier</h4>
+                    <h5>Intégration web & ergonomie</h5>
+                </article>
+
+                <article><img class="memoji" src="./medias/profs/bister.png" alt="professeur">
+                    <h4>Florence Bister</h4>
+                    <h5>Représentation & traitement de l'information</h5>
+                </article>
+                <article><img class="memoji" src="./medias/profs/tasso.png" alt="professeur">
+                    <h4>Anne Tasso</h4>
+                    <h5>Audiovisuel</h5>
+                </article>
+                <article><img class="memoji" src="./medias/profs/poisson-min.png" alt="professeur">
+                    <h4>Frédéric Poisson</h4>
+                    <h5>Design créatif</h5>
+                </article>
+
+                <article><img class="memoji" src="./medias/profs/gambette.png" alt="professeur">
+                    <h4>Philippe Gambette</h4>
+                    <h5>Développement web</h5>
+                </article>
+                <article><img class="memoji" src="./medias/profs/php-min.png" alt="professeur">
+                    <h4>Renaud Eppstein</h4>
+                    <h5>Développement Back-End</h5>
+                </article>
+                <article><img class="memoji" src="./medias/profs/herve.png" alt="professeur">
+                    <h4>Hervé Lo</h4>
+                    <h5>Gestion de projet</h5>
+                </article>
+
+                <article><img class="memoji" src="./medias/profs/alex-min.png" alt="professeur">
+                    <h4>Alexandre Leroy</h4>
+                    <h5>Anglais</h5>
+                </article>
+
+
+                <article><img class="memoji" src="./medias/profs/niel-min.png" alt="professeur">
+                    <h4>Odile Niel</h4>
+                    <h5>Projet professionnel & personnel</h5>
+                </article>
+
+                <article><img class="memoji" src="./medias/profs/dallet-min.png" alt="professeur">
+                    <h4>Sylvie Dallet</h4>
+                    <h5>Cultures artistique & numérique</h5>
+                </article>
+
+                <article><img class="memoji" src="./medias/profs/leyla-min.png" alt="professeur">
+                    <h4>Leyla Jaoued</h4>
+                    <h5>Marketing & stratégie de communication</h5>
+                </article>
+
+                <article><img class="memoji" src="./medias/profs/kpc.png" alt="professeur">
+                    <h4>Karim Pierre Chabane</h4>
+                    <h5>Expression et communication réthorique</h5>
+                </article>
+
+
+                <h5>Et bien d'autres...</h5>
+
+
+
+            </div>
+
+        </section>
 
     </main>
     <footer>
@@ -220,8 +289,10 @@ $resultModules = getModules();
             </div>
         </div>
         <div class="credits">
-            <p>2023&#160;&#160;&#160;-&#160;&#160;&#160;BUT Métiers du Multimédia & de l’Internet, Champs-sur-Marne © Tous droits réservés</p>
-            <h4>mentions légales</h4>
+            <p>2023&#160;&#160;&#160;-&#160;&#160;&#160;BUT Métiers du Multimédia & de l’Internet, Champs-sur-Marne<br>© Tous droits réservés</p>
+            <a href="./mentions.html">
+                <h4>Mentions légales</h4>
+            </a>
             <a href="./login.php">
                 <h4>Back-office</h4>
             </a>

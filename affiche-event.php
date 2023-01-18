@@ -122,8 +122,10 @@ $result = detailEvent($_GET["id"]);
             </div>
         </div>
         <div class="credits">
-            <p>2023&#160;&#160;&#160;-&#160;&#160;&#160;BUT Métiers du Multimédia & de l’Internet, Champs-sur-Marne © Tous droits réservés</p>
-            <h4>mentions légales</h4>
+            <p>2023&#160;&#160;&#160;-&#160;&#160;&#160;BUT Métiers du Multimédia & de l’Internet, Champs-sur-Marne<br>© Tous droits réservés</p>
+            <a href="./mentions.html">
+                <h4>Mentions légales</h4>
+            </a>
             <a href="./login.php">
                 <h4>Back-office</h4>
             </a>

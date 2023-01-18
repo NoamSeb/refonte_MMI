@@ -20,7 +20,8 @@ $resultTemoignage = getTemoignages();
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
 
-    <meta name="twitter:card" content="Site MMI champs"></meta>
+    <meta name="twitter:card" content="Site MMI champs">
+    </meta>
     <link rel="canonical" href="http://mmi-champs.noamsebahoun.fr/index.php">
     <meta name="description" content=" Tout au long de MMI, l’étudiant développe des compétences pluridisciplinaires tant dans le domaine de la programmation que dans le graphisme ou les réseaux. Son atout principal au sortir de la formation est sa polyvalence dans les différents domaine du multimédia.">
     <meta name="keywords" content="MMI, multimédia, internet, web, audiovisuel, études, post-bac">
@@ -219,11 +220,11 @@ $resultTemoignage = getTemoignages();
                 foreach ($resultTemoignage as $value) {
                     echo
                     '<div class="item">' .
-                    '<h4 class="purple">' . $value["nom_etudiant"] . '</h4>'.
-                    '<br><p>' . $value["contenu_temoignage"] . '</p>' .
-                    '<br><h5 class="purple">' . $value["promo_etudiant"] . '</h5>' .
+                        '<h4 class="purple">' . $value["nom_etudiant"] . '</h4>' .
+                        '<br><p>' . $value["contenu_temoignage"] . '</p>' .
+                        '<br><h5 class="purple">' . $value["promo_etudiant"] . '</h5>' .
 
-                    '</div>';
+                        '</div>';
                 };
                 ?>
             </div>
@@ -258,8 +259,10 @@ $resultTemoignage = getTemoignages();
             </div>
         </div>
         <div class="credits">
-            <p>2023&#160;&#160;&#160;-&#160;&#160;&#160;BUT Métiers du Multimédia & de l’Internet, Champs-sur-Marne © Tous droits réservés</p>
-            <h4>mentions légales</h4>
+            <p>2023&#160;&#160;&#160;-&#160;&#160;&#160;BUT Métiers du Multimédia & de l’Internet, Champs-sur-Marne<br>© Tous droits réservés</p>
+            <a href="./mentions.html">
+                <h4>Mentions légales</h4>
+            </a>
             <a href="./login.php">
                 <h4>Back-office</h4>
             </a>

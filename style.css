@@ -474,7 +474,7 @@ main {
 footer {
     width: 100%;
     padding: 5rem 15%;
-    color: var(--color-white);
+    color: var(--color-white) !important;
     background-color: rgb(35, 35, 35);
 }
 
@@ -483,6 +483,15 @@ footer {
     justify-content: space-between;
     gap: 4rem;
     margin-bottom: 2rem;
+}
+
+
+footer a, footer h4 {
+    color: var(--color-white) !important;
+}
+
+footer h4 {
+    font-size: 1rem;
 }
 
 .footer ul {
@@ -505,7 +514,7 @@ footer {
 
 .credits {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     gap: 2rem;
 }
@@ -983,6 +992,40 @@ footer {
     justify-content: center;
     align-items: center;
 }
+
+.profs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+
+.profs article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 2rem;
+    background-color: #eaeaea;
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+.profs article h5 {
+    margin-top: 1rem;
+    color: var(--color-green);
+}
+.memoji {
+    height: 7rem;
+    margin-bottom:2rem;
+}
+
+
+
+
+
 
 
 /* PAGE FORMATION */
