@@ -1,0 +1,13 @@
+RewriteEngine On
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTPS} !on
+RewriteCond %{HTTP_HOST} ^(?:www.)?http://localhost/refonte_MMI/(?:.)$ [nc]
+RewriteRule ^(.)$ https://%{HTTP_HOST}%{REQUEST_URI} [redirect=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^.]+)$ $1.php [NC,L]
+
+RewriteRule ^home$ index.php
+
+ErrorDocument 403 403.html
+ErrorDocument 404 404.html
