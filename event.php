@@ -1,4 +1,4 @@
-<?php 
+<?php
 include('model.php');
 $result = getEvent();
 ?>
@@ -22,7 +22,7 @@ $result = getEvent();
 </head>
 
 <body>
-<div class="menu-overlay">
+    <div class="menu-overlay">
         <div class="overlay-menu">
             <ul class="one">
                 <a href="formation.php">
@@ -79,31 +79,28 @@ $result = getEvent();
     </header>
     <main>
         <div class="content">
-            <div class="pagesSecondTitle">
+            <div class="intro">
                 <h2>Des évènements <span class="purple">tout au long de l'année</span></h2>
-                <div class="pagesSecondTitleTxt">
-                    <p>Le BUT MMI ce n’est pas que des cours ! Participez à différents évènements tout au long de l’année ! Ces évènements (hors la JPO) sont des moyens de mettre en avant vos projets et ce que vous avez appris lors de votre séjours en MMI alors n’hésitez pas à y participer, vous pourrez avoir de bonnes surprises…
-                    </p>
-                </div>
+                <p>Le BUT MMI ce n’est pas que des cours ! Participez à différents évènements tout au long de l’année ! Ces évènements (hors la JPO) sont des moyens de mettre en avant vos projets et ce que vous avez appris lors de votre séjours en MMI alors n’hésitez pas à y participer, vous pourrez avoir de bonnes surprises…
+                </p>
             </div>
             <div class="evenements">
-         
-               <?php
-                foreach($result as $result) { 
-                    echo 
-                    '<div class="event" style="background:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(\'medias/evenements/'.$result['img_event'].'\') no-repeat center center/cover;">'.
-                    '<div class="event-darken">' .
-                        '<h3 class="titleEvent">'.$result['nom_event'].'</h3>' .
-                        '<p class="dateEvent">'.$result['date_event'].'</p>' .
-                        '<p class="descripEvent">'.mb_strimwidth($result['description_event'], 0, 100, "...").'</p>' .
-                        '<a href="affiche-event.php?id='.$result['id_event'].'">Voir plus</a>' .
-                    '</div>'.
-                    '</div>';
+
+                <?php
+                foreach ($result as $result) {
+                    echo
+                    '<div class="event" style="background:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(\'medias/evenements/' . $result['img_event'] . '\') no-repeat center center/cover;">' .
+                        '<div class="event-darken">' .
+                        '<h3 class="titleEvent">' . $result['nom_event'] . '</h3>' .
+                        '<p class="dateEvent">' . $result['date_event'] . '</p>' .
+                        '<p class="descripEvent">' . mb_strimwidth($result['description_event'], 0, 100, "...") . '</p>' .
+                        '<a href="affiche-event.php?id=' . $result['id_event'] . '">Voir plus</a>' .
+                        '</div>' .
+                        '</div>';
                 } ?>
             </div>
 
         </div>
-        <p class="seeMore"> <strong>Voir les évènements passés ></strong></p>
     </main>
     <footer>
         <div class="footer">
@@ -140,7 +137,8 @@ $result = getEvent();
             </a>
         </div>
 
-    </footer></body>
+    </footer>
+</body>
 
 <script>
     ScrollOut({
@@ -148,4 +146,5 @@ $result = getEvent();
         threshold: 0.2,
     });
 </script>
+
 </html>

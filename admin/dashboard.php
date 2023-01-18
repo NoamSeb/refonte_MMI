@@ -90,7 +90,6 @@ if (!isset($_SESSION["login"])) {
                         </tbody>
                     </table>
                     <br>
-                    <p class="center" id="erreurback">&#128546; Oops, aucun article ne semble correspondre à votre recherche.</tp>
 
                 </div>
                 <div class="tab-pane fade" id="nav-projects" role="tabpanel" aria-labelledby="nav-projects-tab" tabindex="0">
@@ -125,7 +124,6 @@ if (!isset($_SESSION["login"])) {
                         </tbody>
                     </table>
                     <br>
-                    <p class="center" id="erreurback">&#128546; Oops, aucun article ne semble correspondre à votre recherche.</tp>
 
                 </div>
 
@@ -139,6 +137,8 @@ if (!isset($_SESSION["login"])) {
                                 <th>Auteur</th>
                                 <th>Contenu</th>
                                 <th>Promo</th>
+                                <th>Options</th>
+
                             </tr>
                         </thead>
                         <tbody>
@@ -156,7 +156,6 @@ if (!isset($_SESSION["login"])) {
                         </tbody>
                     </table>
                     <br>
-                    <p class="center" id="erreurback">&#128546; Oops, aucun article ne semble correspondre à votre recherche.</tp>
 
                 </div>
 

@@ -1,6 +1,6 @@
-<?php 
-require_once('model.php');
-$result = getOneEvent();
+<?php
+include('model.php');
+$result = detailEvent($_GET["id"]);
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +14,9 @@ $result = getOneEvent();
     <link rel="stylesheet" href="style.css" type="text/css">
     <script src="./js/script.js" defer></script>
 
-    <title><?php $result['nom_event']?></title>
+    <title><?php foreach ($result as $r) {
+                echo $r['nom_event'];
+            } ?></title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./medias/icons/logo_MMI.svg">
 </head>
@@ -71,14 +73,26 @@ $result = getOneEvent();
             </div>
         </div>
     </nav>
-
     <?php
     foreach ($result as $r) { ?>
-        <img src="<?= $r['img_event'] ?>" alt="">
-        <h1><?= $r['nom_event'] ?></h1>
-        <p><?= $r['date_event'] ?></p>
-        <p><?= $r['description_event'] ?></p>
+
+        <header class="header header-eventdetail" style="background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('medias/evenements/<?= $r['img_event'] ?>')">
+
+            <h1><?= $r['nom_event'] ?></h1>
+            <h3><?= date('M d, Y', strtotime($r['date_event'])) ?></h3>
+
+
+        </header>
     <?php } ?>
+    <main class="eventdetail">
+        <a class="ariane" href="javascript:history.go(-1)">Retour à la page précédente</a>
+        <?php
+        foreach ($result as $r) { ?>
+            <h1><?= $r['nom_event'] ?></h1>
+            <h3><?= date('M d, Y', strtotime($r['date_event'])) ?></h3>
+            <p><?= $r['description_event'] ?></p>
+        <?php } ?>
+    </main>
 
     <footer>
         <div class="footer">

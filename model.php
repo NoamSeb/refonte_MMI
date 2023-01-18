@@ -142,16 +142,6 @@ function editTemoignage($id, $title, $content, $promo)
     $db->query($query);
 }
 
-
-function getOneEvent()
-{
-    $db = dbConnect();
-    $requete = "SELECT * FROM evenements WHERE id_event={$_GET["id"]}";
-    $stmt = $db->query($requete);
-    $result = $stmt->fetchall(PDO::FETCH_ASSOC);
-    return $result;
-}
-
 function detailEvent($event)
 {
     $db = dbConnect();
