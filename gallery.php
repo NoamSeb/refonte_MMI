@@ -95,7 +95,7 @@ $resultatProjets = getProjectsAndModules();
                             <h2><?= $r['titre'] ?></h2>
                             <h5>Par <?= $r['auteur'] ?></h5>
                             <p>Par <?= mb_strimwidth($r['description'], 0, 150, "...") ?></p>
-                            <a class="button" href="affiche-projets.php?id_projet=<?= $r['id_projet'] ?>" type="button">Voir le projet</a>
+                            <a class="button" href="affiche-projet.php?id_projet=<?= $r['id_projet'] ?>" type="button">Voir le projet</a>
                         </article>
                     </div>
                 <?php } ?>
