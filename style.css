@@ -1243,6 +1243,17 @@ header.gallery {
     transition: opacity 0.3s ease-in 0.4s;
 }
 
+.panel.active h5:first-child {
+    color: var(--color-yellow);
+}
+
+.panel .button {
+    background-color: var(--color-yellow);
+    width: fit-content;
+    padding: 1rem 2rem !important;
+
+}
+
 
 @media(max-width: 480px) {
     .projectscontainer {
