@@ -30,7 +30,7 @@ $result = getOneModule($_GET['id_projet']);
                 <a href="gallery.php">
                     <li>Projets</li>
                 </a>
-                <a href="projet.php">
+                <a href="event.php">
                     <li>Évènements</li>
                 </a>
                 <a href="international.html">
